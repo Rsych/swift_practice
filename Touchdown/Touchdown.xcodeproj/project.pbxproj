@@ -16,6 +16,7 @@
 		718E9FC826F42533001B68D4 /* player.json in Resources */ = {isa = PBXBuildFile; fileRef = 718E9FC426F42532001B68D4 /* player.json */; };
 		718E9FC926F42533001B68D4 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 718E9FC526F42533001B68D4 /* category.json */; };
 		718E9FD326F42672001B68D4 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718E9FD226F42672001B68D4 /* Constant.swift */; };
+		718E9FD526F42794001B68D4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718E9FD426F42794001B68D4 /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		718E9FC426F42532001B68D4 /* player.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = player.json; sourceTree = "<group>"; };
 		718E9FC526F42533001B68D4 /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		718E9FD226F42672001B68D4 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		718E9FD426F42794001B68D4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +108,8 @@
 		718E9FCC26F4260D001B68D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				718E9FCE26F42617001B68D4 /* Detail */,
 				718E9FCD26F42612001B68D4 /* Home */,
+				718E9FCE26F42617001B68D4 /* Detail */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +117,7 @@
 		718E9FCD26F42612001B68D4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				718E9FD426F42794001B68D4 /* FooterView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				718E9FB626F424A8001B68D4 /* ContentView.swift in Sources */,
+				718E9FD526F42794001B68D4 /* FooterView.swift in Sources */,
 				718E9FB426F424A8001B68D4 /* TouchdownApp.swift in Sources */,
 				718E9FD326F42672001B68D4 /* Constant.swift in Sources */,
 			);
