@@ -9,13 +9,31 @@ import SwiftUI
 
 
 // DATA
+
+
 // COLOR
+let colorBackground: Color = Color("colorBackground")
+let colorGray: Color = Color(UIColor.systemGray)
+
+
 // LAYOUT
+
+
 // UX
+
+
 // API
+
+
 // IMAGE
+
+
 // FONT
+
+
 // STRING
+
+
 // MISC
 
 
