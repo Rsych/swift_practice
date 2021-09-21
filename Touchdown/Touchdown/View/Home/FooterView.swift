@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FooterView: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 10, content: {
+        VStack(spacing: 10, content: {
             Text("We offer the most cutting edge, comfortable, lightweight and durable football helmets in the market at affordable prices.")
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
@@ -27,6 +27,7 @@ struct FooterView: View {
                 )
         }) //: VSTACK
         .padding()
+        
     }
 }
 
