@@ -13,6 +13,8 @@ import SwiftUI
 let players: [Player] = Bundle.main.decode("player.json")
 let categories: [Category] = Bundle.main.decode("category.json")
 let products: [Product] = Bundle.main.decode("product.json")
+let brands: [Brands] = Bundle.main.decode("brand.json")
+let sampleProduct: Product = products[0]
 
 // COLOR
 let colorBackground: Color = Color("colorBackground")
