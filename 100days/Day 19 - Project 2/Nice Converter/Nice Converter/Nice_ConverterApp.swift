@@ -11,7 +11,7 @@ import SwiftUI
 struct Nice_ConverterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

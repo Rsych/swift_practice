@@ -1,5 +1,5 @@
 //
-//  ConverterView.swift
+//  DistanceView.swift
 //  Nice Converter
 //
 //  Created by Ryan J. W. Kim on 2021/09/30.
@@ -7,35 +7,34 @@
 
 import SwiftUI
 
-struct TempConverterView: View {
-    // MARK: - Properties
+struct DistanceConverterView: View { // MARK: - Properties
     @State private var inputValue = ""
     @State private var outputValue = ""
     
     @State private var inputUnitValue = 0
-    let inputUnits = ["°C", "°F", "K"]
+    let inputUnits = ["km", "ft", "mi"]
     
     @State private var outputUnitValue = 0
-    let outputUnits = ["°C", "°F", "K"]
+    let outputUnits = ["km", "ft", "mi"]
     
     var calculatedOut: String {
         var output = ""
-        var input = Measurement(value: 0, unit: UnitTemperature.celsius)
+        var input = Measurement(value: 0, unit: UnitLength.meters)
         switch inputUnits[inputUnitValue] {
-        case "°C":
-            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitTemperature.celsius)
-        case "°F":
-            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitTemperature.fahrenheit)
+        case "km":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.kilometers)
+        case "ft":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.feet)
         default:
-            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitTemperature.kelvin)
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitLength.miles)
         }
         switch outputUnits[outputUnitValue] {
-        case "°C":
-            output = String(describing: input.converted(to: UnitTemperature.celsius))
-        case "°F":
-            output = String(describing: input.converted(to: UnitTemperature.fahrenheit))
+        case "km":
+            output = String(describing: input.converted(to: UnitLength.meters))
+        case "mi":
+            output = String(describing: input.converted(to: UnitLength.miles))
         default:
-            output = String(describing: input.converted(to: UnitTemperature.kelvin))
+            output = String(describing: input.converted(to: UnitLength.feet))
         }
         return output
     }
@@ -64,17 +63,15 @@ struct TempConverterView: View {
                     .pickerStyle(.segmented )
                 } //: Output section
             } //: Form
-            .navigationTitle("Temperature converter")
+            .navigationTitle("Distance converter")
         } //: NavigationView
         
     }
 }
+
 // MARK: - Preview
-struct ConverterView_Previews: PreviewProvider {
+struct DistanceConverterView_Previews: PreviewProvider {
     static var previews: some View {
-        TempConverterView()
-            .previewLayout(.sizeThatFits)
+        DistanceConverterView()
     }
 }
-
-

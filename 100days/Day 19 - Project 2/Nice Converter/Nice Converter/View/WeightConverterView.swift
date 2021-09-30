@@ -1,5 +1,5 @@
 //
-//  ConverterView.swift
+//  WeightConverterView.swift
 //  Nice Converter
 //
 //  Created by Ryan J. W. Kim on 2021/09/30.
@@ -7,35 +7,35 @@
 
 import SwiftUI
 
-struct TempConverterView: View {
+struct WeightConverterView: View {
     // MARK: - Properties
     @State private var inputValue = ""
     @State private var outputValue = ""
     
     @State private var inputUnitValue = 0
-    let inputUnits = ["°C", "°F", "K"]
+    let inputUnits = ["kg", "oz", "lb"]
     
     @State private var outputUnitValue = 0
-    let outputUnits = ["°C", "°F", "K"]
+    let outputUnits = ["kg", "oz", "lb"]
     
     var calculatedOut: String {
         var output = ""
-        var input = Measurement(value: 0, unit: UnitTemperature.celsius)
+        var input = Measurement(value: 0, unit: UnitMass.kilograms)
         switch inputUnits[inputUnitValue] {
-        case "°C":
-            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitTemperature.celsius)
-        case "°F":
-            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitTemperature.fahrenheit)
+        case "kg":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitMass.kilograms)
+        case "oz":
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitMass.ounces)
         default:
-            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitTemperature.kelvin)
+            input = Measurement(value: Double(inputValue) ?? 0, unit: UnitMass.pounds)
         }
         switch outputUnits[outputUnitValue] {
-        case "°C":
-            output = String(describing: input.converted(to: UnitTemperature.celsius))
-        case "°F":
-            output = String(describing: input.converted(to: UnitTemperature.fahrenheit))
+        case "kg":
+            output = String(describing: input.converted(to: UnitMass.kilograms))
+        case "oz":
+            output = String(describing: input.converted(to: UnitMass.ounces))
         default:
-            output = String(describing: input.converted(to: UnitTemperature.kelvin))
+            output = String(describing: input.converted(to: UnitMass.pounds))
         }
         return output
     }
@@ -64,17 +64,15 @@ struct TempConverterView: View {
                     .pickerStyle(.segmented )
                 } //: Output section
             } //: Form
-            .navigationTitle("Temperature converter")
+            .navigationTitle("Weight converter")
         } //: NavigationView
         
     }
 }
+
 // MARK: - Preview
-struct ConverterView_Previews: PreviewProvider {
+struct WeightConverterView_Previews: PreviewProvider {
     static var previews: some View {
-        TempConverterView()
-            .previewLayout(.sizeThatFits)
+        WeightConverterView()
     }
 }
-
-
