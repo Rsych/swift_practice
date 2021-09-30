@@ -12,6 +12,7 @@
 		7160A0D92705983000261155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7160A0D82705983000261155 /* Assets.xcassets */; };
 		7160A0DC2705983000261155 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7160A0DB2705983000261155 /* Preview Assets.xcassets */; };
 		7160A0E42705984600261155 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160A0E32705984600261155 /* NavBarView.swift */; };
+		7160A0E727059DB700261155 /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160A0E627059DB700261155 /* TempConverterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		7160A0D82705983000261155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7160A0DB2705983000261155 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7160A0E32705984600261155 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
+		7160A0E627059DB700261155 /* TempConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		7160A0D32705982F00261155 /* Nice Converter */ = {
 			isa = PBXGroup;
 			children = (
+				7160A0E527059CDD00261155 /* App */,
 				7160A0E22705983800261155 /* View */,
 				7160A0D42705982F00261155 /* Nice_ConverterApp.swift */,
 				7160A0D82705983000261155 /* Assets.xcassets */,
@@ -72,10 +75,18 @@
 		7160A0E22705983800261155 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7160A0D62705982F00261155 /* ContentView.swift */,
 				7160A0E32705984600261155 /* NavBarView.swift */,
+				7160A0E627059DB700261155 /* TempConverterView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7160A0E527059CDD00261155 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7160A0D62705982F00261155 /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7160A0D72705982F00261155 /* ContentView.swift in Sources */,
+				7160A0E727059DB700261155 /* TempConverterView.swift in Sources */,
 				7160A0E42705984600261155 /* NavBarView.swift in Sources */,
 				7160A0D52705982F00261155 /* Nice_ConverterApp.swift in Sources */,
 			);

@@ -23,7 +23,7 @@ struct NavBarView: View {
                     .foregroundColor(.gray)
             } //: Button
             Spacer()
-            Text("Converter")
+            Text("XXXX Converter")
                 .foregroundColor(.gray)
                 .opacity(isAnimated ? 1 : 0)
                 .offset(x: 0, y: isAnimated ? 0 : -25)

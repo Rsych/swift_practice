@@ -18,12 +18,13 @@ struct ContentView: View {
                     .padding(.horizontal, 15)
                     .padding(.bottom)
                     .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-                Spacer()
+//                Spacer()
+                TempConverterView()
                 
                 Text("Footer")
                     .padding()
             } //: Vstack
-            Text("Body")
+//            Text("Body")
         } //: Zstack
         .ignoresSafeArea(.all, edges: .top)
     } //: Body
