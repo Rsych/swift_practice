@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		712171BC27095F54004E0C80 /* ModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712171BB27095F54004E0C80 /* ModifierView.swift */; };
 		719773AC2706FB05001FAB51 /* Project_3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719773AB2706FB05001FAB51 /* Project_3App.swift */; };
 		719773AE2706FB05001FAB51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719773AD2706FB05001FAB51 /* ContentView.swift */; };
 		719773B02706FB06001FAB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719773AF2706FB06001FAB51 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		712171BB27095F54004E0C80 /* ModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierView.swift; sourceTree = "<group>"; };
 		719773A82706FB05001FAB51 /* Project 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		719773AB2706FB05001FAB51 /* Project_3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_3App.swift; sourceTree = "<group>"; };
 		719773AD2706FB05001FAB51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				719773AB2706FB05001FAB51 /* Project_3App.swift */,
 				719773AD2706FB05001FAB51 /* ContentView.swift */,
+				712171BB27095F54004E0C80 /* ModifierView.swift */,
 				719773AF2706FB06001FAB51 /* Assets.xcassets */,
 				719773B12706FB06001FAB51 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712171BC27095F54004E0C80 /* ModifierView.swift in Sources */,
 				719773AE2706FB05001FAB51 /* ContentView.swift in Sources */,
 				719773AC2706FB05001FAB51 /* Project_3App.swift in Sources */,
 			);
