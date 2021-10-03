@@ -17,18 +17,18 @@ struct NavBarView: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: nil) {
-            Button(action: {}) {
-                Image(systemName: "magnifyingglass.circle")
-                    .font(.title)
-                    .foregroundColor(.gray)
-            } //: Button
+//            Button(action: {}) {
+//                Image(systemName: "magnifyingglass.circle")
+//                    .font(.title)
+//                    .foregroundColor(.gray)
+//            } //: Button
             Spacer()
             Text("XXXX Converter")
                 .foregroundColor(.gray)
                 .opacity(isAnimated ? 1 : 0)
                 .offset(x: 0, y: isAnimated ? 0 : -25)
                 .onAppear {
-                    withAnimation(.easeInOut(duration: 0.5)) {
+                    withAnimation(.easeIn(duration: 0.5)) {
                         isAnimated.toggle()
                     }
                 }

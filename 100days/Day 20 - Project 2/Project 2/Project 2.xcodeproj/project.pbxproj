@@ -7,32 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7160A0D52705982F00261155 /* Nice_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160A0D42705982F00261155 /* Nice_ConverterApp.swift */; };
-		7160A0D72705982F00261155 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160A0D62705982F00261155 /* ContentView.swift */; };
-		7160A0D92705983000261155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7160A0D82705983000261155 /* Assets.xcassets */; };
-		7160A0DC2705983000261155 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7160A0DB2705983000261155 /* Preview Assets.xcassets */; };
-		7160A0E42705984600261155 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160A0E32705984600261155 /* NavBarView.swift */; };
-		7160A0E727059DB700261155 /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7160A0E627059DB700261155 /* TempConverterView.swift */; };
-		71B257842705D48A0086C8FE /* DistanceConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B257832705D48A0086C8FE /* DistanceConverterView.swift */; };
-		71B257862705D6280086C8FE /* WeightConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B257852705D6280086C8FE /* WeightConverterView.swift */; };
-		71B257882705D6770086C8FE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B257872705D6770086C8FE /* MainView.swift */; };
+		71D1B66B2706E82E008D7F93 /* Project_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1B66A2706E82E008D7F93 /* Project_2App.swift */; };
+		71D1B66D2706E82E008D7F93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1B66C2706E82E008D7F93 /* ContentView.swift */; };
+		71D1B66F2706E82F008D7F93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1B66E2706E82F008D7F93 /* Assets.xcassets */; };
+		71D1B6722706E82F008D7F93 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D1B6712706E82F008D7F93 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7160A0D12705982F00261155 /* Nice Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nice Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7160A0D42705982F00261155 /* Nice_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nice_ConverterApp.swift; sourceTree = "<group>"; };
-		7160A0D62705982F00261155 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7160A0D82705983000261155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7160A0DB2705983000261155 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7160A0E32705984600261155 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
-		7160A0E627059DB700261155 /* TempConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterView.swift; sourceTree = "<group>"; };
-		71B257832705D48A0086C8FE /* DistanceConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverterView.swift; sourceTree = "<group>"; };
-		71B257852705D6280086C8FE /* WeightConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightConverterView.swift; sourceTree = "<group>"; };
-		71B257872705D6770086C8FE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		71D1B6672706E82E008D7F93 /* Project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D1B66A2706E82E008D7F93 /* Project_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_2App.swift; sourceTree = "<group>"; };
+		71D1B66C2706E82E008D7F93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71D1B66E2706E82F008D7F93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71D1B6712706E82F008D7F93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7160A0CE2705982F00261155 /* Frameworks */ = {
+		71D1B6642706E82E008D7F93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,98 +32,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7160A0C82705982F00261155 = {
+		71D1B65E2706E82E008D7F93 = {
 			isa = PBXGroup;
 			children = (
-				7160A0D32705982F00261155 /* Nice Converter */,
-				7160A0D22705982F00261155 /* Products */,
+				71D1B6692706E82E008D7F93 /* Project 2 */,
+				71D1B6682706E82E008D7F93 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		7160A0D22705982F00261155 /* Products */ = {
+		71D1B6682706E82E008D7F93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7160A0D12705982F00261155 /* Nice Converter.app */,
+				71D1B6672706E82E008D7F93 /* Project 2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7160A0D32705982F00261155 /* Nice Converter */ = {
+		71D1B6692706E82E008D7F93 /* Project 2 */ = {
 			isa = PBXGroup;
 			children = (
-				7160A0E527059CDD00261155 /* App */,
-				7160A0E22705983800261155 /* View */,
-				7160A0D42705982F00261155 /* Nice_ConverterApp.swift */,
-				7160A0D82705983000261155 /* Assets.xcassets */,
-				7160A0DA2705983000261155 /* Preview Content */,
+				71D1B66A2706E82E008D7F93 /* Project_2App.swift */,
+				71D1B66C2706E82E008D7F93 /* ContentView.swift */,
+				71D1B66E2706E82F008D7F93 /* Assets.xcassets */,
+				71D1B6702706E82F008D7F93 /* Preview Content */,
 			);
-			path = "Nice Converter";
+			path = "Project 2";
 			sourceTree = "<group>";
 		};
-		7160A0DA2705983000261155 /* Preview Content */ = {
+		71D1B6702706E82F008D7F93 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				7160A0DB2705983000261155 /* Preview Assets.xcassets */,
+				71D1B6712706E82F008D7F93 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		7160A0E22705983800261155 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7160A0E32705984600261155 /* NavBarView.swift */,
-				7160A0E627059DB700261155 /* TempConverterView.swift */,
-				71B257832705D48A0086C8FE /* DistanceConverterView.swift */,
-				71B257852705D6280086C8FE /* WeightConverterView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		7160A0E527059CDD00261155 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				7160A0D62705982F00261155 /* ContentView.swift */,
-				71B257872705D6770086C8FE /* MainView.swift */,
-			);
-			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7160A0D02705982F00261155 /* Nice Converter */ = {
+		71D1B6662706E82E008D7F93 /* Project 2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7160A0DF2705983000261155 /* Build configuration list for PBXNativeTarget "Nice Converter" */;
+			buildConfigurationList = 71D1B6752706E82F008D7F93 /* Build configuration list for PBXNativeTarget "Project 2" */;
 			buildPhases = (
-				7160A0CD2705982F00261155 /* Sources */,
-				7160A0CE2705982F00261155 /* Frameworks */,
-				7160A0CF2705982F00261155 /* Resources */,
+				71D1B6632706E82E008D7F93 /* Sources */,
+				71D1B6642706E82E008D7F93 /* Frameworks */,
+				71D1B6652706E82E008D7F93 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Nice Converter";
-			productName = "Nice Converter";
-			productReference = 7160A0D12705982F00261155 /* Nice Converter.app */;
+			name = "Project 2";
+			productName = "Project 2";
+			productReference = 71D1B6672706E82E008D7F93 /* Project 2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7160A0C92705982F00261155 /* Project object */ = {
+		71D1B65F2706E82E008D7F93 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					7160A0D02705982F00261155 = {
+					71D1B6662706E82E008D7F93 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = 7160A0CC2705982F00261155 /* Build configuration list for PBXProject "Nice Converter" */;
+			buildConfigurationList = 71D1B6622706E82E008D7F93 /* Build configuration list for PBXProject "Project 2" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,47 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 7160A0C82705982F00261155;
-			productRefGroup = 7160A0D22705982F00261155 /* Products */;
+			mainGroup = 71D1B65E2706E82E008D7F93;
+			productRefGroup = 71D1B6682706E82E008D7F93 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7160A0D02705982F00261155 /* Nice Converter */,
+				71D1B6662706E82E008D7F93 /* Project 2 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7160A0CF2705982F00261155 /* Resources */ = {
+		71D1B6652706E82E008D7F93 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7160A0DC2705983000261155 /* Preview Assets.xcassets in Resources */,
-				7160A0D92705983000261155 /* Assets.xcassets in Resources */,
+				71D1B6722706E82F008D7F93 /* Preview Assets.xcassets in Resources */,
+				71D1B66F2706E82F008D7F93 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7160A0CD2705982F00261155 /* Sources */ = {
+		71D1B6632706E82E008D7F93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7160A0D72705982F00261155 /* ContentView.swift in Sources */,
-				71B257882705D6770086C8FE /* MainView.swift in Sources */,
-				71B257842705D48A0086C8FE /* DistanceConverterView.swift in Sources */,
-				7160A0E727059DB700261155 /* TempConverterView.swift in Sources */,
-				71B257862705D6280086C8FE /* WeightConverterView.swift in Sources */,
-				7160A0E42705984600261155 /* NavBarView.swift in Sources */,
-				7160A0D52705982F00261155 /* Nice_ConverterApp.swift in Sources */,
+				71D1B66D2706E82E008D7F93 /* ContentView.swift in Sources */,
+				71D1B66B2706E82E008D7F93 /* Project_2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		7160A0DD2705983000261155 /* Debug */ = {
+		71D1B6732706E82F008D7F93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		7160A0DE2705983000261155 /* Release */ = {
+		71D1B6742706E82F008D7F93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,14 +261,14 @@
 			};
 			name = Release;
 		};
-		7160A0E02705983000261155 /* Debug */ = {
+		71D1B6762706E82F008D7F93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Nice Converter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Project 2/Preview Content\"";
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -319,7 +283,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.naolin.Nice-Converter";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.naolin.Project-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,14 +291,14 @@
 			};
 			name = Debug;
 		};
-		7160A0E12705983000261155 /* Release */ = {
+		71D1B6772706E82F008D7F93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Nice Converter/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Project 2/Preview Content\"";
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -349,7 +313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "net.naolin.Nice-Converter";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.naolin.Project-2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,25 +324,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7160A0CC2705982F00261155 /* Build configuration list for PBXProject "Nice Converter" */ = {
+		71D1B6622706E82E008D7F93 /* Build configuration list for PBXProject "Project 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7160A0DD2705983000261155 /* Debug */,
-				7160A0DE2705983000261155 /* Release */,
+				71D1B6732706E82F008D7F93 /* Debug */,
+				71D1B6742706E82F008D7F93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7160A0DF2705983000261155 /* Build configuration list for PBXNativeTarget "Nice Converter" */ = {
+		71D1B6752706E82F008D7F93 /* Build configuration list for PBXNativeTarget "Project 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7160A0E02705983000261155 /* Debug */,
-				7160A0E12705983000261155 /* Release */,
+				71D1B6762706E82F008D7F93 /* Debug */,
+				71D1B6772706E82F008D7F93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7160A0C92705982F00261155 /* Project object */;
+	rootObject = 71D1B65F2706E82E008D7F93 /* Project object */;
 }

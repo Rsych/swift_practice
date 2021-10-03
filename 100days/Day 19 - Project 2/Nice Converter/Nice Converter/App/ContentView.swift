@@ -12,21 +12,22 @@ struct ContentView: View {
     
     // MARK: - Body
     var body: some View {
-        ZStack(alignment: .center) {
-            VStack(alignment: .center, spacing: nil) {
-                NavBarView() //: Navigation bar
-                    .padding(.horizontal, 15)
-                    .padding(.bottom)
-                    .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
-//                Spacer()
-                TempConverterView()
-                
-                Text("Footer")
-                    .padding()
-            } //: Vstack
-//            Text("Body")
-        } //: Zstack
-        .ignoresSafeArea(.all, edges: .top)
+            ZStack(alignment: .center) {
+                VStack(alignment: .center, spacing: nil) {
+//                    NavBarView() //: Navigation bar
+//                        .padding(.horizontal, 15)
+//                        .padding(.bottom)
+//                        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                    //                Spacer()
+                    TempConverterView()
+                    
+//                    Text("Footer")
+//                        .padding()
+                } //: Vstack
+                //            Text("Body")
+            } //: Zstack
+            .ignoresSafeArea(.all, edges: .top)
+        
     } //: Body
 }
 
@@ -36,5 +37,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewDevice("iPhone 13")
+            
     }
 }
