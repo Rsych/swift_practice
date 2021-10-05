@@ -38,7 +38,7 @@ struct ModifierView: View {
         Button {
             self.colorToggle.toggle()
         } label: {
-            Text("Hello, World")
+            Text("Hello, World2")
         }
         .foregroundColor(colorToggle ? .red : .black)
         .titleStyle()
