@@ -17,6 +17,9 @@ struct ContentView: View {
     @State private var playerSelect = 0
     @State private var numGames = 0
     
+    @State private var showingScore = false
+    @State private var answerCorrect = ""
+    
     func outCome(player: Int) {
         if shouldWin {
             switch (player){
@@ -28,6 +31,7 @@ struct ContentView: View {
                 appChoice = 1
             } // first switch player win
             score += 1
+            answerCorrect = "You Win"
             
             
         } else {
@@ -40,15 +44,20 @@ struct ContentView: View {
                 appChoice = 0
             } // second switch player lose
             score -= 1
+            answerCorrect = "You Lost"
             
         }
         playerSelect = player
         shouldWin = Bool.random()
         numGames += 1
+        showingScore = true
         if numGames == 10 {
-            
+            score = 0
+            numGames = 0
         }
-    }
+        }
+    
+    
     
     //    func outCome(player: String, app: String) -> String{
     //        switch (player, app) {
@@ -100,10 +109,13 @@ struct ContentView: View {
             Text("""
                  You chose \(hands[playerSelect])
                  App chose \(hands[appChoice])
+                 You've played \(numGames)
                  """)
-            Text(shouldWin ? "Win": "lost")
+//            Text(shouldWin ? "Win": "lost")
             Text("Score is \(score)")
         } //: Vstack
+        .alert(isPresented: $showingScore) {
+            Alert(title: Text(answerCorrect), message: Text("Your score is \(score)"))
     }
 }
 
@@ -113,4 +125,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .previewDevice("iPhone 13")
     }
+}
 }
