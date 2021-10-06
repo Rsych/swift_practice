@@ -11,6 +11,7 @@
 		712C31B1270DC0ED00CAFD14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C31B0270DC0ED00CAFD14 /* ContentView.swift */; };
 		712C31B3270DC0EF00CAFD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C31B2270DC0EF00CAFD14 /* Assets.xcassets */; };
 		712C31B6270DC0EF00CAFD14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712C31B5270DC0EF00CAFD14 /* Preview Assets.xcassets */; };
+		712C31BD270DC10100CAFD14 /* ImplicitAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C31BC270DC10100CAFD14 /* ImplicitAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		712C31B0270DC0ED00CAFD14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		712C31B2270DC0EF00CAFD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		712C31B5270DC0EF00CAFD14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		712C31BC270DC10100CAFD14 /* ImplicitAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplicitAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				712C31AE270DC0ED00CAFD14 /* AnimationsApp.swift */,
 				712C31B0270DC0ED00CAFD14 /* ContentView.swift */,
+				712C31BC270DC10100CAFD14 /* ImplicitAnimations.swift */,
 				712C31B2270DC0EF00CAFD14 /* Assets.xcassets */,
 				712C31B4270DC0EF00CAFD14 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712C31BD270DC10100CAFD14 /* ImplicitAnimations.swift in Sources */,
 				712C31B1270DC0ED00CAFD14 /* ContentView.swift in Sources */,
 				712C31AF270DC0ED00CAFD14 /* AnimationsApp.swift in Sources */,
 			);

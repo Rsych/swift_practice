@@ -16,5 +16,6 @@ struct ImplicitAnimations: View {
 struct ImplicitAnimations_Previews: PreviewProvider {
     static var previews: some View {
         ImplicitAnimations()
+            .previewDevice("iPhone 13")
     }
 }
