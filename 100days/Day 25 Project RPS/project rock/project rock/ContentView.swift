@@ -33,7 +33,6 @@ struct ContentView: View {
             score += 1
             answerCorrect = "You Win"
             
-            
         } else {
             switch (player){
             case 0:
@@ -51,31 +50,13 @@ struct ContentView: View {
         shouldWin = Bool.random()
         numGames += 1
         showingScore = true
-        if numGames == 10 {
-            score = 0
+        if numGames == 5 {
             numGames = 0
+            answerCorrect = "Game over \nYour score is \(score)"
+            score = 0
         }
         }
     
-    
-    
-    //    func outCome(player: String, app: String) -> String{
-    //        switch (player, app) {
-    //        case ("Rock", "Rock"): return "You tied"
-    //        case ("Rock", "Paper"): return "You lost"
-    //        case ("Rock", "Scissor"): return "You won"
-    //
-    //        case ("Paper", "Rock"): return "You won"
-    //        case ("Paper", "Paper"): return "You ties"
-    //        case ("Paper", "Scissor"): return "You lost"
-    //
-    //        case ("Scissor", "Rock"): return "You lost"
-    //        case ("Scissor", "Paper"): return "You win"
-    //        case ("Scissor", "Scissor"): return "You tied"
-    //
-    //        default: return "Error"
-    //        } //: Switch
-    //    } //: func
     
     // MARK: - Body
     var body: some View {
@@ -112,10 +93,10 @@ struct ContentView: View {
                  You've played \(numGames)
                  """)
 //            Text(shouldWin ? "Win": "lost")
-            Text("Score is \(score)")
+//            Text("Score is \(score)")
         } //: Vstack
         .alert(isPresented: $showingScore) {
-            Alert(title: Text(answerCorrect), message: Text("Your score is \(score)"))
+            Alert(title: Text(answerCorrect))
     }
 }
 
