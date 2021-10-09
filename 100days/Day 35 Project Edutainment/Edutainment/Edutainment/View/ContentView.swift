@@ -61,6 +61,7 @@ struct ContentView: View {
                         Button {
                             answerIsFocused = false
                             gamePlay(player: Int(userAnswer) ?? 5, numGame: numGames)
+                            userAnswer = ""
                         } label: {
                             Text("Submit")
                         }
