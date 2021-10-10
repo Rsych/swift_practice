@@ -7,21 +7,11 @@
 
 import SwiftUI
 
-struct ExpenseItem: Identifiable {
-    let id = UUID()
-    let name: String
-    let type: String
-    let amount: Int
-}
-
-class Expense: ObservableObject {
-    @Published var items = [ExpenseItem]()
-}
-
 struct ContentView: View {
     // MARK: - Properties
     
     @ObservedObject var expense = Expense()
+    @State private var showingAddExpense = false
     
     // MARK: - Body
     var body: some View {
@@ -29,26 +19,54 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(expense.items, id: \.id) { item in
-                    Text(item.name)
+                    HStack{
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text(item.name)
+                                .foregroundColor(txtColor(for: Int(item.amount)))
+                            Text(item.type)
+                        }
+                        Spacer()
+                        Text("$\(item.amount)")
+                            .foregroundColor(txtColor(for: Int(item.amount)))
+                            
+                    }
                 } //: Loop
                 .onDelete(perform: removeItem)
             } //: List
             .navigationTitle("iEpxpense")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        let expense = ExpenseItem(name: "Test", type: "Personal", amount: 5)
-                        self.expense.items.append(expense)
+                        self.showingAddExpense = true
                     } label: {
                         Image(systemName: "plus")
                     } //: Button
                     
                 } //: ToolbarItem
             } //: Toolbar
+            .sheet(isPresented: $showingAddExpense) {
+                if #available(iOS 15.0, *) {
+                    AddView(expenses: self.expense)
+                } else {
+                    // Fallback on earlier versions
+                }
+            } //: sheet
+            
         } //: NavigationView
+        
     } //: body
     func removeItem(at offsets: IndexSet) {
         expense.items.remove(atOffsets: offsets)
+    }
+    private func txtColor(for amount: Int) -> Color {
+        switch amount{
+        case 1...10: return .black
+        case 11...100: return .blue
+        default : return .red
+        }
     }
 }
 // MARK: - Preview
