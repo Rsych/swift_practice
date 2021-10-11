@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Properties
+    @State private var selectedTab = 0
+    
+    // MARK: - Body
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
+        TabView(selection: $selectedTab) {
+            ResizingGeometryReader()
+                .tabItem {
+                    Label("Resizing", systemImage: "1.circle")
+                } //: Tab 1
+            
+        } //: TabView
+    } //: Body
+} //: View
 
+// MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

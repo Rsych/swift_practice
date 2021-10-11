@@ -15,7 +15,6 @@ struct ResizingGeometryReader: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: geo.size.width)
-                
         } //: Vstack
         }
     }
