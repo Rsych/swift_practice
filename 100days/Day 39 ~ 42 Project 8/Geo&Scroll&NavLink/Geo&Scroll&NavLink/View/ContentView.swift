@@ -18,7 +18,14 @@ struct ContentView: View {
                 .tabItem {
                     Label("Resizing", systemImage: "1.circle")
                 } //: Tab 1
-            
+            ScrollViewExample()
+                .tabItem {
+                    Label("ScrollView", systemImage: "2.circle")
+                } //: Tab 2
+            WorkingCodableData()
+                .tabItem {
+                    Label("Codable", systemImage: "3.circle")
+                }
         } //: TabView
     } //: Body
 } //: View

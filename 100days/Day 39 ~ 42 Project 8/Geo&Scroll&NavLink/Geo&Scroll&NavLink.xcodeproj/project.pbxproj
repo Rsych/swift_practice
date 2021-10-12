@@ -12,6 +12,8 @@
 		710782072712C0A400F17E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710782062712C0A400F17E02 /* Assets.xcassets */; };
 		7107820A2712C0A400F17E02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710782092712C0A400F17E02 /* Preview Assets.xcassets */; };
 		710782112712C0C600F17E02 /* ResizingGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710782102712C0C600F17E02 /* ResizingGeometryReader.swift */; };
+		710782152715859200F17E02 /* ScrollViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710782142715859200F17E02 /* ScrollViewExample.swift */; };
+		7107821827158E6000F17E02 /* WorkingCodableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7107821727158E6000F17E02 /* WorkingCodableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		710782062712C0A400F17E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		710782092712C0A400F17E02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		710782102712C0C600F17E02 /* ResizingGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizingGeometryReader.swift; sourceTree = "<group>"; };
+		710782142715859200F17E02 /* ScrollViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExample.swift; sourceTree = "<group>"; };
+		7107821727158E6000F17E02 /* WorkingCodableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingCodableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				710782022712C0A300F17E02 /* Geo_Scroll_NavLinkApp.swift */,
-				710782042712C0A400F17E02 /* ContentView.swift */,
-				710782102712C0C600F17E02 /* ResizingGeometryReader.swift */,
+				71078216271585A300F17E02 /* View */,
 				710782062712C0A400F17E02 /* Assets.xcassets */,
 				710782082712C0A400F17E02 /* Preview Content */,
 			);
@@ -68,6 +71,17 @@
 				710782092712C0A400F17E02 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71078216271585A300F17E02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				710782042712C0A400F17E02 /* ContentView.swift */,
+				710782142715859200F17E02 /* ScrollViewExample.swift */,
+				710782102712C0C600F17E02 /* ResizingGeometryReader.swift */,
+				7107821727158E6000F17E02 /* WorkingCodableData.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				710782052712C0A400F17E02 /* ContentView.swift in Sources */,
+				710782152715859200F17E02 /* ScrollViewExample.swift in Sources */,
+				7107821827158E6000F17E02 /* WorkingCodableData.swift in Sources */,
 				710782032712C0A300F17E02 /* Geo_Scroll_NavLinkApp.swift in Sources */,
 				710782112712C0C600F17E02 /* ResizingGeometryReader.swift in Sources */,
 			);
