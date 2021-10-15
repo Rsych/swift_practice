@@ -15,6 +15,9 @@
 		717A5DE0271848E80076C1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717A5DDF271848E80076C1C2 /* Assets.xcassets */; };
 		717A5DE3271848E80076C1C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717A5DE2271848E80076C1C2 /* Preview Assets.xcassets */; };
 		717A5DEC271849490076C1C2 /* CustomPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A5DEB271849490076C1C2 /* CustomPaths.swift */; };
+		719D4C582719A9E90087A7E8 /* CGAffineTransformAndFills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C572719A9E90087A7E8 /* CGAffineTransformAndFills.swift */; };
+		719D4C5A2719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C592719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift */; };
+		719D4C5C2719B02D0087A7E8 /* MetalWithDrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		717A5DDF271848E80076C1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		717A5DE2271848E80076C1C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		717A5DEB271849490076C1C2 /* CustomPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaths.swift; sourceTree = "<group>"; };
+		719D4C572719A9E90087A7E8 /* CGAffineTransformAndFills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformAndFills.swift; sourceTree = "<group>"; };
+		719D4C592719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagepaintToBorderAndFill.swift; sourceTree = "<group>"; };
+		719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalWithDrawingGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				717A5DEB271849490076C1C2 /* CustomPaths.swift */,
 				71688C3227184C3600735F7E /* PathVSShapes.swift */,
 				71688C3427184EC600735F7E /* StrokeBorderWithInsettableShape.swift */,
+				719D4C572719A9E90087A7E8 /* CGAffineTransformAndFills.swift */,
+				719D4C592719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift */,
+				719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,7 +171,10 @@
 				71688C3527184EC700735F7E /* StrokeBorderWithInsettableShape.swift in Sources */,
 				717A5DDE271848E50076C1C2 /* ContentView.swift in Sources */,
 				717A5DDC271848E50076C1C2 /* DrawingApp.swift in Sources */,
+				719D4C5C2719B02D0087A7E8 /* MetalWithDrawingGroup.swift in Sources */,
 				71688C3327184C3600735F7E /* PathVSShapes.swift in Sources */,
+				719D4C582719A9E90087A7E8 /* CGAffineTransformAndFills.swift in Sources */,
+				719D4C5A2719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
