@@ -18,6 +18,7 @@
 		719D4C582719A9E90087A7E8 /* CGAffineTransformAndFills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C572719A9E90087A7E8 /* CGAffineTransformAndFills.swift */; };
 		719D4C5A2719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C592719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift */; };
 		719D4C5C2719B02D0087A7E8 /* MetalWithDrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */; };
+		719D4C5E2719B5920087A7E8 /* SpecialEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719D4C5D2719B5920087A7E8 /* SpecialEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		719D4C572719A9E90087A7E8 /* CGAffineTransformAndFills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGAffineTransformAndFills.swift; sourceTree = "<group>"; };
 		719D4C592719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagepaintToBorderAndFill.swift; sourceTree = "<group>"; };
 		719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalWithDrawingGroup.swift; sourceTree = "<group>"; };
+		719D4C5D2719B5920087A7E8 /* SpecialEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				719D4C572719A9E90087A7E8 /* CGAffineTransformAndFills.swift */,
 				719D4C592719AD2E0087A7E8 /* ImagepaintToBorderAndFill.swift */,
 				719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */,
+				719D4C5D2719B5920087A7E8 /* SpecialEffects.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				71688C3727184F4E00735F7E /* ShapeModel.swift in Sources */,
 				71688C3527184EC700735F7E /* StrokeBorderWithInsettableShape.swift in Sources */,
 				717A5DDE271848E50076C1C2 /* ContentView.swift in Sources */,
+				719D4C5E2719B5920087A7E8 /* SpecialEffects.swift in Sources */,
 				717A5DDC271848E50076C1C2 /* DrawingApp.swift in Sources */,
 				719D4C5C2719B02D0087A7E8 /* MetalWithDrawingGroup.swift in Sources */,
 				71688C3327184C3600735F7E /* PathVSShapes.swift in Sources */,
