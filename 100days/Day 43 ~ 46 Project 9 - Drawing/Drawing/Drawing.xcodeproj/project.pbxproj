@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		714EEE43271C5923002AEDE1 /* SpecialEffectSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714EEE42271C5923002AEDE1 /* SpecialEffectSlider.swift */; };
+		714EEE45271C5B49002AEDE1 /* AnimatingWithAnimatableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714EEE44271C5B49002AEDE1 /* AnimatingWithAnimatableData.swift */; };
 		71688C3327184C3600735F7E /* PathVSShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71688C3227184C3600735F7E /* PathVSShapes.swift */; };
 		71688C3527184EC700735F7E /* StrokeBorderWithInsettableShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71688C3427184EC600735F7E /* StrokeBorderWithInsettableShape.swift */; };
 		71688C3727184F4E00735F7E /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71688C3627184F4E00735F7E /* ShapeModel.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		714EEE42271C5923002AEDE1 /* SpecialEffectSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialEffectSlider.swift; sourceTree = "<group>"; };
+		714EEE44271C5B49002AEDE1 /* AnimatingWithAnimatableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingWithAnimatableData.swift; sourceTree = "<group>"; };
 		71688C3227184C3600735F7E /* PathVSShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathVSShapes.swift; sourceTree = "<group>"; };
 		71688C3427184EC600735F7E /* StrokeBorderWithInsettableShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeBorderWithInsettableShape.swift; sourceTree = "<group>"; };
 		71688C3627184F4E00735F7E /* ShapeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeModel.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				719D4C5B2719B02D0087A7E8 /* MetalWithDrawingGroup.swift */,
 				719D4C5D2719B5920087A7E8 /* SpecialEffects.swift */,
 				714EEE42271C5923002AEDE1 /* SpecialEffectSlider.swift */,
+				714EEE44271C5B49002AEDE1 /* AnimatingWithAnimatableData.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				714EEE45271C5B49002AEDE1 /* AnimatingWithAnimatableData.swift in Sources */,
 				717A5DEC271849490076C1C2 /* CustomPaths.swift in Sources */,
 				71688C3727184F4E00735F7E /* ShapeModel.swift in Sources */,
 				71688C3527184EC700735F7E /* StrokeBorderWithInsettableShape.swift in Sources */,
