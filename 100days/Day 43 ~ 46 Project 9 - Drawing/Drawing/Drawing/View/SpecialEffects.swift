@@ -5,11 +5,14 @@
 //  Created by Ryan J.W. Kim on 2021/10/15.
 //
 
+//Special effects in SwiftUI: Blurs, Blending, and more
 import SwiftUI
 
 struct SpecialEffects: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image("Sample")
+        }
     }
 }
 
