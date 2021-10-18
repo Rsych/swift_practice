@@ -1,25 +1,24 @@
-//st
-//  ExpenseItemModel.swift
-//  iExpense
 //
-//  Created by Ryan J. W. Kim on 2021/10/10.
+//  HabitItemModel.swift
+//  HabitRoyale
+//
+//  Created by Ryan J. W. Kim on 2021/10/18.
 //
 
 import Foundation
 
-struct ExpenseItem: Identifiable, Codable {
+struct HabitItem: Identifiable, Codable {
     let id = UUID()
     let name: String
     let type: String
-    let amount: Int
+    let progress: Int
+    let finished: Bool
 }
-
-
-class Expense: ObservableObject {
-    @Published var items = [ExpenseItem]() {
+class Habit: ObservableObject {
+    @Published var items = [HabitItem]() {
         didSet {
             let encoder = JSONEncoder()
-            	
+            
             if let encoded = try?
                 encoder.encode(items) {
                 UserDefaults.standard.set(encoded, forKey: "Item")
@@ -32,7 +31,7 @@ class Expense: ObservableObject {
             let decoder = JSONDecoder()
             
             if let decoded = try?
-                decoder.decode([ExpenseItem].self, from: items) {
+                decoder.decode([HabitItem].self, from: items) {
                 self.items = decoded
                 return
             }
