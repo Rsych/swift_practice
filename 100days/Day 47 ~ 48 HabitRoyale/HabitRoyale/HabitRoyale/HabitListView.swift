@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HabitListView: View {
     // MARK: - Properties
-    
+    @ObservedObject var habit = Habit()
     
     // MARK: - Body
     var body: some View {
