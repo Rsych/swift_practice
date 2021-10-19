@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71A69255271EFF3C001F608C /* ValidatingDisablingForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A69254271EFF3C001F608C /* ValidatingDisablingForm.swift */; };
 		71A9AED6271EF489000B4314 /* WorkingWithData1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9AED5271EF489000B4314 /* WorkingWithData1App.swift */; };
 		71A9AED8271EF489000B4314 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A9AED7271EF489000B4314 /* ContentView.swift */; };
 		71A9AEDA271EF48D000B4314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71A9AED9271EF48D000B4314 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71A69254271EFF3C001F608C /* ValidatingDisablingForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatingDisablingForm.swift; sourceTree = "<group>"; };
 		71A9AED2271EF489000B4314 /* WorkingWithData1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkingWithData1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A9AED5271EF489000B4314 /* WorkingWithData1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingWithData1App.swift; sourceTree = "<group>"; };
 		71A9AED7271EF489000B4314 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				71A9AED7271EF489000B4314 /* ContentView.swift */,
 				71A9AEE3271EF4E8000B4314 /* CodableConformancePublished.swift */,
 				71A9AEE7271EF6EB000B4314 /* CodableDataURLSession.swift */,
+				71A69254271EFF3C001F608C /* ValidatingDisablingForm.swift */,
 				71A9AED9271EF48D000B4314 /* Assets.xcassets */,
 				71A9AEDB271EF48D000B4314 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71A9AED8271EF489000B4314 /* ContentView.swift in Sources */,
+				71A69255271EFF3C001F608C /* ValidatingDisablingForm.swift in Sources */,
 				71A9AEE8271EF6EB000B4314 /* CodableDataURLSession.swift in Sources */,
 				71A9AED6271EF489000B4314 /* WorkingWithData1App.swift in Sources */,
 				71A9AEE4271EF4E8000B4314 /* CodableConformancePublished.swift in Sources */,
