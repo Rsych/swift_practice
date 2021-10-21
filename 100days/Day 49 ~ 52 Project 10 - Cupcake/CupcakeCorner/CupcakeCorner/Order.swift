@@ -29,12 +29,20 @@ class Order: ObservableObject, Codable {
     @Published var addSprinkles = false
     
     @Published var name = ""
-    @Published var streeAddress = ""
+    @Published var streetAddress = ""
     @Published var city = ""
     @Published var zip = ""
     
     var hasValidAddress: Bool {
-        if name.isEmpty || streeAddress.isEmpty || city.isEmpty || zip.isEmpty {
+        // challenge 1
+        // validation to make sure a string of pure whitespace is invalid.
+        
+        let name = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        let streetAddress = streetAddress.trimmingCharacters(in: .whitespacesAndNewlines)
+        let city = city.trimmingCharacters(in: .whitespacesAndNewlines)
+        let zip = zip.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
             return false
         }
         return true
@@ -66,7 +74,7 @@ class Order: ObservableObject, Codable {
         addSprinkles = try container.decode(Bool.self, forKey: .addSprinkles)
         
         name = try container.decode(String.self, forKey: .name)
-        streeAddress = try container.decode(String.self, forKey: .streedAddress)
+        streetAddress = try container.decode(String.self, forKey: .streedAddress)
         city = try container.decode(String.self, forKey: .city)
         zip = try container.decode(String.self, forKey: .zip)
     }
@@ -81,7 +89,7 @@ class Order: ObservableObject, Codable {
         try container.encode(addSprinkles, forKey: .addSprinkles)
         
         try container.encode(name, forKey: .name)
-        try container.encode(streeAddress, forKey: .streedAddress)
+        try container.encode(streetAddress, forKey: .streedAddress)
         try container.encode(city, forKey: .city)
         try container.encode(zip, forKey: .zip)
     }

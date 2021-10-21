@@ -10,13 +10,17 @@ import SwiftUI
 struct AddressView: View {
     // MARK: - Properties
     @ObservedObject var order: Order
+    @State private var fieldError = ""
+    @State private var showFieldError = false
+    @State private var checkOut = false
+//    @Environment(\.presentationMode) var presentationMode
     
     // MARK: - Body
     var body: some View {
         Form {
             Section {
                 TextField("Name", text: $order.name)
-                TextField("Stree Address", text: $order.streeAddress)
+                TextField("Stree Address", text: $order.streetAddress)
                 TextField("City", text: $order.city)
                 TextField("Zip", text: $order.zip)
             }//: section
@@ -27,10 +31,15 @@ struct AddressView: View {
                 } //: NavigationLink
             }//: section 2
             .disabled(order.hasValidAddress == false)
+            
         }//: Form
+        
         .navigationTitle("Delivery details")
         .navigationBarTitleDisplayMode(.inline)
-    }
+        .alert(isPresented: $showFieldError) {
+            Alert(title: Text("Missing field"), message: Text(fieldError), dismissButton: .default(Text("Dismiss")))
+        }//: Alert
+    } //: Body
     
 }
 
