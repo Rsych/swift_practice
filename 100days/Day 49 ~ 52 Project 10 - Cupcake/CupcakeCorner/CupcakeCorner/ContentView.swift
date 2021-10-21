@@ -42,7 +42,7 @@ struct ContentView: View {
                     NavigationLink(destination: AddressView(order: order)) {
                         Text("Delivery details")
                     }
-                }
+                } //: Delivery Section
             }//: Form
             .navigationTitle("Cupcake corner")
         }//: NavigationView
@@ -53,6 +53,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewDevice("iPhone 11")
+            .previewDevice("iPhone 13")
     }
 }

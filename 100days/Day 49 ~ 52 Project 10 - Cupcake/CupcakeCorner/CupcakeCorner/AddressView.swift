@@ -13,8 +13,25 @@ struct AddressView: View {
     
     // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            Section {
+                TextField("Name", text: $order.name)
+                TextField("Stree Address", text: $order.streeAddress)
+                TextField("City", text: $order.city)
+                TextField("Zip", text: $order.zip)
+            }//: section
+            
+            Section {
+                NavigationLink(destination: CheckoutView(order: order)) {
+                    Text("Check out")
+                } //: NavigationLink
+            }//: section 2
+            .disabled(order.hasValidAddress == false)
+        }//: Form
+        .navigationTitle("Delivery details")
+        .navigationBarTitleDisplayMode(.inline)
     }
+    
 }
 
 // MARK: - Preview
