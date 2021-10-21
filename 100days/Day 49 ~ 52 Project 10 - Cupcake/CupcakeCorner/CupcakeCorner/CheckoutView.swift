@@ -10,9 +10,12 @@ import SwiftUI
 struct CheckoutView: View {
     // MARK: - Properties
     @ObservedObject var order: Order
+    
     @State private var confirmationMessage = ""
     @State private var showingConfirmMessage = false
     
+    @State private var connectionErrorMessage = ""
+    @State private var connectionError = false
     // MARK: - Body
     var body: some View {
         GeometryReader { geo in
@@ -37,6 +40,12 @@ struct CheckoutView: View {
         .navigationBarTitleDisplayMode(.inline)
         .alert(isPresented: $showingConfirmMessage) {
             Alert(title: Text("Thank you!"), message: Text(confirmationMessage), dismissButton: .default(Text("OK")))
+        } //: Confirm alert
+        .alert(isPresented: $connectionError) {
+            Alert(title: Text("Order failed"), message: Text(connectionErrorMessage), primaryButton: .destructive(Text("Retry"), action: {
+                self.placeOrder()
+            }), secondaryButton: .cancel()
+                  )
         }
     }
     func placeOrder() {
@@ -63,6 +72,8 @@ struct CheckoutView: View {
                 self.showingConfirmMessage = true
             } else {
                 print("Invalid response from server")
+                self.connectionErrorMessage = "Order could not be made. \nCheck your connection."
+                self.connectionError = true
             }
         }.resume()
     }
