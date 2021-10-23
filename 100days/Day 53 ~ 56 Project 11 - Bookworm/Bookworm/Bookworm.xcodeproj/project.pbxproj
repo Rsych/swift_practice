@@ -14,6 +14,7 @@
 		719F78F227241DAB00E3D8A5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 719F78F027241DAB00E3D8A5 /* Model.xcdatamodeld */; };
 		719F78F427241E3900E3D8A5 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F78F327241E3900E3D8A5 /* AddBookView.swift */; };
 		719F78F62724236C00E3D8A5 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F78F52724236C00E3D8A5 /* PersistenceController.swift */; };
+		719F78F82724292400E3D8A5 /* RatingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F78F72724292400E3D8A5 /* RatingVIew.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		719F78F127241DAB00E3D8A5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		719F78F327241E3900E3D8A5 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		719F78F52724236C00E3D8A5 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		719F78F72724292400E3D8A5 /* RatingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVIew.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				719F78E427241D9900E3D8A5 /* ContentView.swift */,
 				719F78F027241DAB00E3D8A5 /* Model.xcdatamodeld */,
 				719F78F327241E3900E3D8A5 /* AddBookView.swift */,
+				719F78F72724292400E3D8A5 /* RatingVIew.swift */,
 				719F78E627241D9900E3D8A5 /* Assets.xcassets */,
 				719F78E827241D9900E3D8A5 /* Preview Content */,
 			);
@@ -151,6 +154,7 @@
 				719F78F227241DAB00E3D8A5 /* Model.xcdatamodeld in Sources */,
 				719F78F427241E3900E3D8A5 /* AddBookView.swift in Sources */,
 				719F78F62724236C00E3D8A5 /* PersistenceController.swift in Sources */,
+				719F78F82724292400E3D8A5 /* RatingVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
