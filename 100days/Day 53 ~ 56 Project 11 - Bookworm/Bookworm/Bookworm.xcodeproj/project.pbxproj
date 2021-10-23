@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71934BFF2724343E00C148F0 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71934BFE2724343E00C148F0 /* EmojiRatingView.swift */; };
 		719F78E327241D9900E3D8A5 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F78E227241D9900E3D8A5 /* BookwormApp.swift */; };
 		719F78E527241D9900E3D8A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719F78E427241D9900E3D8A5 /* ContentView.swift */; };
 		719F78E727241D9900E3D8A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 719F78E627241D9900E3D8A5 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71934BFE2724343E00C148F0 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		719F78DF27241D9900E3D8A5 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		719F78E227241D9900E3D8A5 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		719F78E427241D9900E3D8A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				719F78E227241D9900E3D8A5 /* BookwormApp.swift */,
 				719F78F52724236C00E3D8A5 /* PersistenceController.swift */,
 				719F78E427241D9900E3D8A5 /* ContentView.swift */,
+				71934BFE2724343E00C148F0 /* EmojiRatingView.swift */,
 				719F78F027241DAB00E3D8A5 /* Model.xcdatamodeld */,
 				719F78F327241E3900E3D8A5 /* AddBookView.swift */,
 				719F78F72724292400E3D8A5 /* RatingVIew.swift */,
@@ -151,6 +154,7 @@
 			files = (
 				719F78E527241D9900E3D8A5 /* ContentView.swift in Sources */,
 				719F78E327241D9900E3D8A5 /* BookwormApp.swift in Sources */,
+				71934BFF2724343E00C148F0 /* EmojiRatingView.swift in Sources */,
 				719F78F227241DAB00E3D8A5 /* Model.xcdatamodeld in Sources */,
 				719F78F427241E3900E3D8A5 /* AddBookView.swift in Sources */,
 				719F78F62724236C00E3D8A5 /* PersistenceController.swift in Sources */,
