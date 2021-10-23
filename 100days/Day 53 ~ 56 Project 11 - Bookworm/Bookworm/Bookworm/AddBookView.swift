@@ -36,14 +36,7 @@ struct AddBookView: View {
                     } //: Picker
                 }//: Section
                 Section {
-                    Text("Rating")
-                    Picker("Rating", selection: $rating) {
-                        ForEach(0..<6) {
-                            Text("\($0)")
-                        }//: Loop
-                    }//: Picker
-                    .pickerStyle(.segmented)
-                    
+                    RatingVIew(rating: $rating)
                     TextField("Write a review", text: $review)
                 }//: Section
                 Section {
