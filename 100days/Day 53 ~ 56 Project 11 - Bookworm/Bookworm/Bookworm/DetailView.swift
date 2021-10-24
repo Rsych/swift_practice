@@ -9,6 +9,10 @@ import SwiftUI
 
 struct DetailView: View {
     // MARK: - Properties
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingDeleteAlert = false
+    
     let book: Book
     
     // MARK: - Body
@@ -18,7 +22,6 @@ struct DetailView: View {
                 ZStack(alignment: .bottomTrailing) {
                     Image(book.genre ?? "Fantasy")
                         .frame(maxWidth: geometry.size.width)
-                    
                     Text(book.genre?.uppercased() ?? "FANTASY")
                         .font(.caption)
                         .fontWeight(.black)
@@ -40,7 +43,28 @@ struct DetailView: View {
         } //: GeometryReader
         .navigationTitle(Text(book.title ?? "Unknown Book"))
         .navigationBarTitleDisplayMode(.inline)
+        .alert(isPresented: $showingDeleteAlert) {
+            Alert(title: Text("Delete book"), message: Text("Are you sure?"), primaryButton: .destructive(Text("Delete"), action: {
+                self.deleteBook()
+            }), secondaryButton: .cancel())
+        }//: Alert for delete book
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    self.showingDeleteAlert = true
+                } label: {
+                    Image(systemName: "trash")
+                }//: Trash button
+            }//: Delete toolbar
+        }
     }//: Body
+    func deleteBook() {
+        moc.delete(book)
+        
+        try? self.moc.save()
+        
+        presentationMode.wrappedValue.dismiss()
+    }//: Deletebook func
 }//: contentview
 
 // MARK: - Preview

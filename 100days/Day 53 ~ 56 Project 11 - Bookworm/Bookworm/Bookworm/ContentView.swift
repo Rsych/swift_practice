@@ -48,7 +48,7 @@ struct ContentView: View {
                 } //: NavBarTrailing
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
-                } //: Edit(Delete)
+                } //: NavLeading Edit(Delete) Button
             }//: Toolbar
             .sheet(isPresented: $showingAddScreen) {
                 AddBookView().environment(\.managedObjectContext, self.moc)
