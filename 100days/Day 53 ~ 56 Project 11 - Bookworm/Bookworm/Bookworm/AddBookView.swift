@@ -15,10 +15,11 @@ struct AddBookView: View {
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
-    @State private var genre = ""
+    @State private var genre = "Others"
     @State private var review = ""
+    @State private var date = Date()
     
-    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
+    let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller", "Others"]
     
     
     // MARK: - Body
@@ -28,6 +29,7 @@ struct AddBookView: View {
                 Section {
                     TextField("Name of Book", text: $title)
                     TextField("Author's name", text: $author)
+                        
                     
                     Picker("Genre", selection: $genre) {
                         ForEach(genres, id: \.self) {
@@ -47,6 +49,7 @@ struct AddBookView: View {
                         newBook.rating = Int16(self.rating)
                         newBook.genre = self.genre
                         newBook.review = self.review
+                        newBook.date = self.date
                         
                         try? self.moc.save()
                         
