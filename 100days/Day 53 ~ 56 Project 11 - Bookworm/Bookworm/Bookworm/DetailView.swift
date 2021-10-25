@@ -38,6 +38,13 @@ struct DetailView: View {
                     .padding()
                 RatingVIew(rating: .constant(Int(book.rating)))
                     .font(.largeTitle)
+                    .padding()
+                Text("Date Added")
+                    .font(.headline)
+                HStack {
+                    Text(book.date ?? Date(), style: .date)
+                    Text(book.date ?? Date(), style: .time)
+                }//: Date added
                 Spacer()
             }//: VStack
         } //: GeometryReader
