@@ -11,6 +11,7 @@
 		710E59D82726C74300CF4880 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710E59D72726C74300CF4880 /* ContentView.swift */; };
 		710E59DA2726C74400CF4880 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710E59D92726C74400CF4880 /* Assets.xcassets */; };
 		710E59DD2726C74400CF4880 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710E59DC2726C74400CF4880 /* Preview Assets.xcassets */; };
+		71AC157E2727FEC800894EF8 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC157D2727FEC800894EF8 /* MemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		710E59D72726C74300CF4880 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		710E59D92726C74400CF4880 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		710E59DC2726C74400CF4880 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71AC157D2727FEC800894EF8 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				710E59D52726C74300CF4880 /* memorizeApp.swift */,
 				710E59D72726C74300CF4880 /* ContentView.swift */,
+				71AC157D2727FEC800894EF8 /* MemoryGame.swift */,
 				710E59D92726C74400CF4880 /* Assets.xcassets */,
 				710E59DB2726C74400CF4880 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71AC157E2727FEC800894EF8 /* MemoryGame.swift in Sources */,
 				710E59D82726C74300CF4880 /* ContentView.swift in Sources */,
 				710E59D62726C74300CF4880 /* memorizeApp.swift in Sources */,
 			);
