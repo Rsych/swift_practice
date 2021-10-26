@@ -12,6 +12,11 @@
 		7164D81E2728211C00FFBD35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7164D81D2728211C00FFBD35 /* Assets.xcassets */; };
 		7164D8212728211C00FFBD35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7164D8202728211C00FFBD35 /* Preview Assets.xcassets */; };
 		7164D8282728262000FFBD35 /* ForEachSelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164D8272728262000FFBD35 /* ForEachSelf.swift */; };
+		7164D82B272828CA00FFBD35 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7164D829272828CA00FFBD35 /* Model.xcdatamodeld */; };
+		7164D83627282A1000FFBD35 /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164D83427282A1000FFBD35 /* Movie+CoreDataClass.swift */; };
+		7164D83727282A1000FFBD35 /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164D83527282A1000FFBD35 /* Movie+CoreDataProperties.swift */; };
+		7164D83927282AF900FFBD35 /* NSManagedOBJContextConditionalSaving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164D83827282AF900FFBD35 /* NSManagedOBJContextConditionalSaving.swift */; };
+		7164D83B27282C5600FFBD35 /* CoreDataUniqueConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7164D83A27282C5600FFBD35 /* CoreDataUniqueConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		7164D81D2728211C00FFBD35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7164D8202728211C00FFBD35 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7164D8272728262000FFBD35 /* ForEachSelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForEachSelf.swift; sourceTree = "<group>"; };
+		7164D82A272828CA00FFBD35 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		7164D83427282A1000FFBD35 /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7164D83527282A1000FFBD35 /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7164D83827282AF900FFBD35 /* NSManagedOBJContextConditionalSaving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSManagedOBJContextConditionalSaving.swift; sourceTree = "<group>"; };
+		7164D83A27282C5600FFBD35 /* CoreDataUniqueConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUniqueConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +63,14 @@
 		7164D8182728211900FFBD35 /* CoreDataProj */ = {
 			isa = PBXGroup;
 			children = (
+				7164D83427282A1000FFBD35 /* Movie+CoreDataClass.swift */,
+				7164D83527282A1000FFBD35 /* Movie+CoreDataProperties.swift */,
 				7164D8192728211900FFBD35 /* CoreDataProjApp.swift */,
 				7164D81B2728211900FFBD35 /* ContentView.swift */,
 				7164D8272728262000FFBD35 /* ForEachSelf.swift */,
+				7164D83827282AF900FFBD35 /* NSManagedOBJContextConditionalSaving.swift */,
+				7164D83A27282C5600FFBD35 /* CoreDataUniqueConstraints.swift */,
+				7164D829272828CA00FFBD35 /* Model.xcdatamodeld */,
 				7164D81D2728211C00FFBD35 /* Assets.xcassets */,
 				7164D81F2728211C00FFBD35 /* Preview Content */,
 			);
@@ -143,6 +158,11 @@
 				7164D8282728262000FFBD35 /* ForEachSelf.swift in Sources */,
 				7164D81C2728211900FFBD35 /* ContentView.swift in Sources */,
 				7164D81A2728211900FFBD35 /* CoreDataProjApp.swift in Sources */,
+				7164D83627282A1000FFBD35 /* Movie+CoreDataClass.swift in Sources */,
+				7164D83B27282C5600FFBD35 /* CoreDataUniqueConstraints.swift in Sources */,
+				7164D83927282AF900FFBD35 /* NSManagedOBJContextConditionalSaving.swift in Sources */,
+				7164D83727282A1000FFBD35 /* Movie+CoreDataProperties.swift in Sources */,
+				7164D82B272828CA00FFBD35 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +365,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7164D829272828CA00FFBD35 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7164D82A272828CA00FFBD35 /* Model.xcdatamodel */,
+			);
+			currentVersion = 7164D82A272828CA00FFBD35 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7164D80E2728211900FFBD35 /* Project object */;
 }
