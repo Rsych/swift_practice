@@ -88,6 +88,8 @@ struct DetailView: View {
             } //: NAV Link
             
         } //: Form
+        .navigationTitle("Detail of \(user.name)")
+        
     } //: Body
         
 }

@@ -28,6 +28,7 @@ struct FriendListView: View {
             } //: List
             .listStyle(.plain)
         } //: VStack
+        .navigationTitle("Friends of \(user.name)")
     }
     
     // TODO: Fix this damn Thing
