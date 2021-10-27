@@ -10,7 +10,8 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct DetailView: View {
     // MARK: - Properties
-    let user: User
+    @ObservedObject var users = FetchData()
+
     //    let users: [User]
     
     // MARK: - Body
@@ -80,7 +81,7 @@ struct DetailView: View {
             
             
             NavigationLink {
-                FriendListView(friends: user.friends)
+                FriendListView(friends: users.friends)
             } label: {
                 Text("See Friends")
             } //: NAV Link

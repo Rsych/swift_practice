@@ -9,12 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    @StateObject var fetchData = FetchData()
+//    @StateObject var fetchData = FetchData()
+    @ObservedObject var users = FetchData()
     // MARK: - Body
     var body: some View {
     
           
-            UserListView(users: fetchData.users)
+        UserListView(users: users)
+        
       
     } //: body
     

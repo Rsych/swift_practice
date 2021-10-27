@@ -10,12 +10,14 @@ import SwiftUI
 @available(iOS 15.0, *)
 struct FriendListView: View {
     // MARK: - Properties
-    let friends : [Friend]
+    
+    @ObservedObject var friends = FetchData()
+
     
     // MARK: - Body
     var body: some View {
         VStack{
-            List(friends, id: \.self) { friend in
+            List(friends.friends, id: \.self) { friend in
                 NavigationLink {
                     findFriendName(from: friend, in: [User]())
                 } label: {
