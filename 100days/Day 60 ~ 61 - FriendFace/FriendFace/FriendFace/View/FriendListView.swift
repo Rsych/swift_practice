@@ -11,9 +11,9 @@ import SwiftUI
 struct FriendListView: View {
     // MARK: - Properties
     
-    @ObservedObject var friends = FetchData()
+    @ObservedObject var friends = FriendFetch()
 
-    
+//    let friend: Friend
     // MARK: - Body
     var body: some View {
         VStack{
@@ -42,7 +42,9 @@ struct FriendListView: View {
 
 @available(iOS 15.0, *)
 struct FriendListView_Previews: PreviewProvider {
+    static let friends: [Friend] = FriendFetch().friends
     static var previews: some View {
-        FriendListView(friends: [Friend]())
+        
+        FriendListView()
     }
 }

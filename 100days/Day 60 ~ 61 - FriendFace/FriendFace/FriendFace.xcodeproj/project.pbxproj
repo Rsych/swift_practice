@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7135949A2729882500992BB3 /* FriendFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713594992729882500992BB3 /* FriendFetch.swift */; };
 		713C098827290655007B42DD /* FriendFaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C098727290655007B42DD /* FriendFaceApp.swift */; };
 		713C098A27290655007B42DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713C098927290655007B42DD /* ContentView.swift */; };
 		713C098C27290656007B42DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 713C098B27290656007B42DD /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		713594992729882500992BB3 /* FriendFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFetch.swift; sourceTree = "<group>"; };
 		713C098427290655007B42DD /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713C098727290655007B42DD /* FriendFaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceApp.swift; sourceTree = "<group>"; };
 		713C098927290655007B42DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				713C0999272909F4007B42DD /* FetchData.swift */,
+				713594992729882500992BB3 /* FriendFetch.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				71E0C5142729514400753D59 /* BundleDecode.swift in Sources */,
 				71E0C506272925E800753D59 /* Friend.swift in Sources */,
 				713C098A27290655007B42DD /* ContentView.swift in Sources */,
+				7135949A2729882500992BB3 /* FriendFetch.swift in Sources */,
 				71E0C50C272928BF00753D59 /* FriendListView.swift in Sources */,
 				713C098827290655007B42DD /* FriendFaceApp.swift in Sources */,
 			);

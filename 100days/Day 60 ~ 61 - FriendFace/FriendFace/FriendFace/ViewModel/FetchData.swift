@@ -10,7 +10,7 @@ import Foundation
 class FetchData: ObservableObject {
     
     @Published var users = [User]()
-    @Published var friends = [Friend]()
+   
     init() {
         fetchAllUser()
     }

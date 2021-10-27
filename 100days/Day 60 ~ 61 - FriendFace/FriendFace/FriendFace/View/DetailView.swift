@@ -11,8 +11,8 @@ import SwiftUI
 struct DetailView: View {
     // MARK: - Properties
     @ObservedObject var users = FetchData()
-
-    //    let users: [User]
+    @ObservedObject var friends = FriendFetch()
+        let user: User
     
     // MARK: - Body
     var body: some View {
@@ -81,7 +81,7 @@ struct DetailView: View {
             
             
             NavigationLink {
-                FriendListView(friends: users.friends)
+                FriendListView(friends: FriendFetch())
             } label: {
                 Text("See Friends")
             } //: NAV Link

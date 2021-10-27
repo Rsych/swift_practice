@@ -28,6 +28,7 @@ import Foundation
 struct Friend: Codable, Hashable {
     let id, name: String
   
+    static let example2 = Friend(id: "91b5be3d-9a19-4ac2-b2ce-89cc41884ed0", name: "Hawkins Patel")
 }
 
 
