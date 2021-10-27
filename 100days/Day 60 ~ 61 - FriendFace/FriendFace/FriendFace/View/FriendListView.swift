@@ -21,6 +21,7 @@ struct FriendListView: View {
         VStack{
             List(user.friends, id: \.self) { friend in
                 NavigationLink {
+//                    FriendListView(user: user)
                     findFriendName(from: friend, in: [User]())
                 } label: {
                     Text(friend.name)
