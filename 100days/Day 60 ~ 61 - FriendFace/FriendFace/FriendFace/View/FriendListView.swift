@@ -33,7 +33,7 @@ struct FriendListView: View {
     // TODO: Fix this damn Thing
     func findFriendName(from friend: Friend, in user: [User]) -> some View {
         guard let user = user.first(where: { $0.id == friend.id }) else {
-            return AnyView(Text(friend.name))
+            return AnyView(Text("\(friend.name), \n\(friend.id)"))
 //            return AnyView(DetailView(user: friend.id))
         }
         return AnyView(DetailView(user: user))
