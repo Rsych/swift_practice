@@ -7,27 +7,34 @@
 
 import SwiftUI
 
+@available(iOS 15.0, *)
 struct FriendListView: View {
     // MARK: - Properties
-    let friends : [Friend]
     
+//    @ObservedObject var friends = FriendFetch()
+    @ObservedObject var users = FetchData()
+    @ObservedObject var friends = FriendFetch()
+        let user: User
+//    let friend: Friend
     // MARK: - Body
     var body: some View {
         VStack{
-            List(friends, id: \.self) { friend in
+            List(user.friends, id: \.self) { friend in
                 NavigationLink {
                     findFriendName(from: friend, in: [User]())
                 } label: {
                     Text(friend.name)
                 } //: NAV Link
             } //: List
+            .listStyle(.plain)
         } //: VStack
     }
     
     // TODO: Fix this damn Thing
     func findFriendName(from friend: Friend, in user: [User]) -> some View {
-        guard let user = user.first(where: { $0.name == friend.name }) else {
-            return AnyView(Text("No Match"))
+        guard let user = user.first(where: { $0.id == friend.id }) else {
+            return AnyView(Text("\(friend.name), \n\(friend.id)"))
+//            return AnyView(DetailView(user: friend.id))
         }
         return AnyView(DetailView(user: user))
     }
@@ -36,8 +43,10 @@ struct FriendListView: View {
 
 
 
+@available(iOS 15.0, *)
 struct FriendListView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendListView(friends: [Friend]())
+        
+        FriendListView(users: FetchData(), user: User.example)
     }
 }
