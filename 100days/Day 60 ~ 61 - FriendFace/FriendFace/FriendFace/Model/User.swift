@@ -36,9 +36,9 @@ struct User: Codable, Hashable {
     let name: String
     let age: Int
     let company, email, address, about: String
-    let registered: Date?
-    let tags: [String]?
-    let friends: [Friend]?
+    let registered: Date
+    let tags: [String]
+    let friends: [Friend]
     
     static func example1() -> User {
         return User(id: "50a48fa3-2c0f-4397-ac50-64da464f9954", isActive: false, name: "Alford Rodriguez",

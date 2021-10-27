@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 /*
  "friends": [
  {
@@ -22,11 +23,11 @@ import Foundation
  }
  ]
  */
+
 // MARK: - Friend
-struct Friend: Codable, Identifiable, Hashable {
+struct Friend: Codable, Hashable {
     let id, name: String
-    
-   
+  
 }
 
 

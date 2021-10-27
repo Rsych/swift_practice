@@ -15,7 +15,11 @@ struct UserListView: View {
             List {
                 ForEach(users, id: \.self) { user in
                     NavigationLink {
-                        DetailView(user: user)
+                        if #available(iOS 15.0, *) {
+                            DetailView(user: user)
+                        } else {
+                            // Fallback on earlier versions
+                        }
                     } label: {
                         Text(user.name)
                     }

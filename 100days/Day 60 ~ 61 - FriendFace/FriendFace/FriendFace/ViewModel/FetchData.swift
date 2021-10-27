@@ -21,7 +21,12 @@ class FetchData: ObservableObject {
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in         
             let decoder = JSONDecoder()
+            let formatter = DateFormatter()
+            
+            formatter.dateFormat = "YYYY-MM-dd"
+            
             decoder.dateDecodingStrategy = .iso8601
+            
             if let data = data {
                 
                 

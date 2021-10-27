@@ -70,13 +70,13 @@
 			isa = PBXGroup;
 			children = (
 				713C098727290655007B42DD /* FriendFaceApp.swift */,
+				71E0C51527295C4700753D59 /* Bundle */,
 				71E0C5022729248800753D59 /* Model */,
 				71E0C5032729248C00753D59 /* View */,
 				71E0C5042729256B00753D59 /* ViewModel */,
 				713C098B27290656007B42DD /* Assets.xcassets */,
 				713C09952729066E007B42DD /* friendface.json */,
 				713C098D27290656007B42DD /* Preview Content */,
-				71E0C5132729514400753D59 /* BundleDecode.swift */,
 			);
 			path = FriendFace;
 			sourceTree = "<group>";
@@ -116,6 +116,14 @@
 				713C0999272909F4007B42DD /* FetchData.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		71E0C51527295C4700753D59 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				71E0C5132729514400753D59 /* BundleDecode.swift */,
+			);
+			path = Bundle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
