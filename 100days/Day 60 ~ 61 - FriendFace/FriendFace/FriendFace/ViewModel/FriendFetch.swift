@@ -7,11 +7,12 @@
 
 import Foundation
 
-class FriendFetch: ObservableObject {
-    @Published var friends = [Friend]()
+class FriendFetch: ObservableObject, Identifiable {
+    @Published var friends: [Friend] = []
+    private var friend: Friend?
     
-    init() {
-        
+    init(friend : Friend? = nil) {
+        self.friend = friend
     }
     func friendFetch() {
         let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!

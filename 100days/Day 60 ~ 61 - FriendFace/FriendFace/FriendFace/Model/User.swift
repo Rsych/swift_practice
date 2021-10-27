@@ -30,7 +30,7 @@ import Foundation
  */
 // MARK: - User
 
-struct User: Codable, Hashable, Identifiable {
+struct User: Decodable, Hashable, Identifiable {
     let id: String
     let isActive: Bool
     let name: String

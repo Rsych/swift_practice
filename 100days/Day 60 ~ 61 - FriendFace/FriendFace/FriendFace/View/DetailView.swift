@@ -76,12 +76,13 @@ struct DetailView: View {
                     }
                 }
             } //: Section 1
+//            Text("\(user.friends.description)")
             .font(.headline)
             .foregroundColor(.gray)
             
             
             NavigationLink {
-                FriendListView(friends: FriendFetch())
+                FriendListView(user: user)
             } label: {
                 Text("See Friends")
             } //: NAV Link
