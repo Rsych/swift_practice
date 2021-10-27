@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct DetailView: View {
-// MARK: - Properties
+    // MARK: - Properties
     let user: User
-    let users: [User]
-// MARK: - Body
+    //    let users: [User]
+    // MARK: - Body
     var body: some View {
         VStack{
             Spacer()
-        Text(user.name)
+            Text(user.name)
             Text("\(user.friends!.count) Friends")
             Spacer()
             NavigationLink {
-                FriendListView(friends: user.friends!, users: users)
+                FriendListView(friends: user.friends!)
             } label: {
                 Text("See Friends")
-            }
-Spacer()
-        }
+            } //: NAV Link
+            Spacer()
+        } //: VStack
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(user: User.example, users: [User]())
+        DetailView(user: User.example)
     }
 }

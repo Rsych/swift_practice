@@ -16,9 +16,9 @@ struct ContentView: View {
           
             UserListView(users: fetchData.users)
       
-    }
+    } //: body
     
-}
+} //: ContentView
 
 // MARK: - Preview
 struct ContentView_Previews: PreviewProvider {

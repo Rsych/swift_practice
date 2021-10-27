@@ -15,7 +15,7 @@ struct UserListView: View {
             List {
                 ForEach(users, id: \.self) { user in
                     NavigationLink {
-                        DetailView(user: user, users: [User]())
+                        DetailView(user: user)
                     } label: {
                         Text(user.name)
                     }
@@ -30,6 +30,6 @@ struct UserListView: View {
 struct UserListView_Previews: PreviewProvider {
     static let users: [User] = FetchData().users
     static var previews: some View {
-        UserListView(users: users)
+        UserListView(users: [User]())
     }
 }
