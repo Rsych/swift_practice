@@ -22,8 +22,18 @@ struct CoreDataUniqueConstraints: View {
             let wizzard = Wizard(context: self.moc)
             wizzard.wizName = "Harry potter"
         } label: {
-            Text("Save")
+            Text("Add")
         } //: Button
+            Button {
+                do {
+                    try self.moc.save()
+                } catch {
+                    print(error.localizedDescription)
+                }
+            } label: {
+                Text("Save")
+            }
+
         } //: VStack
     } //: Body
 }
