@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var selectedNum = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $selectedNum) {
+            WrapperBeStruct()
+                .tabItem {
+                    Label("Custom Binding", systemImage: "1.circle")
+                }
+                .tag(0)
+            
+            MultipleActionSheet()
+                .tabItem {
+                    Label("MultipleActionSheet", systemImage: "2.circle")
+                }
+                .tag(1)
+            CoreImageIntegration()
+                .tabItem {
+                    Label("CoreImage", systemImage: "3.circle")
+                }
+                .tag(3)
+        }
+        
     }
 }
 
