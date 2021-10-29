@@ -31,7 +31,7 @@ struct ContentView: View {
             }
         ) //: Custombinding update filterIntensity and call applyProcessing()
         
-        return NavigationView {
+        NavigationView {
             VStack {
                 ZStack {
                     Rectangle()
@@ -56,8 +56,12 @@ struct ContentView: View {
                 
                 HStack {
                     Text("Intensity")
+                    Image(systemName: "minus")
                     Slider(value: intensity)
+                        .tint(.green)
+                    Image(systemName: "plus")
                 } //: Hstack
+                .padding(.horizontal)
                 .padding(.vertical)
                 
                 HStack {
@@ -100,7 +104,7 @@ struct ContentView: View {
             let uiImage = UIImage(cgImage: cgimg)
             image = Image(uiImage: uiImage)
         }
-    }
+    } //: applyprocessing func
 }
 
 // MARK: - Preview
