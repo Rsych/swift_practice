@@ -7,24 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71522258272AADD90051DC90 /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71522257272AADD90051DC90 /* InstafilterApp.swift */; };
-		7152225A272AADD90051DC90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71522259272AADD90051DC90 /* ContentView.swift */; };
-		7152225C272AADDB0051DC90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7152225B272AADDB0051DC90 /* Assets.xcassets */; };
-		7152225F272AADDB0051DC90 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7152225E272AADDB0051DC90 /* Preview Assets.xcassets */; };
-		71522266272AB2580051DC90 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71522265272AB2580051DC90 /* ImagePicker.swift */; };
+		71CC58AB272BD34100C123E9 /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC58AA272BD34100C123E9 /* InstafilterApp.swift */; };
+		71CC58AD272BD34100C123E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC58AC272BD34100C123E9 /* ContentView.swift */; };
+		71CC58AF272BD34200C123E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CC58AE272BD34200C123E9 /* Assets.xcassets */; };
+		71CC58B2272BD34200C123E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CC58B1272BD34200C123E9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71522254272AADD90051DC90 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71522257272AADD90051DC90 /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
-		71522259272AADD90051DC90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		7152225B272AADDB0051DC90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7152225E272AADDB0051DC90 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		71522265272AB2580051DC90 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		71CC58A7272BD34100C123E9 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71CC58AA272BD34100C123E9 /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
+		71CC58AC272BD34100C123E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71CC58AE272BD34200C123E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71CC58B1272BD34200C123E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		71522251272AADD90051DC90 /* Frameworks */ = {
+		71CC58A4272BD34100C123E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,38 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7152224B272AADD90051DC90 = {
+		71CC589E272BD34100C123E9 = {
 			isa = PBXGroup;
 			children = (
-				71522256272AADD90051DC90 /* Instafilter */,
-				71522255272AADD90051DC90 /* Products */,
+				71CC58A9272BD34100C123E9 /* Instafilter */,
+				71CC58A8272BD34100C123E9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		71522255272AADD90051DC90 /* Products */ = {
+		71CC58A8272BD34100C123E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71522254272AADD90051DC90 /* Instafilter.app */,
+				71CC58A7272BD34100C123E9 /* Instafilter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71522256272AADD90051DC90 /* Instafilter */ = {
+		71CC58A9272BD34100C123E9 /* Instafilter */ = {
 			isa = PBXGroup;
 			children = (
-				71522257272AADD90051DC90 /* InstafilterApp.swift */,
-				71522259272AADD90051DC90 /* ContentView.swift */,
-				71522265272AB2580051DC90 /* ImagePicker.swift */,
-				7152225B272AADDB0051DC90 /* Assets.xcassets */,
-				7152225D272AADDB0051DC90 /* Preview Content */,
+				71CC58AA272BD34100C123E9 /* InstafilterApp.swift */,
+				71CC58AC272BD34100C123E9 /* ContentView.swift */,
+				71CC58AE272BD34200C123E9 /* Assets.xcassets */,
+				71CC58B0272BD34200C123E9 /* Preview Content */,
 			);
 			path = Instafilter;
 			sourceTree = "<group>";
 		};
-		7152225D272AADDB0051DC90 /* Preview Content */ = {
+		71CC58B0272BD34200C123E9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				7152225E272AADDB0051DC90 /* Preview Assets.xcassets */,
+				71CC58B1272BD34200C123E9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -73,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71522253272AADD90051DC90 /* Instafilter */ = {
+		71CC58A6272BD34100C123E9 /* Instafilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71522262272AADDB0051DC90 /* Build configuration list for PBXNativeTarget "Instafilter" */;
+			buildConfigurationList = 71CC58B5272BD34200C123E9 /* Build configuration list for PBXNativeTarget "Instafilter" */;
 			buildPhases = (
-				71522250272AADD90051DC90 /* Sources */,
-				71522251272AADD90051DC90 /* Frameworks */,
-				71522252272AADD90051DC90 /* Resources */,
+				71CC58A3272BD34100C123E9 /* Sources */,
+				71CC58A4272BD34100C123E9 /* Frameworks */,
+				71CC58A5272BD34100C123E9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,25 +84,25 @@
 			);
 			name = Instafilter;
 			productName = Instafilter;
-			productReference = 71522254272AADD90051DC90 /* Instafilter.app */;
+			productReference = 71CC58A7272BD34100C123E9 /* Instafilter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		7152224C272AADD90051DC90 /* Project object */ = {
+		71CC589F272BD34100C123E9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					71522253272AADD90051DC90 = {
+					71CC58A6272BD34100C123E9 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = 7152224F272AADD90051DC90 /* Build configuration list for PBXProject "Instafilter" */;
+			buildConfigurationList = 71CC58A2272BD34100C123E9 /* Build configuration list for PBXProject "Instafilter" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,43 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 7152224B272AADD90051DC90;
-			productRefGroup = 71522255272AADD90051DC90 /* Products */;
+			mainGroup = 71CC589E272BD34100C123E9;
+			productRefGroup = 71CC58A8272BD34100C123E9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71522253272AADD90051DC90 /* Instafilter */,
+				71CC58A6272BD34100C123E9 /* Instafilter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		71522252272AADD90051DC90 /* Resources */ = {
+		71CC58A5272BD34100C123E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7152225F272AADDB0051DC90 /* Preview Assets.xcassets in Resources */,
-				7152225C272AADDB0051DC90 /* Assets.xcassets in Resources */,
+				71CC58B2272BD34200C123E9 /* Preview Assets.xcassets in Resources */,
+				71CC58AF272BD34200C123E9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		71522250272AADD90051DC90 /* Sources */ = {
+		71CC58A3272BD34100C123E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71522266272AB2580051DC90 /* ImagePicker.swift in Sources */,
-				7152225A272AADD90051DC90 /* ContentView.swift in Sources */,
-				71522258272AADD90051DC90 /* InstafilterApp.swift in Sources */,
+				71CC58AD272BD34100C123E9 /* ContentView.swift in Sources */,
+				71CC58AB272BD34100C123E9 /* InstafilterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		71522260272AADDB0051DC90 /* Debug */ = {
+		71CC58B3272BD34200C123E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -210,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		71522261272AADDB0051DC90 /* Release */ = {
+		71CC58B4272BD34200C123E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +261,7 @@
 			};
 			name = Release;
 		};
-		71522263272AADDB0051DC90 /* Debug */ = {
+		71CC58B6272BD34200C123E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -294,7 +290,7 @@
 			};
 			name = Debug;
 		};
-		71522264272AADDB0051DC90 /* Release */ = {
+		71CC58B7272BD34200C123E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -326,25 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7152224F272AADD90051DC90 /* Build configuration list for PBXProject "Instafilter" */ = {
+		71CC58A2272BD34100C123E9 /* Build configuration list for PBXProject "Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71522260272AADDB0051DC90 /* Debug */,
-				71522261272AADDB0051DC90 /* Release */,
+				71CC58B3272BD34200C123E9 /* Debug */,
+				71CC58B4272BD34200C123E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71522262272AADDB0051DC90 /* Build configuration list for PBXNativeTarget "Instafilter" */ = {
+		71CC58B5272BD34200C123E9 /* Build configuration list for PBXNativeTarget "Instafilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				71522263272AADDB0051DC90 /* Debug */,
-				71522264272AADDB0051DC90 /* Release */,
+				71CC58B6272BD34200C123E9 /* Debug */,
+				71CC58B7272BD34200C123E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 7152224C272AADD90051DC90 /* Project object */;
+	rootObject = 71CC589F272BD34100C123E9 /* Project object */;
 }
