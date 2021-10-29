@@ -17,8 +17,10 @@ struct ContentView: View {
     @State private var inputImage: UIImage?
     
     
-    @State var currentFilter = CIFilter.sepiaTone()
+    @State var currentFilter: CIFilter = CIFilter.sepiaTone()
     let context = CIContext()
+    
+    @State private var showingFilterSheet = false
     // MARK: - Body
     var body: some View {
         let intensity = Binding<Double>(
@@ -66,7 +68,7 @@ struct ContentView: View {
                 
                 HStack {
                     Button {
-                        // change filter
+                        showingFilterSheet = true
                     } label: {
                         Text("Change Filter")
                     } //: Filter change button
@@ -86,17 +88,65 @@ struct ContentView: View {
                 } //: sheet for img picker
             } //: Vstack
         } //: NAVview
+        .confirmationDialog("Change Filter", isPresented: $showingFilterSheet, titleVisibility: .visible) {
+            Button {
+                setFilter(.crystallize())
+            } label: {
+                Text("Crystallize")
+            } //: Crystallize
+            
+            Button {
+                setFilter(.edges())
+            } label: {
+                Text("Edges")
+            } //: Edges
+            
+            Button {
+                setFilter(.gaussianBlur())
+            } label: {
+                Text("Gaussian Blur")
+            }
+            
+            Button {
+                setFilter(.pixellate())
+            } label: {
+                Text("Pixellate")
+            }
+            
+            Button {
+                setFilter(.sepiaTone())
+            } label: {
+                Text("Sepia Tone")
+            }
+            
+            Button {
+                setFilter(.unsharpMask())
+            } label: {
+                Text("Unsharp Mask")
+            }
+
+            Button {
+                setFilter(.vignette())
+            } label: {
+                Text("Vignette")
+            }
+        } //: Multiple Actionsheet
     } //: body
+    
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        //        image = Image(uiImage: inputImage)
         let beginImage = CIImage(image: inputImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
         applyProcessing()
     }
     
     func applyProcessing() {
-        currentFilter.intensity = Float(filterIntensity)
+        // adapting to each filter params to safely workaround with input param
+        let inputKeys = currentFilter.inputKeys
+        if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
+        if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 200, forKey: kCIInputRadiusKey) }
+        if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10 , forKey: kCIInputScaleKey) }
+        
         guard let outputImage = currentFilter.outputImage
         else { return }
         
@@ -105,6 +155,11 @@ struct ContentView: View {
             image = Image(uiImage: uiImage)
         }
     } //: applyprocessing func
+    
+    func setFilter(_ filter: CIFilter) {
+        currentFilter = filter
+        loadImage()
+    }
 }
 
 // MARK: - Preview
