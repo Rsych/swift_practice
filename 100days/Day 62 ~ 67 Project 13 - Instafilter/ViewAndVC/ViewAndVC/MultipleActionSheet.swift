@@ -15,12 +15,12 @@ struct MultipleActionSheet: View {
     
     // MARK: - Body
     var body: some View {
-        Text("Hello, World!")
+        Text("Touch here to change color")
             .frame(width: 300, height: 300)
             .background(backgroundColor)
             .onTapGesture {
                 showingActionSheet = true
-            }
+            } //: OnTap
             .confirmationDialog("Change background", isPresented: $showingActionSheet, titleVisibility: .visible) {
                 Button {
                     backgroundColor = .red
@@ -33,11 +33,10 @@ struct MultipleActionSheet: View {
                 Button("Green") {
                     backgroundColor = .green
                 }
-                
-                
-             
-
-            }
+                Button("Default") {
+                    backgroundColor = .white
+                }
+            } //: ConfirmationDialog
     }
 }
 
