@@ -15,12 +15,14 @@ struct ContentView: View {
     
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
-    
+    @State private var processedImage: UIImage?
     
     @State var currentFilter: CIFilter = CIFilter.sepiaTone()
     let context = CIContext()
     
     @State private var showingFilterSheet = false
+    
+    
     // MARK: - Body
     var body: some View {
         let intensity = Binding<Double>(
@@ -76,7 +78,16 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        // save the picture
+                        guard let processedImage = processedImage else { return }
+                        let imageSaver = ImageSaver()
+                        
+                        imageSaver.successHandler = {
+                            print("Success!")
+                        }
+                        imageSaver.errorHandler = {
+                            print("Error \($0.localizedDescription)")
+                        }
+                        imageSaver.writeToPhotoAlbum(image: processedImage)
                     } label: {
                         Text("Save")
                     } //: Save button
@@ -124,7 +135,7 @@ struct ContentView: View {
             } label: {
                 Text("Unsharp Mask")
             }
-
+            
             Button {
                 setFilter(.vignette())
             } label: {
@@ -153,13 +164,14 @@ struct ContentView: View {
         if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
             let uiImage = UIImage(cgImage: cgimg)
             image = Image(uiImage: uiImage)
+            processedImage = uiImage
         }
     } //: applyprocessing func
     
     func setFilter(_ filter: CIFilter) {
         currentFilter = filter
         loadImage()
-    }
+    } //: setFilter func
 }
 
 // MARK: - Preview
