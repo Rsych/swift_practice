@@ -27,6 +27,11 @@ struct ContentView: View {
                     Label("CoreImage", systemImage: "3.circle")
                 }
                 .tag(3)
+            ImagePickerView()
+                .tabItem {
+                    Label("ImagePicker", systemImage: "4.circle")
+                }
+                .tag(4)
         }
         
     }
