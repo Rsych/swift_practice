@@ -18,9 +18,12 @@ struct ContentView: View {
     @State private var processedImage: UIImage?
     
     @State var currentFilter: CIFilter = CIFilter.sepiaTone()
+    @State var currentFilterName: String = "Sepia filter"
     let context = CIContext()
     
     @State private var showingFilterSheet = false
+    
+    @State private var imageDidload = false
     
     
     // MARK: - Body
@@ -72,13 +75,20 @@ struct ContentView: View {
                     Button {
                         showingFilterSheet = true
                     } label: {
-                        Text("Change Filter")
+                        Text(currentFilterName)
                     } //: Filter change button
                     
                     Spacer()
                     
                     Button {
-                        guard let processedImage = processedImage else { return }
+                        guard let processedImage = processedImage else {
+                            imageDidload = true
+                            print("Image was not selected")
+                            print(imageDidload)
+                            return }
+                        imageDidload = false
+                        print("Image was selected")
+                        print(imageDidload)
                         let imageSaver = ImageSaver()
                         
                         imageSaver.successHandler = {
@@ -91,6 +101,9 @@ struct ContentView: View {
                     } label: {
                         Text("Save")
                     } //: Save button
+                    .alert("Image was not selected", isPresented: $imageDidload) {
+                        Button("Okay") {}
+                    } //: Image not selected button
                 } //: Hstack
                 .padding([.horizontal, .bottom])
                 .navigationTitle(Text("Instafilter"))
@@ -102,24 +115,28 @@ struct ContentView: View {
         .confirmationDialog("Change Filter", isPresented: $showingFilterSheet, titleVisibility: .visible) {
             Button {
                 setFilter(.crystallize())
+                currentFilterName = "Crystallize filter"
             } label: {
                 Text("Crystallize")
             } //: Crystallize
             
             Button {
                 setFilter(.edges())
+                currentFilterName = "Edges filter"
             } label: {
                 Text("Edges")
             } //: Edges
             
             Button {
                 setFilter(.gaussianBlur())
+                currentFilterName = "Gaussian Blur filter"
             } label: {
                 Text("Gaussian Blur")
             }
             
             Button {
                 setFilter(.pixellate())
+                currentFilterName = "Pixellate filter"
             } label: {
                 Text("Pixellate")
             }
@@ -132,22 +149,26 @@ struct ContentView: View {
             
             Button {
                 setFilter(.unsharpMask())
+                currentFilterName = "Unsharp Mask filter"
             } label: {
                 Text("Unsharp Mask")
             }
             
             Button {
                 setFilter(.vignette())
+                currentFilterName = "Vignette filter"
             } label: {
                 Text("Vignette")
             }
         } //: Multiple Actionsheet
+        .foregroundColor(.black)
     } //: body
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
         let beginImage = CIImage(image: inputImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        
         applyProcessing()
     }
     
