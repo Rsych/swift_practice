@@ -22,6 +22,8 @@ struct ContentView: View {
     
     @State private var showingFilterSheet = false
     
+    @State private var imageDidload = false
+    
     
     // MARK: - Body
     var body: some View {
@@ -78,7 +80,14 @@ struct ContentView: View {
                     Spacer()
                     
                     Button {
-                        guard let processedImage = processedImage else { return }
+                        guard let processedImage = processedImage else {
+                            imageDidload = true
+                            print("Image was not selected")
+                            print(imageDidload)
+                            return }
+                        imageDidload = false
+                        print("Image was selected")
+                        print(imageDidload)
                         let imageSaver = ImageSaver()
                         
                         imageSaver.successHandler = {
@@ -91,6 +100,9 @@ struct ContentView: View {
                     } label: {
                         Text("Save")
                     } //: Save button
+                    .alert("Image was not selected", isPresented: $imageDidload) {
+                        Button("Okay") {}
+                    } //: Image not selected button
                 } //: Hstack
                 .padding([.horizontal, .bottom])
                 .navigationTitle(Text("Instafilter"))
@@ -142,12 +154,14 @@ struct ContentView: View {
                 Text("Vignette")
             }
         } //: Multiple Actionsheet
+        
     } //: body
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
         let beginImage = CIImage(image: inputImage)
         currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        
         applyProcessing()
     }
     
