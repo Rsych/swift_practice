@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var processedImage: UIImage?
     
     @State var currentFilter: CIFilter = CIFilter.sepiaTone()
+    @State var currentFilterName: String = "Sepia filter"
     let context = CIContext()
     
     @State private var showingFilterSheet = false
@@ -74,7 +75,7 @@ struct ContentView: View {
                     Button {
                         showingFilterSheet = true
                     } label: {
-                        Text("Change Filter")
+                        Text(currentFilterName)
                     } //: Filter change button
                     
                     Spacer()
@@ -114,24 +115,28 @@ struct ContentView: View {
         .confirmationDialog("Change Filter", isPresented: $showingFilterSheet, titleVisibility: .visible) {
             Button {
                 setFilter(.crystallize())
+                currentFilterName = "Crystallize filter"
             } label: {
                 Text("Crystallize")
             } //: Crystallize
             
             Button {
                 setFilter(.edges())
+                currentFilterName = "Edges filter"
             } label: {
                 Text("Edges")
             } //: Edges
             
             Button {
                 setFilter(.gaussianBlur())
+                currentFilterName = "Gaussian Blur filter"
             } label: {
                 Text("Gaussian Blur")
             }
             
             Button {
                 setFilter(.pixellate())
+                currentFilterName = "Pixellate filter"
             } label: {
                 Text("Pixellate")
             }
@@ -144,17 +149,19 @@ struct ContentView: View {
             
             Button {
                 setFilter(.unsharpMask())
+                currentFilterName = "Unsharp Mask filter"
             } label: {
                 Text("Unsharp Mask")
             }
             
             Button {
                 setFilter(.vignette())
+                currentFilterName = "Vignette filter"
             } label: {
                 Text("Vignette")
             }
         } //: Multiple Actionsheet
-        
+        .foregroundColor(.black) 
     } //: body
     
     func loadImage() {
