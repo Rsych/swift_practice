@@ -161,7 +161,7 @@ struct ContentView: View {
                 Text("Vignette")
             }
         } //: Multiple Actionsheet
-        .foregroundColor(.black) 
+        .foregroundColor(.black)
     } //: body
     
     func loadImage() {
