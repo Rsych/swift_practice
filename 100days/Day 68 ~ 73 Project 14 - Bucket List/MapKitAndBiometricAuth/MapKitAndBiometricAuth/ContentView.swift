@@ -28,6 +28,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Enum Views", systemImage: "3.circle")
                 }
+            MapContentView()
+                .tabItem {
+                    Label("MapKit", systemImage: "4.circle")
+                }
         }
     }
 }
