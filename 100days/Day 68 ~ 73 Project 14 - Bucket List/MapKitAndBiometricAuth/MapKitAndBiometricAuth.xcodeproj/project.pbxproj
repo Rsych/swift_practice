@@ -15,6 +15,9 @@
 		71D686FC272D97C700131B3E /* WritindDataToDocuments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D686FB272D97C700131B3E /* WritindDataToDocuments.swift */; };
 		71D68700272D9B5700131B3E /* BundleFilemanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D686FF272D9B5700131B3E /* BundleFilemanager.swift */; };
 		71D68702272DA49D00131B3E /* SwitchingViewEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D68701272DA49D00131B3E /* SwitchingViewEnums.swift */; };
+		71E28BB0272E70A600363322 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E28BAF272E70A600363322 /* MapView.swift */; };
+		71E28BB2272E725B00363322 /* MapContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E28BB1272E725B00363322 /* MapContentView.swift */; };
+		71E28BB4272E826400363322 /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E28BB3272E826400363322 /* BiometricAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		71D686FB272D97C700131B3E /* WritindDataToDocuments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritindDataToDocuments.swift; sourceTree = "<group>"; };
 		71D686FF272D9B5700131B3E /* BundleFilemanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleFilemanager.swift; sourceTree = "<group>"; };
 		71D68701272DA49D00131B3E /* SwitchingViewEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingViewEnums.swift; sourceTree = "<group>"; };
+		71E28BAF272E70A600363322 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		71E28BB1272E725B00363322 /* MapContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContentView.swift; sourceTree = "<group>"; };
+		71E28BB3272E826400363322 /* BiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 			children = (
 				71D686EB272D7F5800131B3E /* MapKitAndBiometricAuthApp.swift */,
 				71D686ED272D7F5800131B3E /* ContentView.swift */,
+				71E28BAF272E70A600363322 /* MapView.swift */,
+				71E28BB3272E826400363322 /* BiometricAuth.swift */,
+				71E28BB1272E725B00363322 /* MapContentView.swift */,
 				71D686F9272D956600131B3E /* ConformanceToComparableCustomType.swift */,
 				71D686FB272D97C700131B3E /* WritindDataToDocuments.swift */,
 				71D686FF272D9B5700131B3E /* BundleFilemanager.swift */,
@@ -150,9 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71D68702272DA49D00131B3E /* SwitchingViewEnums.swift in Sources */,
+				71E28BB0272E70A600363322 /* MapView.swift in Sources */,
 				71D686FA272D956600131B3E /* ConformanceToComparableCustomType.swift in Sources */,
+				71E28BB2272E725B00363322 /* MapContentView.swift in Sources */,
 				71D686EE272D7F5800131B3E /* ContentView.swift in Sources */,
 				71D686EC272D7F5800131B3E /* MapKitAndBiometricAuthApp.swift in Sources */,
+				71E28BB4272E826400363322 /* BiometricAuth.swift in Sources */,
 				71D686FC272D97C700131B3E /* WritindDataToDocuments.swift in Sources */,
 				71D68700272D9B5700131B3E /* BundleFilemanager.swift in Sources */,
 			);
@@ -288,6 +300,7 @@
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,6 +330,7 @@
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -28,6 +28,18 @@ struct ContentView: View {
                 .tabItem {
                     Label("Enum Views", systemImage: "3.circle")
                 }
+                .tag(2)
+            MapContentView()
+                .tabItem {
+                    Label("MapKit", systemImage: "4.circle")
+                }
+                .tag(3)
+            BiometricAuth()
+                .tabItem {
+                    Label("Biometrics", systemImage: "5.circle")
+                }
+                .tag(4
+                )
         }
     }
 }

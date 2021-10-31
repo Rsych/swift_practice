@@ -53,3 +53,4 @@ struct SwitchingViewEnums_Previews: PreviewProvider {
         SwitchingViewEnums()
     }
 }
+
