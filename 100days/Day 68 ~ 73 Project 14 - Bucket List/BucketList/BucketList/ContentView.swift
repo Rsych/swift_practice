@@ -7,7 +7,15 @@
 
 import SwiftUI
 import MapKit
-import LocalAuthentication
+
+struct pointCircle: View {
+    var body: some View {
+        Circle()
+            .fill(.blue)
+            .opacity(0.3)
+            .frame(width: 16, height: 16)
+    }
+} //: Center circle view
 
 struct ContentView: View {
     // MARK: - Properties
@@ -18,17 +26,13 @@ struct ContentView: View {
     
     @State private var showingEditScreen = false
     
-    @State private var isUnlocked = false
+
     // MARK: - Body
     var body: some View {
         ZStack {
-            if isUnlocked {
                 MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
                     .edgesIgnoringSafeArea(.all)
-                Circle()
-                    .fill(.blue)
-                    .opacity(0.3)
-                    .frame(width: 16, height: 16)
+                pointCircle()
                 
                 VStack {
                     Spacer()
@@ -55,16 +59,6 @@ struct ContentView: View {
                         .padding(.trailing)
                     } //: HStack
                 } //: VStack
-            } //: isUnlocked
-            else {
-                Button("Unlock Please") {
-                    authenticate()
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .clipShape(Capsule())
-            } //: BIoAuth asking button
         } //: ZStack
         .onAppear(perform: loadData)
         .alert(isPresented: $showingPlaceDetails) {
@@ -106,57 +100,7 @@ struct ContentView: View {
         }
     } //: SaveData func
     
-    func authenticate() {
-        let context = LAContext()
-        var error: NSError?
 
-        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-            let reason = "Please authenticate yourself to unlock your places."
-
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authError in
-                DispatchQueue.main.async {
-                    if success {
-                        self.isUnlocked = true
-                    } else {
-                        // error
-                    }
-                }
-            }
-        } else {
-            // No biometric
-        }
-    } //: bio Auth func
-//    func authenticate() {
-//        let context = LAContext()
-//        var error:NSError?
-//
-//        // edit line - deviceOwnerAuthentication
-//        guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
-//            //showAlertViewIfNoBiometricSensorHasBeenDetected()
-//            return
-//        }
-//
-//        // edit line - deviceOwnerAuthentication
-//        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-//            let reason = "Please authenticate yourself to unlock your places."
-//            // edit line - deviceOwnerAuthentication
-//            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason, reply: { (success, error) in
-//                if success {
-//                    DispatchQueue.main.async {
-//                        self.isUnlocked = true
-//                        print("Authentication was successful")
-//                    }
-//                }else {
-//                    DispatchQueue.main.async {
-//                        //self.displayErrorMessage(error: error as! LAError )
-//                        print("Authentication was error")
-//                    }
-//                }
-//            })
-//        }else {
-//           // self.showAlertWith(title: "Error", message: (errorPointer?.localizedDescription)!)
-//        }
-//    }
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {
