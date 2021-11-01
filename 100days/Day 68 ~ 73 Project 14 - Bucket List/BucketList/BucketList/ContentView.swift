@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import LocalAuthentication
 
 struct ContentView: View {
     // MARK: - Properties
@@ -17,42 +18,55 @@ struct ContentView: View {
     
     @State private var showingEditScreen = false
     
+    @State private var isUnlocked = false
     // MARK: - Body
     var body: some View {
         ZStack {
-            MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
-                .edgesIgnoringSafeArea(.all)
-            Circle()
-                .fill(.blue)
-                .opacity(0.3)
-                .frame(width: 16, height: 16)
-            
-            VStack {
-                Spacer()
-                HStack {
+            if isUnlocked {
+                MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
+                    .edgesIgnoringSafeArea(.all)
+                Circle()
+                    .fill(.blue)
+                    .opacity(0.3)
+                    .frame(width: 16, height: 16)
+                
+                VStack {
                     Spacer()
-                    Button {
-                        let newLocation = CodableMKPointAnnotation()
-                        newLocation.title = "Example loc"
-                        newLocation.coordinate = self.centerCoordinate
-                        locations.append(newLocation)
-                        
-                        // setting selectedPlace to let code know
-                        selectedPlace = newLocation
-                        showingEditScreen = true
-                        print(locations)
-                    } label: {
-                        Image(systemName: "plus")
-                    } //: Annotation add button
-                    .padding()
-                    .background(Color.black.opacity(0.75))
-                    .foregroundColor(.white)
-                    .font(.title)
-                    .clipShape(Circle())
-                    .padding(.trailing)
-                } //: HStack
-            } //: VStack
+                    HStack {
+                        Spacer()
+                        Button {
+                            let newLocation = CodableMKPointAnnotation()
+                            newLocation.title = "Example loc"
+                            newLocation.coordinate = self.centerCoordinate
+                            locations.append(newLocation)
+                            
+                            // setting selectedPlace to let code know
+                            selectedPlace = newLocation
+                            showingEditScreen = true
+                            print(locations)
+                        } label: {
+                            Image(systemName: "plus")
+                        } //: Annotation add button
+                        .padding()
+                        .background(Color.black.opacity(0.75))
+                        .foregroundColor(.white)
+                        .font(.title)
+                        .clipShape(Circle())
+                        .padding(.trailing)
+                    } //: HStack
+                } //: VStack
+            } //: isUnlocked
+            else {
+                Button("Unlock Please") {
+                    authenticate()
+                }
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+            } //: BIoAuth asking button
         } //: ZStack
+        .onAppear(perform: loadData)
         .alert(isPresented: $showingPlaceDetails) {
             Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
                 showingEditScreen = true
@@ -64,7 +78,6 @@ struct ContentView: View {
                 EditView(placemark: selectedPlace!)
             }
         } //: EditView sheet
-        .onAppear(perform: loadData)
     } //: body
     
     func getDocumentsDirectory() -> URL {
@@ -91,7 +104,28 @@ struct ContentView: View {
         } catch {
             print("Unable to save data.")
         }
-    }
+    } //: SaveData func
+    
+    func authenticate() {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Please authenticate yourself to unlock your places."
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authError in
+                DispatchQueue.main.async {
+                    if success {
+                        self.isUnlocked = true
+                    } else {
+                        // error
+                    }
+                }
+            }
+        } else {
+            // No biometric
+        }
+    } //: bio Auth func
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {
