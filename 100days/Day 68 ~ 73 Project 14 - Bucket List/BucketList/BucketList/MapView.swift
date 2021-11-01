@@ -26,17 +26,23 @@ struct MapView: UIViewRepresentable {
         }
         
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+            // Unique identifier for view reuse
             let identifier = "Placemark"
-            
+            // try finding cell we can use
             var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             
             if annotationView == nil {
+                // didn't find any, create one
                 annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                // allot pop up info
                 annotationView?.canShowCallout = true
+                // attach info button on view
                 annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
             } else {
+                // view to reuse, give new annotation
                 annotationView?.annotation = annotation
             }
+            // send it back
             return annotationView
         } // custom annotations
         

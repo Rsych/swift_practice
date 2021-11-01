@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		712B1593272FD42F00E28CD0 /* MKPointAnnotation-ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B1592272FD42F00E28CD0 /* MKPointAnnotation-ObservableObject.swift */; };
 		712B1595272FD48800E28CD0 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712B1594272FD48800E28CD0 /* EditView.swift */; };
+		715E885E273029BB00D7457B /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E885D273029BB00D7457B /* AuthView.swift */; };
+		715E886027302F9600D7457B /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715E885F27302F9600D7457B /* FirstView.swift */; };
 		717683B527300CFA00FA79EA /* QueryWiki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717683B427300CFA00FA79EA /* QueryWiki.swift */; };
+		717683B7273016BB00FA79EA /* MKPointAnnotation-Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717683B6273016BB00FA79EA /* MKPointAnnotation-Codable.swift */; };
 		71BC9F5F272FB13D005D3110 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC9F5E272FB13D005D3110 /* BucketListApp.swift */; };
 		71BC9F61272FB13D005D3110 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC9F60272FB13D005D3110 /* ContentView.swift */; };
 		71BC9F63272FB13D005D3110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BC9F62272FB13D005D3110 /* Assets.xcassets */; };
@@ -20,7 +23,10 @@
 /* Begin PBXFileReference section */
 		712B1592272FD42F00E28CD0 /* MKPointAnnotation-ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-ObservableObject.swift"; sourceTree = "<group>"; };
 		712B1594272FD48800E28CD0 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		715E885D273029BB00D7457B /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		715E885F27302F9600D7457B /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		717683B427300CFA00FA79EA /* QueryWiki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryWiki.swift; sourceTree = "<group>"; };
+		717683B6273016BB00FA79EA /* MKPointAnnotation-Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Codable.swift"; sourceTree = "<group>"; };
 		71BC9F5B272FB13D005D3110 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BC9F5E272FB13D005D3110 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		71BC9F60272FB13D005D3110 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,8 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				71EB7FF1272FBD6200469C84 /* Info.plist */,
+				715E885F27302F9600D7457B /* FirstView.swift */,
 				71BC9F5E272FB13D005D3110 /* BucketListApp.swift */,
 				71BC9F60272FB13D005D3110 /* ContentView.swift */,
+				715E885D273029BB00D7457B /* AuthView.swift */,
+				717683B6273016BB00FA79EA /* MKPointAnnotation-Codable.swift */,
 				717683B427300CFA00FA79EA /* QueryWiki.swift */,
 				712B1592272FD42F00E28CD0 /* MKPointAnnotation-ObservableObject.swift */,
 				712B1594272FD48800E28CD0 /* EditView.swift */,
@@ -151,11 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717683B7273016BB00FA79EA /* MKPointAnnotation-Codable.swift in Sources */,
 				717683B527300CFA00FA79EA /* QueryWiki.swift in Sources */,
 				71BC9F61272FB13D005D3110 /* ContentView.swift in Sources */,
 				712B1595272FD48800E28CD0 /* EditView.swift in Sources */,
 				712B1593272FD42F00E28CD0 /* MKPointAnnotation-ObservableObject.swift in Sources */,
 				71BC9F6D272FB5AF005D3110 /* MapView.swift in Sources */,
+				715E885E273029BB00D7457B /* AuthView.swift in Sources */,
+				715E886027302F9600D7457B /* FirstView.swift in Sources */,
 				71BC9F5F272FB13D005D3110 /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
