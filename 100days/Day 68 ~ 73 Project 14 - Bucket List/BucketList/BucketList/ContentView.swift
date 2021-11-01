@@ -26,41 +26,42 @@ struct ContentView: View {
     
     @State private var showingEditScreen = false
     
-
+    
     // MARK: - Body
     var body: some View {
         ZStack {
-                MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
-                    .edgesIgnoringSafeArea(.all)
-                pointCircle()
-                
-                VStack {
+            MapView(centerCoordinate: $centerCoordinate, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails, annotations: locations)
+                .edgesIgnoringSafeArea(.all)
+            pointCircle()
+            
+            VStack {
+                Spacer()
+                HStack {
                     Spacer()
-                    HStack {
-                        Spacer()
-                        Button {
-                            let newLocation = CodableMKPointAnnotation()
-                            newLocation.title = "Example loc"
-                            newLocation.coordinate = self.centerCoordinate
-                            locations.append(newLocation)
-                            
-                            // setting selectedPlace to let code know
-                            selectedPlace = newLocation
-                            showingEditScreen = true
-                            print(locations)
-                        } label: {
-                            Image(systemName: "plus")
-                        } //: Annotation add button
-                        .padding()
-                        .background(Color.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
-                    } //: HStack
-                } //: VStack
+                    Button {
+                        let newLocation = CodableMKPointAnnotation()
+                        newLocation.title = ""
+                        newLocation.subtitle = ""
+                        newLocation.coordinate = self.centerCoordinate
+                        locations.append(newLocation)
+                        
+                        // setting selectedPlace to let code know
+                        selectedPlace = newLocation
+                        showingEditScreen = true
+                        print(locations)
+                    } label: {
+                        Image(systemName: "plus")
+                    } //: Annotation add button
+                    .padding()
+                    .background(Color.black.opacity(0.75))
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .clipShape(Circle())
+                    .padding(.trailing)
+                } //: HStack
+                .padding(.bottom)
+            } //: VStack
         } //: ZStack
-        .onAppear(perform: loadData)
         .alert(isPresented: $showingPlaceDetails) {
             Alert(title: Text(selectedPlace?.title ?? "Unknown"), message: Text(selectedPlace?.subtitle ?? "Missing place information."), primaryButton: .default(Text("OK")), secondaryButton: .default(Text("Edit")) {
                 showingEditScreen = true
@@ -72,12 +73,13 @@ struct ContentView: View {
                 EditView(placemark: selectedPlace!)
             }
         } //: EditView sheet
+        .onAppear(perform: loadData)
     } //: body
     
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
-    } //: Get directory func
+    }
     
     func loadData() {
         let filename = getDocumentsDirectory().appendingPathComponent("SavedPlaces")
@@ -85,22 +87,21 @@ struct ContentView: View {
         do {
             let data = try Data(contentsOf: filename)
             locations = try JSONDecoder().decode([CodableMKPointAnnotation].self, from: data)
+            
         } catch {
-            print("Unable to load saved data.")
+            print("unable to load saved data")
         }
-    } //: Load data func
+    }
     
     func saveData() {
         do {
             let filename = getDocumentsDirectory().appendingPathComponent("SavedPlaces")
-            let data = try JSONEncoder().encode(self.locations)
-            try data.write(to: filename, options: [.atomic, .completeFileProtection])
+            let data = try JSONEncoder().encode(locations)
+            try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
         } catch {
-            print("Unable to save data.")
+            print("Unable to save data")
         }
     } //: SaveData func
-    
-
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {

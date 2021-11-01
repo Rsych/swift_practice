@@ -28,6 +28,9 @@ struct AuthView: View {
         .alert(isPresented: $showingAuthenticationError) {
             Alert(title: Text(authenticationErrorTitle), message: Text(authenticationErrorMessage), dismissButton: .default(Text("OK")))
         } //: Alert
+        .onAppear {
+            authenticate()
+        }
     } //: Body
     
     func authenticate() {
