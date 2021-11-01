@@ -11,6 +11,7 @@
 		71BC9F61272FB13D005D3110 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC9F60272FB13D005D3110 /* ContentView.swift */; };
 		71BC9F63272FB13D005D3110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BC9F62272FB13D005D3110 /* Assets.xcassets */; };
 		71BC9F66272FB13D005D3110 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BC9F65272FB13D005D3110 /* Preview Assets.xcassets */; };
+		71BC9F6D272FB5AF005D3110 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC9F6C272FB5AF005D3110 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		71BC9F60272FB13D005D3110 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71BC9F62272FB13D005D3110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71BC9F65272FB13D005D3110 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71BC9F6C272FB5AF005D3110 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		71EB7FF1272FBD6200469C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +54,10 @@
 		71BC9F5D272FB13D005D3110 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				71EB7FF1272FBD6200469C84 /* Info.plist */,
 				71BC9F5E272FB13D005D3110 /* BucketListApp.swift */,
 				71BC9F60272FB13D005D3110 /* ContentView.swift */,
+				71BC9F6C272FB5AF005D3110 /* MapView.swift */,
 				71BC9F62272FB13D005D3110 /* Assets.xcassets */,
 				71BC9F64272FB13D005D3110 /* Preview Content */,
 			);
@@ -138,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71BC9F61272FB13D005D3110 /* ContentView.swift in Sources */,
+				71BC9F6D272FB5AF005D3110 /* MapView.swift in Sources */,
 				71BC9F5F272FB13D005D3110 /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +278,7 @@
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BucketList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -301,6 +308,7 @@
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BucketList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
