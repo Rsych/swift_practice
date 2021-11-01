@@ -109,11 +109,11 @@ struct ContentView: View {
     func authenticate() {
         let context = LAContext()
         var error: NSError?
-        
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
             let reason = "Please authenticate yourself to unlock your places."
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authError in
+
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authError in
                 DispatchQueue.main.async {
                     if success {
                         self.isUnlocked = true
@@ -126,6 +126,37 @@ struct ContentView: View {
             // No biometric
         }
     } //: bio Auth func
+//    func authenticate() {
+//        let context = LAContext()
+//        var error:NSError?
+//
+//        // edit line - deviceOwnerAuthentication
+//        guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
+//            //showAlertViewIfNoBiometricSensorHasBeenDetected()
+//            return
+//        }
+//
+//        // edit line - deviceOwnerAuthentication
+//        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+//            let reason = "Please authenticate yourself to unlock your places."
+//            // edit line - deviceOwnerAuthentication
+//            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason, reply: { (success, error) in
+//                if success {
+//                    DispatchQueue.main.async {
+//                        self.isUnlocked = true
+//                        print("Authentication was successful")
+//                    }
+//                }else {
+//                    DispatchQueue.main.async {
+//                        //self.displayErrorMessage(error: error as! LAError )
+//                        print("Authentication was error")
+//                    }
+//                }
+//            })
+//        }else {
+//           // self.showAlertWith(title: "Error", message: (errorPointer?.localizedDescription)!)
+//        }
+//    }
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {
