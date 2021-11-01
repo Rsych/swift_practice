@@ -11,7 +11,7 @@ import MapKit
 struct ContentView: View {
     // MARK: - Properties
     @State private var centerCoordinate = CLLocationCoordinate2D()
-    @State private var locations = [MKPointAnnotation]()
+    @State private var locations = [CodableMKPointAnnotation]()
     @State private var selectedPlace: MKPointAnnotation?
     @State private var showingPlaceDetails = false
     
@@ -32,7 +32,7 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button {
-                        let newLocation = MKPointAnnotation()
+                        let newLocation = CodableMKPointAnnotation()
                         newLocation.title = "Example loc"
                         newLocation.coordinate = self.centerCoordinate
                         locations.append(newLocation)
@@ -59,12 +59,39 @@ struct ContentView: View {
             } //: EditButton
             )
         } //: Alert place details
-        .sheet(isPresented: $showingEditScreen) {
+        .sheet(isPresented: $showingEditScreen, onDismiss: saveData) {
             if selectedPlace != nil {
                 EditView(placemark: selectedPlace!)
             }
         } //: EditView sheet
+        .onAppear(perform: loadData)
     } //: body
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    } //: Get directory func
+    
+    func loadData() {
+        let filename = getDocumentsDirectory().appendingPathComponent("SavedPlaces")
+        
+        do {
+            let data = try Data(contentsOf: filename)
+            locations = try JSONDecoder().decode([CodableMKPointAnnotation].self, from: data)
+        } catch {
+            print("Unable to load saved data.")
+        }
+    } //: Load data func
+    
+    func saveData() {
+        do {
+            let filename = getDocumentsDirectory().appendingPathComponent("SavedPlaces")
+            let data = try JSONEncoder().encode(self.locations)
+            try data.write(to: filename, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save data.")
+        }
+    }
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {
