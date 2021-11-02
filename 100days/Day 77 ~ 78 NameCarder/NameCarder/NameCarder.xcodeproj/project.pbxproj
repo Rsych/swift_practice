@@ -11,6 +11,8 @@
 		71272464273101BE00175850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71272463273101BE00175850 /* ContentView.swift */; };
 		71272466273101BE00175850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71272465273101BE00175850 /* Assets.xcassets */; };
 		71272469273101BE00175850 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71272468273101BE00175850 /* Preview Assets.xcassets */; };
+		71272470273101E100175850 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127246F273101E100175850 /* ImagePicker.swift */; };
+		712724722731024000175850 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712724712731024000175850 /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		71272463273101BE00175850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71272465273101BE00175850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71272468273101BE00175850 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7127246F273101E100175850 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		712724712731024000175850 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				71272461273101BE00175850 /* NameCarderApp.swift */,
 				71272463273101BE00175850 /* ContentView.swift */,
+				712724712731024000175850 /* ImagePickerView.swift */,
+				7127246F273101E100175850 /* ImagePicker.swift */,
 				71272465273101BE00175850 /* Assets.xcassets */,
 				71272467273101BE00175850 /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712724722731024000175850 /* ImagePickerView.swift in Sources */,
+				71272470273101E100175850 /* ImagePicker.swift in Sources */,
 				71272464273101BE00175850 /* ContentView.swift in Sources */,
 				71272462273101BE00175850 /* NameCarderApp.swift in Sources */,
 			);
