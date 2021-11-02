@@ -47,7 +47,7 @@ struct User: Decodable,  Hashable{
                     tags: ["cillum"],
                     friends: [Friend(id: UUID(), name: "Hawkins Patel")])
     }
-    
+    :
     // show in preview set up only
     static let example = User(id: UUID(),
                               isActive: true,
