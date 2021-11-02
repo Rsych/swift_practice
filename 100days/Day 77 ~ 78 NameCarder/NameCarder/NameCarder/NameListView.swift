@@ -23,6 +23,7 @@ struct NameListView: View {
                             Image(uiImage: UIImage(data: person.image ?? Data()) ?? UIImage())
                                 .resizable()
                                 .scaledToFit()
+                                .frame(width: 150, height: 150)
                             Text(person.name ?? "Unknown")
                         } //: Hstack
                     } //: NAV LINK
