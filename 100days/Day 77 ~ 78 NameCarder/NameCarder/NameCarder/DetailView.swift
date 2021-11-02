@@ -18,16 +18,17 @@ struct DetailView: View {
     var body: some View {
         VStack {
             GeometryReader { geo in
-            Text(person.name ?? "NA")
-            Image(uiImage: UIImage(data: person.image ?? Data()) ?? UIImage())
+                Text(person.name ?? "NA")
+                Image(uiImage: UIImage(data: person.image ?? Data()) ?? UIImage())
                     .resizable()
                     .frame(maxWidth: geo.size.width,maxHeight: geo.size.height)
                     .scaledToFit()
-        }
-        }
-    }
-}
+            } //: Geometry
+        } //: VStack
+    } //: body
+} //: Contentview
 
+// MARK: - Preview
 struct DetailView_Previews: PreviewProvider {
     static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
     

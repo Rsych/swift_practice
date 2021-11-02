@@ -9,6 +9,7 @@ import SwiftUI
 struct AlertControl: UIViewControllerRepresentable {
 
     @Binding var textString: String
+    @Binding var textString2: String
     @Binding var show: Bool
     
     
@@ -30,6 +31,11 @@ struct AlertControl: UIViewControllerRepresentable {
                 textField.placeholder = "Please enter name."
                 textField.text = self.textString            // << initial value if any
                 textField.delegate = context.coordinator    // << use coordinator as delegate
+            }
+            alert.addTextField { textField2 in
+                textField2.placeholder = "Please enter name2."
+                textField2.text = self.textString2          // << initial value if any
+                textField2.delegate = context.coordinator    // << use coordinator as delegate
             }
             alert.addAction(UIAlertAction(title: "cancel", style: .destructive) { _ in
                 // your action here

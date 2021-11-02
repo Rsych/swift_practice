@@ -17,6 +17,7 @@ struct ImagePickerView: View {
     
     @State private var isNotNamed:Bool = false
     @State var photoName:String = ""
+    @State var photoName2: String = ""
     
     @State var saveDisabled = true
     @Environment(\.managedObjectContext) var moc
@@ -28,15 +29,12 @@ struct ImagePickerView: View {
                 Section {
                     if let image = image {
                         HStack {
-//                            Spacer()
                             image
                                 .resizable()
                                 .scaledToFit()
                                 .aspectRatio(contentMode: .fill)
-//                                .frame(width: 250, height: 250, alignment: .center)
                                 .shadow(color: .secondary, radius: 5, x: 20, y: 20)
                                 .shadow(color: .secondary, radius: 5, x: -20, y: -20)
-//                            Spacer()
                         } //: Hstack
                     } else {
                         HStack {
@@ -44,8 +42,6 @@ struct ImagePickerView: View {
                             Image(systemName: "photo")
                                 .resizable()
                                 .scaledToFit()
-//                                .frame(width: 250, height: 250, alignment: .center)
-//                            Spacer()
                         } //: Hstack
                     } // Image input box
                 } header: {
@@ -61,7 +57,6 @@ struct ImagePickerView: View {
                 } //: Section 2 name display
                 .opacity(saveDisabled ? 0:1)
                 
-                
             } //: VStack
             .sheet(isPresented: $showingImagePicker) {
                 // ondismiss
@@ -69,13 +64,15 @@ struct ImagePickerView: View {
             } content: {
                 ImagePicker(image: $inputImage)
             } //: ImagePicker sheet
-            .background(AlertControl(textString: $photoName, show: $isNotNamed, title: "What's the name?", message: "Please input name here."))
+            .background(AlertControl(textString: $photoName, textString2: $photoName2, show: $isNotNamed, title: "What's the name?", message: "Please input name here."))
             .navigationTitle("NameCard")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         // save
                         saveInfo()
+                        print(photoName)
+                        print(photoName2)
                     } label: {
                         Text("Save")
                     } //: Button

@@ -28,27 +28,28 @@ struct NameListView: View {
                         } //: Hstack
                     } //: NAV LINK
                 } //: Loop
-                .onDelete(perform: deleteName)
+                .onDelete(perform: deleteName) // deleteFunction
             } //: List
             
-                        .navigationTitle("Name List")
-                        .navigationBarTitleDisplayMode(.inline)
-                        .toolbar {
-                            ToolbarItem(placement: .navigationBarLeading) {
-                                EditButton()
-                            }
-                        }
+            .navigationTitle("Name List")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+            } //: EditButton Toolbar
             
             
         } //: NavView
     } //: body
+    
     func deleteName(at offsets: IndexSet) {
         for offset in offsets {
             let person = persons[offset]
             moc.delete(person)
         }
         try? moc.save()
-    }
+    } //: Delete function
     
 } //: Contentview
 
