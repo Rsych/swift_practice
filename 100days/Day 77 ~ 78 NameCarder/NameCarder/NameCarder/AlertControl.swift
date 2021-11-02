@@ -33,11 +33,11 @@ struct AlertControl: UIViewControllerRepresentable {
             }
             alert.addAction(UIAlertAction(title: "cancel", style: .destructive) { _ in
                 // your action here
-                self.show = false
+//                self.show = false
             })
             alert.addAction(UIAlertAction(title: "Submit", style: .default) { _ in
                 // your action here
-                self.textString = textString
+//                self.textString = textString
             })
 
             DispatchQueue.main.async { // must be async !!
