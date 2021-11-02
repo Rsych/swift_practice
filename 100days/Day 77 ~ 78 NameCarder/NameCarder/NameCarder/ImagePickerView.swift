@@ -12,6 +12,7 @@ struct ImagePickerView: View {
     @State private var image: Image?
     @State private var showingImagePicker = false
     
+    @State private var inputImage: UIImage?
     // MARK: - Body
     var body: some View {
         VStack {
@@ -24,14 +25,21 @@ struct ImagePickerView: View {
             } label: {
                 Text("Tap to load image")
             } //: Button
+            
             .sheet(isPresented: $showingImagePicker) {
                 // ondismiss
+                loadImage()
             } content: {
-                ImagePicker()
+                ImagePicker(image: self.$inputImage)
             } //: ImagePicker sheet
             
         } //: VStack
     } //: body
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    } //: loadImg func
 } //: ContentView
 
 struct ImagePickerView_Previews: PreviewProvider {
