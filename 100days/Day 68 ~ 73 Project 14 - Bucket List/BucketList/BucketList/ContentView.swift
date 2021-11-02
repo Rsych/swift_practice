@@ -42,7 +42,7 @@ struct ContentView: View {
                         let newLocation = CodableMKPointAnnotation()
                         newLocation.title = ""
                         newLocation.subtitle = ""
-                        newLocation.coordinate = self.centerCoordinate
+                        newLocation.coordinate = centerCoordinate
                         locations.append(newLocation)
                         
                         // setting selectedPlace to let code know
@@ -87,7 +87,7 @@ struct ContentView: View {
         do {
             let data = try Data(contentsOf: filename)
             locations = try JSONDecoder().decode([CodableMKPointAnnotation].self, from: data)
-            
+            print("Data loaded")
         } catch {
             print("unable to load saved data")
         }
@@ -98,6 +98,7 @@ struct ContentView: View {
             let filename = getDocumentsDirectory().appendingPathComponent("SavedPlaces")
             let data = try JSONEncoder().encode(locations)
             try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
+            print("Data saved")
         } catch {
             print("Unable to save data")
         }
