@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// Wrap UIImagePickerController so it can be used to select photos.
+
 struct ImagePicker: UIViewControllerRepresentable {
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         var parent: ImagePicker
