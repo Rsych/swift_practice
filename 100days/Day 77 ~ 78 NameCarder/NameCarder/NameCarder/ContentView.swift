@@ -19,6 +19,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Card List", systemImage: "2.circle")
                 } .tag(1)
+            
         }
         
     }

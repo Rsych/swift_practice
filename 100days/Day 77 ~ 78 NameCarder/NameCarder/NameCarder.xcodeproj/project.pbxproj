@@ -14,6 +14,7 @@
 		71272470273101E100175850 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127246F273101E100175850 /* ImagePicker.swift */; };
 		712724722731024000175850 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712724712731024000175850 /* ImagePickerView.swift */; };
 		712724762731101B00175850 /* TextFieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712724752731101B00175850 /* TextFieldAlert.swift */; };
+		718C558827313AF500293DC5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C558727313AF500293DC5 /* DetailView.swift */; };
 		71F545E3273115D90030812A /* AlertControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F545E2273115D90030812A /* AlertControl.swift */; };
 		71F545E62731221A0030812A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71F545E42731221A0030812A /* Model.xcdatamodeld */; };
 		71F545E8273123270030812A /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F545E7273123270030812A /* PersistenceController.swift */; };
@@ -29,6 +30,7 @@
 		7127246F273101E100175850 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		712724712731024000175850 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		712724752731101B00175850 /* TextFieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldAlert.swift; sourceTree = "<group>"; };
+		718C558727313AF500293DC5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		71F545E2273115D90030812A /* AlertControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControl.swift; sourceTree = "<group>"; };
 		71F545E52731221A0030812A /* Person.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Person.xcdatamodel; sourceTree = "<group>"; };
 		71F545E7273123270030812A /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				71F545E2273115D90030812A /* AlertControl.swift */,
 				712724712731024000175850 /* ImagePickerView.swift */,
 				71F545E92731313F0030812A /* NameListView.swift */,
+				718C558727313AF500293DC5 /* DetailView.swift */,
 				71F545E7273123270030812A /* PersistenceController.swift */,
 				71F545E42731221A0030812A /* Model.xcdatamodeld */,
 				712724752731101B00175850 /* TextFieldAlert.swift */,
@@ -161,6 +164,7 @@
 				712724762731101B00175850 /* TextFieldAlert.swift in Sources */,
 				71F545E62731221A0030812A /* Model.xcdatamodeld in Sources */,
 				712724722731024000175850 /* ImagePickerView.swift in Sources */,
+				718C558827313AF500293DC5 /* DetailView.swift in Sources */,
 				71F545EA2731313F0030812A /* NameListView.swift in Sources */,
 				71272470273101E100175850 /* ImagePicker.swift in Sources */,
 				71272464273101BE00175850 /* ContentView.swift in Sources */,

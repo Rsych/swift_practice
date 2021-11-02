@@ -16,31 +16,39 @@ struct NameListView: View {
     // MARK: - Body
     var body: some View {
         NavigationView {
-            List(persons, id: \.self) { person in
-                HStack {
-                    Image(uiImage: UIImage(data: person.image ?? Data()) ?? UIImage())
-                        .resizable()
-                        .scaledToFit()
-                    Text(person.name ?? "Unknown")
-                } //: Hstack
-            } //: Loop
-            //        .onDelete(perform: deleteName)
-            .navigationTitle("Name List")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-            }
+            List {
+                ForEach(persons, id: \.self) { person in
+                    NavigationLink(destination: DetailView(person: person)) {
+                        HStack {
+                            Image(uiImage: UIImage(data: person.image ?? Data()) ?? UIImage())
+                                .resizable()
+                                .scaledToFit()
+                            Text(person.name ?? "Unknown")
+                        } //: Hstack
+                    } //: NAV LINK
+                } //: Loop
+                .onDelete(perform: deleteName)
+            } //: List
+            
+                        .navigationTitle("Name List")
+                        .navigationBarTitleDisplayMode(.inline)
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                EditButton()
+                            }
+                        }
+            
+            
         } //: NavView
     } //: body
     func deleteName(at offsets: IndexSet) {
         for offset in offsets {
-            let name = persons[offset]
-            moc.delete(name)
+            let person = persons[offset]
+            moc.delete(person)
         }
         try? moc.save()
     }
+    
 } //: Contentview
 
 struct NameListView_Previews: PreviewProvider {
