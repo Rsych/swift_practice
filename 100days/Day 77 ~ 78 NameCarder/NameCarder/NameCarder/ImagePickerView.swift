@@ -62,7 +62,7 @@ struct ImagePickerView: View {
                 // ondismiss
                 upLoadImage()
             } content: {
-                ImagePicker(image: $inputImage)
+                ImagePicker(image: $inputImage, sourceType: .camera) // takes camera as input
             } //: ImagePicker sheet
             .background(AlertControl(textString: $photoName, textString2: $photoName2, show: $isNotNamed, title: "What's the name?", message: "Please input name here."))
             .navigationTitle("NameCard")
