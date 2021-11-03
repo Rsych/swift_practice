@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7116D89E27325A6400AE508D /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D89D27325A6400AE508D /* LocationFetcher.swift */; };
+		7116D8A027325A9600AE508D /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116D89F27325A9600AE508D /* LocationView.swift */; };
 		71272462273101BE00175850 /* NameCarderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71272461273101BE00175850 /* NameCarderApp.swift */; };
 		71272464273101BE00175850 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71272463273101BE00175850 /* ContentView.swift */; };
 		71272466273101BE00175850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71272465273101BE00175850 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7116D89D27325A6400AE508D /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		7116D89F27325A9600AE508D /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		7127245E273101BE00175850 /* NameCarder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameCarder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71272461273101BE00175850 /* NameCarderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCarderApp.swift; sourceTree = "<group>"; };
 		71272463273101BE00175850 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				71F545E42731221A0030812A /* Model.xcdatamodeld */,
 				712724752731101B00175850 /* TextFieldAlert.swift */,
 				7127246F273101E100175850 /* ImagePicker.swift */,
+				7116D89F27325A9600AE508D /* LocationView.swift */,
+				7116D89D27325A6400AE508D /* LocationFetcher.swift */,
 				71272465273101BE00175850 /* Assets.xcassets */,
 				71272467273101BE00175850 /* Preview Content */,
 			);
@@ -162,9 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				712724762731101B00175850 /* TextFieldAlert.swift in Sources */,
+				7116D8A027325A9600AE508D /* LocationView.swift in Sources */,
 				71F545E62731221A0030812A /* Model.xcdatamodeld in Sources */,
 				712724722731024000175850 /* ImagePickerView.swift in Sources */,
 				718C558827313AF500293DC5 /* DetailView.swift in Sources */,
+				7116D89E27325A6400AE508D /* LocationFetcher.swift in Sources */,
 				71F545EA2731313F0030812A /* NameListView.swift in Sources */,
 				71272470273101E100175850 /* ImagePicker.swift in Sources */,
 				71272464273101BE00175850 /* ContentView.swift in Sources */,
@@ -305,6 +313,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access the camera to take photos";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location services is needed to make list accurate";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +344,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access the camera to take photos";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location services is needed to make list accurate";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
