@@ -19,7 +19,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Card List", systemImage: "2.circle")
                 } .tag(1)
-            
+            LocationView()
+                .tabItem {
+                    Label("Location List", systemImage: "3.circle")
+                } .tag(2)
         }
         
     }
