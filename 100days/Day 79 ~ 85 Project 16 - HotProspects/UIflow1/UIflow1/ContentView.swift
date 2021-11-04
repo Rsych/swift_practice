@@ -29,6 +29,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Interpolation", systemImage: "star")
                 } .tag(3)
+            CreateContextMenu()
+                .tabItem {
+                    Label("ContextMenu", systemImage: "star")
+                } .tag(4)
         }
     }
 }
