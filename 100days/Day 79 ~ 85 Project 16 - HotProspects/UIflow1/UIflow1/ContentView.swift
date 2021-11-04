@@ -15,12 +15,20 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             CustomValueEnvironmentObj()
                 .tabItem {
-                    Label("One", systemImage: "star")
+                    Label("CustomEnvironment", systemImage: "star")
                 } .tag(0)
             SwiftResultTypes()
                 .tabItem {
-                    Label("Two", systemImage: "star.fill")
+                    Label("ResultType", systemImage: "star.fill")
                 } .tag(1)
+            PublishingObservableObj()
+                .tabItem {
+                    Label("Publishing", systemImage: "star")
+                } .tag(2)
+            ImageInterpolation()
+                .tabItem {
+                    Label("Interpolation", systemImage: "star")
+                } .tag(3)
         }
     }
 }
