@@ -30,8 +30,8 @@ import Foundation
  */
 // MARK: - User
 
-struct User: Codable, Hashable {
-    let id: String
+struct User: Decodable,  Hashable{
+    let id: UUID
     let isActive: Bool
     let name: String
     let age: Int
@@ -41,15 +41,15 @@ struct User: Codable, Hashable {
     let friends: [Friend]
     
     static func example1() -> User {
-        return User(id: "50a48fa3-2c0f-4397-ac50-64da464f9954", isActive: false, name: "Alford Rodriguez",
+        return User(id: UUID(), isActive: false, name: "Alford Rodriguez",
                     age: 21, company: "Imkan", email: "alfordrodriguez@imkan.com", address: "907 Nelson Street, Cotopaxi, South Dakota, 5913", about: "Occaecat consequat elit aliquip magna laboris dolore laboris sunt officia adipisicing reprehenderit sunt. Do in proident consectetur labore. Laboris pariatur quis incididunt nostrud labore ad cillum veniam ipsum ullamco. Dolore laborum commodo veniam nisi. Eu ullamco cillum ex nostrud fugiat eu consequat enim cupidatat. Non incididunt fugiat cupidatat reprehenderit nostrud eiusmod eu sit minim do amet qui cupidatat. Elit aliquip nisi ea veniam proident dolore exercitation irure est deserunt.\r\n",
                     registered: Date(),
                     tags: ["cillum"],
-                    friends: [Friend(id: "91b5be3d-9a19-4ac2-b2ce-89cc41884ed0", name: "Hawkins Patel")])
+                    friends: [Friend(id: UUID(), name: "Hawkins Patel")])
     }
-    
+    :
     // show in preview set up only
-    static let example = User(id: "0",
+    static let example = User(id: UUID(),
                               isActive: true,
                               name: "Test Name",
                               age: 99,
@@ -59,6 +59,6 @@ struct User: Codable, Hashable {
                               about: "Occaecat consequat elit aliquip magna laboris dolore laboris sunt officia adipisicing reprehenderit sunt. Do in proident consectetur labore. Laboris pariatur quis incididunt nostrud labore ad cillum veniam ipsum ullamco. Dolore laborum commodo veniam nisi. Eu ullamco cillum ex nostrud fugiat eu consequat enim cupidatat. Non incididunt fugiat cupidatat reprehenderit nostrud eiusmod eu sit minim do amet qui cupidatat. Elit aliquip nisi ea veniam proident dolore exercitation irure est deserunt.\r\n",
                               registered: Date(),
                               tags: ["cillum"],
-                              friends: [Friend(id: "91b5be3d-9a19-4ac2-b2ce-89cc41884ed0", name: "Hawkins Patel")]
+                              friends: [Friend(id: UUID(), name: "Hawkins Patel")]
     )}
 
