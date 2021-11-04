@@ -9,11 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    
+    @State private var selectedTab = 0
     // MARK: - Body
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $selectedTab) {
+            CustomValueEnvironmentObj()
+                .tabItem {
+                    Label("One", systemImage: "star")
+                } .tag(0)
+            SwiftResultTypes()
+                .tabItem {
+                    Label("Two", systemImage: "star.fill")
+                } .tag(1)
+        }
     }
 }
 

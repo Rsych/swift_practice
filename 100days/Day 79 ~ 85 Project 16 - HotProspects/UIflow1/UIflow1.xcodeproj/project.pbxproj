@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		712A634D2733B96D0023DE62 /* CustomValueEnvironmentObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712A634C2733B96D0023DE62 /* CustomValueEnvironmentObj.swift */; };
+		712A634F2733BEA00023DE62 /* SwiftResultTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712A634E2733BEA00023DE62 /* SwiftResultTypes.swift */; };
 		71AE30A427339AAA0039932E /* UIflow1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE30A327339AAA0039932E /* UIflow1App.swift */; };
 		71AE30A627339AAA0039932E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE30A527339AAA0039932E /* ContentView.swift */; };
 		71AE30A827339AAE0039932E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AE30A727339AAE0039932E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		712A634C2733B96D0023DE62 /* CustomValueEnvironmentObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomValueEnvironmentObj.swift; sourceTree = "<group>"; };
+		712A634E2733BEA00023DE62 /* SwiftResultTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftResultTypes.swift; sourceTree = "<group>"; };
 		71AE30A027339AAA0039932E /* UIflow1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIflow1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AE30A327339AAA0039932E /* UIflow1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIflow1App.swift; sourceTree = "<group>"; };
 		71AE30A527339AAA0039932E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				71AE30A327339AAA0039932E /* UIflow1App.swift */,
 				71AE30A527339AAA0039932E /* ContentView.swift */,
+				712A634E2733BEA00023DE62 /* SwiftResultTypes.swift */,
 				712A634C2733B96D0023DE62 /* CustomValueEnvironmentObj.swift */,
 				71AE30A727339AAE0039932E /* Assets.xcassets */,
 				71AE30A927339AAE0039932E /* Preview Content */,
@@ -142,6 +145,7 @@
 			files = (
 				712A634D2733B96D0023DE62 /* CustomValueEnvironmentObj.swift in Sources */,
 				71AE30A627339AAA0039932E /* ContentView.swift in Sources */,
+				712A634F2733BEA00023DE62 /* SwiftResultTypes.swift in Sources */,
 				71AE30A427339AAA0039932E /* UIflow1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

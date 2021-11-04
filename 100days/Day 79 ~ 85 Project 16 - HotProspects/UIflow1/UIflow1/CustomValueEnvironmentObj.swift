@@ -37,7 +37,7 @@ struct CustomValueEnvironmentObj: View {
 //            DisplayView()
 //                .environmentObject(user)
 //        }
-        // Identical 
+        // Identical
         VStack {
             EditView()
             DisplayView()
