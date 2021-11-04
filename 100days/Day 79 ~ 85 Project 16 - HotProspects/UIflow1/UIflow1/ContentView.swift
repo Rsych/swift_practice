@@ -33,6 +33,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("ContextMenu", systemImage: "star")
                 } .tag(4)
+            SchedulingLocalNotifications()
+                .tabItem {
+                    Label("Local Notifications", systemImage: "star")
+                } .tag(5)
         }
     }
 }
