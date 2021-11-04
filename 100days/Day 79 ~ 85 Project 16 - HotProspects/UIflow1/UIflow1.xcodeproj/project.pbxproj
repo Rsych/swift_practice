@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		711FC70D273415ED00335005 /* SchedulingLocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711FC70C273415ED00335005 /* SchedulingLocalNotifications.swift */; };
 		712A634D2733B96D0023DE62 /* CustomValueEnvironmentObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712A634C2733B96D0023DE62 /* CustomValueEnvironmentObj.swift */; };
 		712A634F2733BEA00023DE62 /* SwiftResultTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712A634E2733BEA00023DE62 /* SwiftResultTypes.swift */; };
 		714369C02733F26900F09552 /* PublishingObservableObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714369BF2733F26900F09552 /* PublishingObservableObj.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711FC70C273415ED00335005 /* SchedulingLocalNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulingLocalNotifications.swift; sourceTree = "<group>"; };
 		712A634C2733B96D0023DE62 /* CustomValueEnvironmentObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomValueEnvironmentObj.swift; sourceTree = "<group>"; };
 		712A634E2733BEA00023DE62 /* SwiftResultTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftResultTypes.swift; sourceTree = "<group>"; };
 		714369BF2733F26900F09552 /* PublishingObservableObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishingObservableObj.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				714369BF2733F26900F09552 /* PublishingObservableObj.swift */,
 				714369C12733F54E00F09552 /* ImageInterpolation.swift */,
 				714369C32733F6C400F09552 /* CreateContextMenu.swift */,
+				711FC70C273415ED00335005 /* SchedulingLocalNotifications.swift */,
 				712A634C2733B96D0023DE62 /* CustomValueEnvironmentObj.swift */,
 				71AE30A727339AAE0039932E /* Assets.xcassets */,
 				71AE30A927339AAE0039932E /* Preview Content */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				711FC70D273415ED00335005 /* SchedulingLocalNotifications.swift in Sources */,
 				714369C02733F26900F09552 /* PublishingObservableObj.swift in Sources */,
 				712A634D2733B96D0023DE62 /* CustomValueEnvironmentObj.swift in Sources */,
 				714369C42733F6C400F09552 /* CreateContextMenu.swift in Sources */,
