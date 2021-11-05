@@ -51,9 +51,14 @@ struct ProspectsView: View {
                             .font(.headline)
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
-                    }
-                }
-            }
+                    } //: Vstack
+                    .contextMenu {
+                        Button(prospect.isContacted ? "Mark Uncontacted" : "Mark Contacted") {
+                            prospects.toggle(prospect)
+                        }
+                    } //: ContextMenu
+                } //: Loop
+            } //: List
             .navigationTitle(title)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
