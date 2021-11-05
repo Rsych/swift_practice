@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		717E3F852735632A00FE1E6B /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 717E3F842735632A00FE1E6B /* CodeScanner */; };
+		717E3F8C273598A100FE1E6B /* FileAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717E3F8B273598A100FE1E6B /* FileAccess.swift */; };
 		71C5F6BD27354FD500AFC6AC /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5F6BC27354FD500AFC6AC /* HotProspectsApp.swift */; };
 		71C5F6BF27354FD500AFC6AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5F6BE27354FD500AFC6AC /* ContentView.swift */; };
 		71C5F6C127354FD700AFC6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C5F6C027354FD700AFC6AC /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		717E3F8B273598A100FE1E6B /* FileAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAccess.swift; sourceTree = "<group>"; };
 		71C5F6B927354FD500AFC6AC /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C5F6BC27354FD500AFC6AC /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		71C5F6BE27354FD500AFC6AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				71C5F6BC27354FD500AFC6AC /* HotProspectsApp.swift */,
 				71C5F6BE27354FD500AFC6AC /* ContentView.swift */,
 				71C5F6CE2735533600AFC6AC /* Prospect.swift */,
+				717E3F8B273598A100FE1E6B /* FileAccess.swift */,
 				71C5F6CA2735503400AFC6AC /* ProspectsView.swift */,
 				71C5F6CC2735503800AFC6AC /* MeView.swift */,
 				71C5F6C027354FD700AFC6AC /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 				71C5F6CD2735503800AFC6AC /* MeView.swift in Sources */,
 				71C5F6CF2735533600AFC6AC /* Prospect.swift in Sources */,
 				71C5F6CB2735503400AFC6AC /* ProspectsView.swift in Sources */,
+				717E3F8C273598A100FE1E6B /* FileAccess.swift in Sources */,
 				71C5F6BF27354FD500AFC6AC /* ContentView.swift in Sources */,
 				71C5F6BD27354FD500AFC6AC /* HotProspectsApp.swift in Sources */,
 			);

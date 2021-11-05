@@ -17,6 +17,8 @@ struct ProspectsView: View {
     
     @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
+    @State private var showingActionSheet = false
+    @State private var usingSort = false
 
     let filter: FilterType
     
@@ -41,16 +43,29 @@ struct ProspectsView: View {
             return Image(systemName: "person.fill")
         }
     }
+    var randomSimulationData: String {
+        return ["Apple \napple@fruit.farm",
+                "Banana \nbanana@fruit.farm",
+                "Mango \nmango@fruit.farm",
+                "Zebra \nzebra@anmimal.safari"].randomElement()!
+    }
     
     var filteredProspects: [Prospect] {
+        var list: [Prospect]
+        
         switch filter {
         case .none:
-            return prospects.people
+            list = prospects.people
         case .contacted:
-            return prospects.people.filter{ $0.isContacted }
+            list = prospects.people.filter{ $0.isContacted }
         case .uncontacted:
-            return prospects.people.filter { !$0.isContacted }
+            list = prospects.people.filter { !$0.isContacted }
         }
+        if usingSort {
+            list = list.sorted(by: >)
+        }
+        return list
+        
     }
     
     // MARK: - Body
@@ -65,6 +80,7 @@ struct ProspectsView: View {
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
                     } //: Vstack
+                    
                         if prospect.isContacted {
                             Image(systemName: "person.fill.checkmark")
                         } else { Image(systemName: "person.fill") }
@@ -86,6 +102,7 @@ struct ProspectsView: View {
                     } //: ContextMenu
                 } //: Loop
             } //: List
+            
             .navigationTitle(title)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -102,12 +119,27 @@ struct ProspectsView: View {
                     
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
+                    Button {
+                        showingActionSheet = true
+                    } label: {
+                        Text("Sort")
+                    }
+                    .confirmationDialog("Sort", isPresented: $showingActionSheet, titleVisibility: .hidden) {
+                                    Button("Sort by name") {
+                                        usingSort = true
+                                        //
+                                    }
+                                    Button("Sort by date") {
+                                        usingSort = false
+                                    }
+                                } //: ConfirmationDialog
                 }
+                
             } //: toolbar
             .sheet(isPresented: $isShowingScanner) {
-                CodeScannerView(codeTypes: [.qr], simulatedData: "Ryan\nryan@ryan.com", completion: self.handleScan)
+                CodeScannerView(codeTypes: [.qr], simulatedData: randomSimulationData, completion: self.handleScan)
             } //: qrscanner sheet
+            
         } //: NAV View
     } //: body
     func handleScan(result: Result<String, CodeScannerView.ScanError>) {
