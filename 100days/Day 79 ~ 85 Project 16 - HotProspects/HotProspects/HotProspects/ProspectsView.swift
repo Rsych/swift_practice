@@ -11,7 +11,9 @@ struct ProspectsView: View {
     // MARK: - Properties
     enum FilterType {
         case none, contacted, uncontacted
-    }
+    } //: Filtertype enum
+    
+    @EnvironmentObject var prospects: Prospects
     let filter: FilterType
     
     var title: String {
@@ -23,12 +25,26 @@ struct ProspectsView: View {
         case .uncontacted:
             return "Uncontacted people"
         }
-    }
+    } //: computed properties with switch
+    
     // MARK: - Body
     var body: some View {
         NavigationView {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("People: \(prospects.people.count)")
                 .navigationTitle(title)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            let prospect = Prospect()
+                            prospect.name = "Ryan"
+                            prospect.emailAddress = "aliefj@gmail.com"
+                            self.prospects.people.append(prospect)
+                        } label: {
+                            Label("Scan", systemImage: "qrcode.viewfinder")
+                        }
+
+                    }
+                }
         } //: NAV View
     } //: body
     
