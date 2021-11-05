@@ -17,6 +17,8 @@
 		71AE30A627339AAA0039932E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AE30A527339AAA0039932E /* ContentView.swift */; };
 		71AE30A827339AAE0039932E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AE30A727339AAE0039932E /* Assets.xcassets */; };
 		71AE30AB27339AAE0039932E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AE30AA27339AAE0039932E /* Preview Assets.xcassets */; };
+		71C5F6AC27354E1300AFC6AC /* AddSwiftPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C5F6AB27354E1300AFC6AC /* AddSwiftPackage.swift */; };
+		71C5F6AF27354EAA00AFC6AC /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 71C5F6AE27354EAA00AFC6AC /* SamplePackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		71AE30A527339AAA0039932E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71AE30A727339AAE0039932E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71AE30AA27339AAE0039932E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71C5F6AB27354E1300AFC6AC /* AddSwiftPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSwiftPackage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C5F6AF27354EAA00AFC6AC /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +69,7 @@
 			children = (
 				71AE30A327339AAA0039932E /* UIflow1App.swift */,
 				71AE30A527339AAA0039932E /* ContentView.swift */,
+				71C5F6AB27354E1300AFC6AC /* AddSwiftPackage.swift */,
 				712A634E2733BEA00023DE62 /* SwiftResultTypes.swift */,
 				714369BF2733F26900F09552 /* PublishingObservableObj.swift */,
 				714369C12733F54E00F09552 /* ImageInterpolation.swift */,
@@ -101,6 +106,9 @@
 			dependencies = (
 			);
 			name = UIflow1;
+			packageProductDependencies = (
+				71C5F6AE27354EAA00AFC6AC /* SamplePackage */,
+			);
 			productName = UIflow1;
 			productReference = 71AE30A027339AAA0039932E /* UIflow1.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 71AE309727339AAA0039932E;
+			packageReferences = (
+				71C5F6AD27354EAA00AFC6AC /* XCRemoteSwiftPackageReference "SamplePackage" */,
+			);
 			productRefGroup = 71AE30A127339AAA0039932E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,6 +171,7 @@
 				712A634D2733B96D0023DE62 /* CustomValueEnvironmentObj.swift in Sources */,
 				714369C42733F6C400F09552 /* CreateContextMenu.swift in Sources */,
 				714369C22733F54E00F09552 /* ImageInterpolation.swift in Sources */,
+				71C5F6AC27354E1300AFC6AC /* AddSwiftPackage.swift in Sources */,
 				71AE30A627339AAA0039932E /* ContentView.swift in Sources */,
 				712A634F2733BEA00023DE62 /* SwiftResultTypes.swift in Sources */,
 				71AE30A427339AAA0039932E /* UIflow1App.swift in Sources */,
@@ -365,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71C5F6AD27354EAA00AFC6AC /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71C5F6AE27354EAA00AFC6AC /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71C5F6AD27354EAA00AFC6AC /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71AE309827339AAA0039932E /* Project object */;
 }
