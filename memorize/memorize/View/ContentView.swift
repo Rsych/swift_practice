@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    let GameVM: EmojiMemoryGame
+    @ObservedObject var GameVM: EmojiMemoryGame
     
     // MARK: - Body
     var body: some View {
