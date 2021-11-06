@@ -50,7 +50,7 @@ func saveData(of people: [Prospect], to file: String) {
     let url = filePath(filename: file)
     let encoded = jsonEncode(people: people)
     do {
-        try encoded?.write(to: url)
+        try encoded?.write(to: url, options: .atomic)
     } catch {
         print(error.localizedDescription)
     }
