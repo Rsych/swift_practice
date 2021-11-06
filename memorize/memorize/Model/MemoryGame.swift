@@ -12,8 +12,8 @@ struct MemoryGame<CardContent> {
     
     private(set) var cards: Array<Card>
     
-    func pick(card: Card) {
-        
+    func pick(_ card: Card) {
+        print("card chosen")
     } //: pick func
     
     init(numberOfPairsOfCards: Int, createCardContent: (Int) -> CardContent) {
@@ -26,9 +26,11 @@ struct MemoryGame<CardContent> {
         }
     }
     
-    struct Card {
-        var isFaceUp: Bool = false
+    struct Card: Identifiable {
+        var isFaceUp: Bool = true
         var isMatched: Bool = false
         var content: CardContent //"don't care type"
+        
+        var id: UUID = UUID()
     } //: MemoryGame.Card nested struct
 }
