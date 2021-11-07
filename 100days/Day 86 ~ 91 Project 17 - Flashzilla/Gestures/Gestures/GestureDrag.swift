@@ -21,16 +21,16 @@ struct GestureDrag: View {
                 withAnimation {
                     offset = .zero
                     isDragging = false
-                }
-            }
+                } //: withAnimation
+            } //: onEnd
         
         let pressGesture = LongPressGesture()
             .onEnded { value in
                 withAnimation {
-                    
                 isDragging = true
-                }
-            }
+                } //: animation
+            } //: onEnded
+        
         let combined = pressGesture.sequenced(before: dragGesture)
         
         return Circle()
@@ -39,9 +39,9 @@ struct GestureDrag: View {
             .scaleEffect(isDragging ? 1.5 : 1)
             .offset(offset)
             .gesture(combined)
-    }
+    } //: body
     
-}
+} //: contentview
 
 struct
 GestureDrag_Previews: PreviewProvider {

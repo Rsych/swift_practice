@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7116FCEF2737B3D4009AFC72 /* GesturesHapticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FCEE2737B3D4009AFC72 /* GesturesHapticApp.swift */; };
+		7116FCEF2737B3D4009AFC72 /* GesturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FCEE2737B3D4009AFC72 /* GesturesApp.swift */; };
 		7116FCF12737B3D4009AFC72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FCF02737B3D4009AFC72 /* ContentView.swift */; };
 		7116FCF32737B3D6009AFC72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7116FCF22737B3D6009AFC72 /* Assets.xcassets */; };
 		7116FCF62737B3D6009AFC72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7116FCF52737B3D6009AFC72 /* Preview Assets.xcassets */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7116FCEB2737B3D4009AFC72 /* GesturesHaptic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GesturesHaptic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7116FCEE2737B3D4009AFC72 /* GesturesHapticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesHapticApp.swift; sourceTree = "<group>"; };
+		7116FCEB2737B3D4009AFC72 /* Gestures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gestures.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7116FCEE2737B3D4009AFC72 /* GesturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesApp.swift; sourceTree = "<group>"; };
 		7116FCF02737B3D4009AFC72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7116FCF22737B3D6009AFC72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7116FCF52737B3D6009AFC72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		7116FCE22737B3D4009AFC72 = {
 			isa = PBXGroup;
 			children = (
-				7116FCED2737B3D4009AFC72 /* GesturesHaptic */,
+				7116FCED2737B3D4009AFC72 /* Gestures */,
 				7116FCEC2737B3D4009AFC72 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,15 +49,15 @@
 		7116FCEC2737B3D4009AFC72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7116FCEB2737B3D4009AFC72 /* GesturesHaptic.app */,
+				7116FCEB2737B3D4009AFC72 /* Gestures.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7116FCED2737B3D4009AFC72 /* GesturesHaptic */ = {
+		7116FCED2737B3D4009AFC72 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
-				7116FCEE2737B3D4009AFC72 /* GesturesHapticApp.swift */,
+				7116FCEE2737B3D4009AFC72 /* GesturesApp.swift */,
 				7116FCF02737B3D4009AFC72 /* ContentView.swift */,
 				7116FCFC2737B42C009AFC72 /* GesturesUse.swift */,
 				7116FCFE2737B924009AFC72 /* Gesturespriorities.swift */,
@@ -65,7 +65,7 @@
 				7116FCF22737B3D6009AFC72 /* Assets.xcassets */,
 				7116FCF42737B3D6009AFC72 /* Preview Content */,
 			);
-			path = GesturesHaptic;
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 		7116FCF42737B3D6009AFC72 /* Preview Content */ = {
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7116FCEA2737B3D4009AFC72 /* GesturesHaptic */ = {
+		7116FCEA2737B3D4009AFC72 /* Gestures */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7116FCF92737B3D6009AFC72 /* Build configuration list for PBXNativeTarget "GesturesHaptic" */;
+			buildConfigurationList = 7116FCF92737B3D6009AFC72 /* Build configuration list for PBXNativeTarget "Gestures" */;
 			buildPhases = (
 				7116FCE72737B3D4009AFC72 /* Sources */,
 				7116FCE82737B3D4009AFC72 /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = GesturesHaptic;
+			name = Gestures;
 			productName = GesturesHaptic;
-			productReference = 7116FCEB2737B3D4009AFC72 /* GesturesHaptic.app */;
+			productReference = 7116FCEB2737B3D4009AFC72 /* Gestures.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7116FCE62737B3D4009AFC72 /* Build configuration list for PBXProject "GesturesHaptic" */;
+			buildConfigurationList = 7116FCE62737B3D4009AFC72 /* Build configuration list for PBXProject "Gestures" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7116FCEA2737B3D4009AFC72 /* GesturesHaptic */,
+				7116FCEA2737B3D4009AFC72 /* Gestures */,
 			);
 		};
 /* End PBXProject section */
@@ -149,7 +149,7 @@
 				7116FCF12737B3D4009AFC72 /* ContentView.swift in Sources */,
 				7116FCFD2737B42C009AFC72 /* GesturesUse.swift in Sources */,
 				7116FD012737B9D9009AFC72 /* GestureDrag.swift in Sources */,
-				7116FCEF2737B3D4009AFC72 /* GesturesHapticApp.swift in Sources */,
+				7116FCEF2737B3D4009AFC72 /* GesturesApp.swift in Sources */,
 				7116FCFF2737B924009AFC72 /* Gesturespriorities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +280,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GesturesHaptic/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Gestures/Preview Content\"";
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +295,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.naolin.GesturesHaptic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gestures;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +309,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"GesturesHaptic/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Gestures/Preview Content\"";
 				DEVELOPMENT_TEAM = G6V85GALCN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -324,7 +324,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = net.naolin.GesturesHaptic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Gestures;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,7 +334,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7116FCE62737B3D4009AFC72 /* Build configuration list for PBXProject "GesturesHaptic" */ = {
+		7116FCE62737B3D4009AFC72 /* Build configuration list for PBXProject "Gestures" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7116FCF72737B3D6009AFC72 /* Debug */,
@@ -343,7 +343,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7116FCF92737B3D6009AFC72 /* Build configuration list for PBXNativeTarget "GesturesHaptic" */ = {
+		7116FCF92737B3D6009AFC72 /* Build configuration list for PBXNativeTarget "Gestures" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7116FCFA2737B3D6009AFC72 /* Debug */,
