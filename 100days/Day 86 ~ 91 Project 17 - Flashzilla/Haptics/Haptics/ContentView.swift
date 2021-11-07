@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  GesturesHaptic
+//  Haptics
 //
 //  Created by Ryan J. W. Kim on 2021/11/07.
 //
