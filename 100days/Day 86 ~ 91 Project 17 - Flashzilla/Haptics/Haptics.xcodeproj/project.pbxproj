@@ -11,6 +11,7 @@
 		7116FD112737BFCF009AFC72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FD102737BFCF009AFC72 /* ContentView.swift */; };
 		7116FD132737BFD0009AFC72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7116FD122737BFD0009AFC72 /* Assets.xcassets */; };
 		7116FD162737BFD0009AFC72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7116FD152737BFD0009AFC72 /* Preview Assets.xcassets */; };
+		7116FD1D2737C037009AFC72 /* VibrationsCoreHaptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7116FD1C2737C037009AFC72 /* VibrationsCoreHaptics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		7116FD102737BFCF009AFC72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7116FD122737BFD0009AFC72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7116FD152737BFD0009AFC72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7116FD1C2737C037009AFC72 /* VibrationsCoreHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VibrationsCoreHaptics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				7116FD0E2737BFCF009AFC72 /* HapticsApp.swift */,
 				7116FD102737BFCF009AFC72 /* ContentView.swift */,
+				7116FD1C2737C037009AFC72 /* VibrationsCoreHaptics.swift */,
 				7116FD122737BFD0009AFC72 /* Assets.xcassets */,
 				7116FD142737BFD0009AFC72 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				7116FD112737BFCF009AFC72 /* ContentView.swift in Sources */,
 				7116FD0F2737BFCF009AFC72 /* HapticsApp.swift in Sources */,
+				7116FD1D2737C037009AFC72 /* VibrationsCoreHaptics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,13 +4,22 @@
 //
 //  Created by Ryan J. W. Kim on 2021/11/07.
 //
-
+import CoreHaptics
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var selectedTab = 0
+    
+    // MARK: - Body
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        TabView(selection: $selectedTab) {
+            VibrationsCoreHaptics()
+                .tabItem {
+                    Label("Vibration", systemImage: "1.circle")
+                } .tag(0)
+        }
     }
 }
 
