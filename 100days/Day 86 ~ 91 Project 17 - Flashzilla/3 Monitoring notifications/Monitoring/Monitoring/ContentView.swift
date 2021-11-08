@@ -19,6 +19,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("NotifiedBackground", systemImage: "2.circle")
                 } .tag(1)
+            AccessibilitySupport()
+                .tabItem {
+                    Label("Accessibility support", systemImage: "3.circle")
+                } .tag(2)
         }
     }
 }

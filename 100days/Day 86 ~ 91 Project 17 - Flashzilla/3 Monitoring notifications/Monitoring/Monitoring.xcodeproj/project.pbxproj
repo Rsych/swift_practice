@@ -13,6 +13,7 @@
 		71AC6148273946B5003AE259 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AC6147273946B5003AE259 /* Preview Assets.xcassets */; };
 		71AC614F273946C9003AE259 /* TriggerTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC614E273946C9003AE259 /* TriggerTimer.swift */; };
 		71AC615127394AE4003AE259 /* NotifiedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC615027394AE4003AE259 /* NotifiedBackground.swift */; };
+		71AC615327394D42003AE259 /* AccessibilitySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC615227394D42003AE259 /* AccessibilitySupport.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		71AC6147273946B5003AE259 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71AC614E273946C9003AE259 /* TriggerTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerTimer.swift; sourceTree = "<group>"; };
 		71AC615027394AE4003AE259 /* NotifiedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifiedBackground.swift; sourceTree = "<group>"; };
+		71AC615227394D42003AE259 /* AccessibilitySupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilitySupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				71AC6142273946B3003AE259 /* ContentView.swift */,
 				71AC614E273946C9003AE259 /* TriggerTimer.swift */,
 				71AC615027394AE4003AE259 /* NotifiedBackground.swift */,
+				71AC615227394D42003AE259 /* AccessibilitySupport.swift */,
 				71AC6144273946B5003AE259 /* Assets.xcassets */,
 				71AC6146273946B5003AE259 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71AC6143273946B3003AE259 /* ContentView.swift in Sources */,
+				71AC615327394D42003AE259 /* AccessibilitySupport.swift in Sources */,
 				71AC615127394AE4003AE259 /* NotifiedBackground.swift in Sources */,
 				71AC614F273946C9003AE259 /* TriggerTimer.swift in Sources */,
 				71AC6141273946B3003AE259 /* MonitoringApp.swift in Sources */,
