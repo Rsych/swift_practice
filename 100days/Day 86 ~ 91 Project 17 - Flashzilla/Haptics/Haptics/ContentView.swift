@@ -19,6 +19,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Vibration", systemImage: "1.circle")
                 } .tag(0)
+            DisableUserInteractAllowsHitTesting()
+                .tabItem {
+                    Label("DisablingInteractivity", systemImage: "2.circle")
+                } .tag(1)
         }
     }
 }
