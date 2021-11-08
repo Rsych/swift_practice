@@ -15,6 +15,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("TriggerTimer", systemImage: "1.circle")
                 } .tag(0)
+            NotifiedBackground()
+                .tabItem {
+                    Label("NotifiedBackground", systemImage: "2.circle")
+                } .tag(1)
         }
     }
 }
