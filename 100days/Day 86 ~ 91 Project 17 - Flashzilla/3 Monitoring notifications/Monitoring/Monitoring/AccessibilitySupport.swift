@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct AccessibilitySupport: View {
+    // MARK: - Properties
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    
+    // MARK: - Body
     var body: some View {
-        Text("Hello, World!")
+        HStack {
+            if differentiateWithoutColor {
+                Image(systemName: "checkmark.circle")
+            }
+            Text("Success")
+        }
+        .padding()
+        .background(differentiateWithoutColor ? Color.black : .green)
+        .foregroundColor(.white)
+        .clipShape(Capsule())
     }
 }
 
