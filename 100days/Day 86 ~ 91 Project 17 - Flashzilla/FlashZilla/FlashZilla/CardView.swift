@@ -15,11 +15,22 @@ struct CardView: View {
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
     
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutcolor
     // MARK: - Body
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(.white)
+                .fill(
+                    differentiateWithoutcolor
+                    ? Color.white
+                    : Color.white
+                        .opacity(1 - Double(abs(offset.width / 50))))
+                .background(
+                    differentiateWithoutcolor
+                    ? nil
+                    : RoundedRectangle(cornerRadius: 25, style: .continuous)
+                        .fill(offset.width > 0 ? Color.green : .red)
+                ) //: Rectangle fill color optional by swipe left right
                 .shadow(radius: 10)
             
             VStack {
@@ -41,18 +52,18 @@ struct CardView: View {
         .offset(x: offset.width * 5, y: 0)
         .opacity(2 - Double(abs(offset.width / 50)))
         .gesture(
-        DragGesture()
-            .onChanged({ gesture in
-                offset = gesture.translation
-            })
-            .onEnded({ _ in
-                if abs(offset.width) > 100 {
-                    // remove the card
-                    removal?()
-                } else {
-                    offset = .zero
-                }
-            })
+            DragGesture()
+                .onChanged({ gesture in
+                    offset = gesture.translation
+                })
+                .onEnded({ _ in
+                    if abs(offset.width) > 100 {
+                        // remove the card
+                        removal?()
+                    } else {
+                        offset = .zero
+                    }
+                })
         ) //: Moving views with draggesture
         
         .onTapGesture {
@@ -64,6 +75,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(card: Card.example)
-.previewInterfaceOrientation(.landscapeLeft)
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
