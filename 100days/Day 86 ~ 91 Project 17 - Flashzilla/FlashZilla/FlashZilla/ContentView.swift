@@ -17,6 +17,11 @@ extension View {
 struct ContentView: View {
     // MARK: - Properties
     @State private var cards = [Card](repeating: Card.example, count: 10)
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutcolor
+    @State private var timeRemain = 100
+    @State private var isActive = true
+    let timer = Timer.publish(every: 1, tolerance: 0, on: .main, in: .common).autoconnect()
+    
     // MARK: - Body
     var body: some View {
         ZStack {
@@ -24,8 +29,17 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
-            
             VStack {
+                Text("Time: \(timeRemain)")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 5)
+                    .background(
+                        Capsule()
+                            .fill(.black)
+                            .opacity(0.75)
+                    )
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
                         CardView(card: cards[index]) {
@@ -33,11 +47,43 @@ struct ContentView: View {
                                 removeCard(at: index)
                             }
                         }
-                            .stacked(at: index, in: cards.count)
+                        .stacked(at: index, in: cards.count)
                     } //: loop
                 } //: ZStack
             } //: Vstack
+            if differentiateWithoutcolor {
+                VStack {
+                    Spacer()
+                    
+                    HStack {
+                        Image(systemName: "xmark.circle")
+                            .padding()
+                            .background(.black.opacity(0.7))
+                            .clipShape(Circle())
+                        Spacer()
+                        Image(systemName: "checkmark.circle")
+                            .padding()
+                            .background(.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .padding()
+                } //: accessibility Vstack
+            } //: accessibility
         } //: Zstack
+        .onReceive(timer) { time in
+            guard isActive else { return }
+            if timeRemain > 0 {
+                timeRemain -= 1
+            }
+        } //: timer receive
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            isActive = false
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            isActive = true
+        }
     } //: body
     
     func removeCard(at index: Int) {
@@ -48,6 +94,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-.previewInterfaceOrientation(.landscapeRight)
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }
