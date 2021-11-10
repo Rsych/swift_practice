@@ -50,6 +50,20 @@ struct ContentView: View {
                         .stacked(at: index, in: cards.count)
                     } //: loop
                 } //: ZStack
+                // only allowed when timeRemain is > 0
+                .allowsHitTesting(timeRemain > 0)
+                
+                if cards.isEmpty {
+                    Button {
+                        resetCards()
+                    } label: {
+                        Text("Start Again")
+                    }
+                    .padding()
+                    .background(.white)
+                    .foregroundColor(.black)
+                    .clipShape(Capsule())
+                } //: card empty = appear reset Button
             } //: Vstack
             if differentiateWithoutcolor {
                 VStack {
@@ -82,13 +96,26 @@ struct ContentView: View {
             isActive = false
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-            isActive = true
+            if self.cards.isEmpty == false {
+                isActive = true
+            }
         }
     } //: body
     
     func removeCard(at index: Int) {
         cards.remove(at: index)
-    }
+        
+        if cards.isEmpty {
+            isActive = false
+        }
+    } //: Removecard func
+    
+    func resetCards() {
+        cards = [Card](repeating: Card.example, count: 10)
+        timeRemain = 100
+        isActive = true
+    } //: resetcard func
+    
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {
