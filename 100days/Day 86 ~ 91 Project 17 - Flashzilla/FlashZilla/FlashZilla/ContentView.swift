@@ -28,16 +28,26 @@ struct ContentView: View {
             VStack {
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: cards[index]).stacked(at: index, in: cards.count)
+                        CardView(card: cards[index]) {
+                            withAnimation {
+                                removeCard(at: index)
+                            }
+                        }
+                            .stacked(at: index, in: cards.count)
                     } //: loop
                 } //: ZStack
             } //: Vstack
         } //: Zstack
     } //: body
+    
+    func removeCard(at index: Int) {
+        cards.remove(at: index)
+    }
 } //: contentview
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+.previewInterfaceOrientation(.landscapeRight)
     }
 }
