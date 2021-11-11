@@ -14,8 +14,11 @@ struct CardView: View {
     
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
+    @State private var feedback = UINotificationFeedbackGenerator()
     
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutcolor
+    @Environment(\.accessibilityEnabled) var accessibilityEnabled
+    
     // MARK: - Body
     var body: some View {
         ZStack {
@@ -34,13 +37,19 @@ struct CardView: View {
                 .shadow(radius: 10)
             
             VStack {
-                Text(card.prompt)
-                    .font(.largeTitle)
-                    .foregroundColor(.primary)
-                if isShowingAnswer {
-                    Text(card.answer)
-                        .font(.title)
-                        .foregroundColor(.secondary)
+                if accessibilityEnabled {
+                    Text(isShowingAnswer ? card.answer : card.prompt)
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                } else {
+                    Text(card.prompt)
+                        .font(.largeTitle)
+                        .foregroundColor(.primary)
+                    if isShowingAnswer {
+                        Text(card.answer)
+                            .font(.title)
+                            .foregroundColor(.secondary)
+                    }
                 } //: showinganswer only true
             } //: VStack
             .padding(20)
@@ -51,26 +60,34 @@ struct CardView: View {
         .rotationEffect(.degrees(Double(offset.width / 5)))
         .offset(x: offset.width * 5, y: 0)
         .opacity(2 - Double(abs(offset.width / 50)))
+        .accessibilityAddTraits(.isButton)
         .gesture(
             DragGesture()
-                .onChanged({ gesture in
+                .onChanged { gesture in
                     offset = gesture.translation
-                })
-                .onEnded({ _ in
+                    feedback.prepare() //: haptic prepare
+                }
+                .onEnded{ _ in
                     if abs(offset.width) > 100 {
+                        if offset.width > 0 {
+                            feedback.notificationOccurred(.success)
+                        } else {
+                            feedback.notificationOccurred(.error)
+                        } //: haptic on or error
                         // remove the card
                         removal?()
                     } else {
                         offset = .zero
                     }
-                })
+                }
         ) //: Moving views with draggesture
         
         .onTapGesture {
             isShowingAnswer.toggle()
         }
-    }
-}
+        .animation(.spring())
+    } //: body
+} //: contentview
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
