@@ -29,6 +29,7 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
+            
             VStack {
                 Text("Time: \(timeRemain)")
                     .font(.largeTitle)
@@ -39,14 +40,15 @@ struct ContentView: View {
                         Capsule()
                             .fill(.black)
                             .opacity(0.75)
-                    )
+                    ) //: background
+                
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
                         CardView(card: cards[index]) {
                             withAnimation {
                                 removeCard(at: index)
-                            }
-                        }
+                            } //: withAnimation removecard
+                        } //: cardview loop
                         .stacked(at: index, in: cards.count)
                     } //: loop
                 } //: ZStack
