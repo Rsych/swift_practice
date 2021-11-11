@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71597101273D345F00A3C4F2 /* EditCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71597100273D345F00A3C4F2 /* EditCards.swift */; };
 		71AC6161273A8295003AE259 /* FlashZillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC6160273A8295003AE259 /* FlashZillaApp.swift */; };
 		71AC6163273A8295003AE259 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC6162273A8295003AE259 /* ContentView.swift */; };
 		71AC6165273A8299003AE259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71AC6164273A8299003AE259 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71597100273D345F00A3C4F2 /* EditCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCards.swift; sourceTree = "<group>"; };
 		71AC615D273A8295003AE259 /* FlashZilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashZilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AC6160273A8295003AE259 /* FlashZillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashZillaApp.swift; sourceTree = "<group>"; };
 		71AC6162273A8295003AE259 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				71AC6160273A8295003AE259 /* FlashZillaApp.swift */,
 				71AC6162273A8295003AE259 /* ContentView.swift */,
 				71AC616E273A9F0D003AE259 /* Card.swift */,
+				71597100273D345F00A3C4F2 /* EditCards.swift */,
 				71AC6164273A8299003AE259 /* Assets.xcassets */,
 				71AC6166273A8299003AE259 /* Preview Content */,
 				71AC6172273A9FD8003AE259 /* CardView.swift */,
@@ -146,6 +149,7 @@
 				71AC6163273A8295003AE259 /* ContentView.swift in Sources */,
 				71AC616F273A9F0D003AE259 /* Card.swift in Sources */,
 				71AC6173273A9FD8003AE259 /* CardView.swift in Sources */,
+				71597101273D345F00A3C4F2 /* EditCards.swift in Sources */,
 				71AC6161273A8295003AE259 /* FlashZillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

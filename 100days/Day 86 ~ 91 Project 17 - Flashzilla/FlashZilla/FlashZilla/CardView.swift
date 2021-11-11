@@ -18,6 +18,7 @@ struct CardView: View {
     
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutcolor
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
+    
     // MARK: - Body
     var body: some View {
         ZStack {

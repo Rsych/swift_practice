@@ -16,12 +16,15 @@ extension View {
 
 struct ContentView: View {
     // MARK: - Properties
-    @State private var cards = [Card](repeating: Card.example, count: 10)
+//    @State private var cards = [Card](repeating: Card.example, count: 10)
+    @State private var cards = [Card]()
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutcolor
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
     @State private var timeRemain = 100
     @State private var isActive = true
     let timer = Timer.publish(every: 1, tolerance: 0, on: .main, in: .common).autoconnect()
+    
+    @State private var showingEditscreen = false
     
     // MARK: - Body
     var body: some View {
@@ -70,6 +73,24 @@ struct ContentView: View {
                     .clipShape(Capsule())
                 } //: card empty = appear reset Button
             } //: Vstack
+            
+            VStack {
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        showingEditscreen = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .padding()
+                    } //: Add Button
+                } //: HStack
+                Spacer()
+            } //: VStack
+            .foregroundColor(.white)
+            .font(.largeTitle)
+            .padding()
+            
             if differentiateWithoutcolor || accessibilityEnabled {
                 VStack {
                     Spacer()
@@ -122,6 +143,10 @@ struct ContentView: View {
                 isActive = true
             }
         }
+        .sheet(isPresented: $showingEditscreen, onDismiss: resetCards) {
+            EditCards()
+        }
+        .onAppear(perform: resetCards)
     } //: body
     
     func removeCard(at index: Int) {
@@ -137,7 +162,16 @@ struct ContentView: View {
         cards = [Card](repeating: Card.example, count: 10)
         timeRemain = 100
         isActive = true
+        loadData()
     } //: resetcard func
+    
+    func loadData() {
+        if let data = UserDefaults.standard.data(forKey: "Cards") {
+            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
+                cards = decoded
+            }
+        }
+    }
     
 } //: contentview
 
