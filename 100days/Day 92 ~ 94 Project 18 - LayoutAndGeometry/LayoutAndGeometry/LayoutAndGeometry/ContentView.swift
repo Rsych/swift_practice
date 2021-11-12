@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - Properties
+    @State private var selectedTab = 0
+    // MARK: - Body
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView(selection: $selectedTab) {
+            HowLayoutWorks()
+                .tabItem {
+                    Label("HowLayoutWorks", systemImage: "1.circle")
+                } .tag(0)
+            AlignmentAndGuide()
+                .tabItem {
+                    Label("Alignment and guides", systemImage: "2.circle")
+                } .tag(1)
+            CustomAlignment()
+                .tabItem {
+                    Label("Custom alignment", systemImage: "3.circle")
+                } .tag(2)
+        }
     }
 }
 
