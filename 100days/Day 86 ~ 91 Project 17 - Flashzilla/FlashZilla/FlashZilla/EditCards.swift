@@ -93,6 +93,6 @@ struct EditCards: View {
 struct EditCards_Previews: PreviewProvider {
     static var previews: some View {
         EditCards()
-.previewInterfaceOrientation(.landscapeLeft)
+.previewInterfaceOrientation(.portrait)
     }
 }
