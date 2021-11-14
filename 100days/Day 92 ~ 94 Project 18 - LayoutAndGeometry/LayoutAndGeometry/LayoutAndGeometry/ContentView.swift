@@ -25,6 +25,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Custom alignment", systemImage: "3.circle")
                 } .tag(2)
+            AbsolutePosition()
+                .tabItem {
+                    Label("Absolute positioning", systemImage: "4.circle")
+                } .tag(3)
         }
     }
 }
