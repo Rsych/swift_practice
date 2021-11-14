@@ -29,6 +29,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Absolute positioning", systemImage: "4.circle")
                 } .tag(3)
+            FramesAndCoordinates()
+                .tabItem {
+                    Label("Frames&Coordinates", systemImage: "5.circle")
+                } .tag(4)
         }
     }
 }

@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct AbsolutePosition: View {
+    // MARK: - Properties
+    
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
+            .background(Color.red)
+            .position(x: 100, y: 100)
+            .offset(x: 150, y: 150)
+            .background(Color.blue)
+            .ignoresSafeArea()
+        
+        
     }
 }
 
