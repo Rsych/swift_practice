@@ -15,7 +15,7 @@ struct OuterView: View {
                 .background(Color.green)
             Text("Bottom")
         } //: Vstack
-    }
+    } //: body
 } //: OuterView
 
 struct InnerView: View {
@@ -36,7 +36,7 @@ struct InnerView: View {
             .background(Color.orange)
             Text("Right")
         } //: Hstack
-    }
+    } //: body
 } //: InnerView
 
 struct FramesAndCoordinates: View {
@@ -47,8 +47,8 @@ struct FramesAndCoordinates: View {
         OuterView()
             .background(Color.red)
             .coordinateSpace(name: "Custom")
-    }
-}
+    } //: body
+} //: contentview
 
 struct FramesAndCoordinates_Previews: PreviewProvider {
     static var previews: some View {
