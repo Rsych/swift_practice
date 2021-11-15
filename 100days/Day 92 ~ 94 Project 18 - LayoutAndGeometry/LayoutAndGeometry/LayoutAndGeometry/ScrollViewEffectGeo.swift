@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ScrollViewEffectGeo: View {
+struct ScrollViewEffectDNA: View {
     // MARK: - Properties
     let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
     // MARK: - Body
@@ -29,8 +29,8 @@ struct ScrollViewEffectGeo: View {
     } //: body
 } //: contentview
 
-struct ScrollViewEffectGeo_Previews: PreviewProvider {
+struct ScrollViewEffectDNA_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollViewEffectGeo()
+        ScrollViewEffectDNA()
     }
 }
