@@ -13,26 +13,31 @@ struct ContentView: View {
     // MARK: - Body
     var body: some View {
         TabView(selection: $selectedTab) {
+            ScrollViewEffectGeo()
+                .tabItem {
+                    Label("ScrollView Effect", systemImage: "1.circle")
+                } .tag(0)
             HowLayoutWorks()
                 .tabItem {
-                    Label("HowLayoutWorks", systemImage: "1.circle")
-                } .tag(0)
+                    Label("HowLayoutWorks", systemImage: "2.circle")
+                } .tag(1)
             AlignmentAndGuide()
                 .tabItem {
-                    Label("Alignment and guides", systemImage: "2.circle")
-                } .tag(1)
+                    Label("Alignment and guides", systemImage: "3.circle")
+                } .tag(2)
             CustomAlignment()
                 .tabItem {
-                    Label("Custom alignment", systemImage: "3.circle")
-                } .tag(2)
+                    Label("Custom alignment", systemImage: "4.circle")
+                } .tag(3)
             AbsolutePosition()
                 .tabItem {
-                    Label("Absolute positioning", systemImage: "4.circle")
-                } .tag(3)
+                    Label("Absolute positioning", systemImage: "5.circle")
+                } .tag(4)
             FramesAndCoordinates()
                 .tabItem {
-                    Label("Frames&Coordinates", systemImage: "5.circle")
-                } .tag(4)
+                    Label("Frames&Coordinates", systemImage: "6.circle")
+                } .tag(5)
+            
         }
     }
 }

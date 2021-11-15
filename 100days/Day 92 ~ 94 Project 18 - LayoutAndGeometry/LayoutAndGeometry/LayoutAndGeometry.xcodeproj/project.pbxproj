@@ -16,6 +16,7 @@
 		71796457273EAB6500DBFAFB /* CustomAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71796456273EAB6500DBFAFB /* CustomAlignment.swift */; };
 		71C2E2FA2741204A008E1078 /* AbsolutePosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E2F92741204A008E1078 /* AbsolutePosition.swift */; };
 		71C2E2FC274121B7008E1078 /* FramesAndCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C2E2FB274121B7008E1078 /* FramesAndCoordinates.swift */; };
+		71E82EE4274272A2001D899A /* ScrollViewEffectGeo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E82EE3274272A2001D899A /* ScrollViewEffectGeo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		71796456273EAB6500DBFAFB /* CustomAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlignment.swift; sourceTree = "<group>"; };
 		71C2E2F92741204A008E1078 /* AbsolutePosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbsolutePosition.swift; sourceTree = "<group>"; };
 		71C2E2FB274121B7008E1078 /* FramesAndCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesAndCoordinates.swift; sourceTree = "<group>"; };
+		71E82EE3274272A2001D899A /* ScrollViewEffectGeo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewEffectGeo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				71796456273EAB6500DBFAFB /* CustomAlignment.swift */,
 				71C2E2F92741204A008E1078 /* AbsolutePosition.swift */,
 				71C2E2FB274121B7008E1078 /* FramesAndCoordinates.swift */,
+				71E82EE3274272A2001D899A /* ScrollViewEffectGeo.swift */,
 				71796448273E248000DBFAFB /* Assets.xcassets */,
 				7179644A273E248000DBFAFB /* Preview Content */,
 			);
@@ -158,6 +161,7 @@
 				71796445273E247F00DBFAFB /* LayoutAndGeometryApp.swift in Sources */,
 				71C2E2FA2741204A008E1078 /* AbsolutePosition.swift in Sources */,
 				71796455273EA96200DBFAFB /* AlignmentAndGuide.swift in Sources */,
+				71E82EE4274272A2001D899A /* ScrollViewEffectGeo.swift in Sources */,
 				71796453273E25D300DBFAFB /* HowLayoutWorks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
