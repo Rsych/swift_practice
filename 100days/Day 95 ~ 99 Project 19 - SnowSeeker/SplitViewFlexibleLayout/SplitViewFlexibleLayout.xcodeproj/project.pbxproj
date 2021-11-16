@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7184B5A127436E2C0028ABB6 /* SplitSideViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184B5A027436E2C0028ABB6 /* SplitSideViews.swift */; };
+		7184B5A3274371730028ABB6 /* OptionalAlertAndSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184B5A2274371730028ABB6 /* OptionalAlertAndSheet.swift */; };
+		7184B5A52743726D0028ABB6 /* BindingAlertAndSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184B5A42743726D0028ABB6 /* BindingAlertAndSheet.swift */; };
+		7184B5A7274375BD0028ABB6 /* GroupsLayoutContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184B5A6274375BD0028ABB6 /* GroupsLayoutContainers.swift */; };
 		71BDFDF327436AE000DDE6B7 /* SplitViewFlexibleLayoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BDFDF227436AE000DDE6B7 /* SplitViewFlexibleLayoutApp.swift */; };
 		71BDFDF527436AE000DDE6B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BDFDF427436AE000DDE6B7 /* ContentView.swift */; };
 		71BDFDF727436AE200DDE6B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71BDFDF627436AE200DDE6B7 /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		7184B5A027436E2C0028ABB6 /* SplitSideViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitSideViews.swift; sourceTree = "<group>"; };
+		7184B5A2274371730028ABB6 /* OptionalAlertAndSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalAlertAndSheet.swift; sourceTree = "<group>"; };
+		7184B5A42743726D0028ABB6 /* BindingAlertAndSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingAlertAndSheet.swift; sourceTree = "<group>"; };
+		7184B5A6274375BD0028ABB6 /* GroupsLayoutContainers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsLayoutContainers.swift; sourceTree = "<group>"; };
 		71BDFDEF27436AE000DDE6B7 /* SplitViewFlexibleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewFlexibleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71BDFDF227436AE000DDE6B7 /* SplitViewFlexibleLayoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewFlexibleLayoutApp.swift; sourceTree = "<group>"; };
 		71BDFDF427436AE000DDE6B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 				71BDFDF227436AE000DDE6B7 /* SplitViewFlexibleLayoutApp.swift */,
 				71BDFDF427436AE000DDE6B7 /* ContentView.swift */,
 				7184B5A027436E2C0028ABB6 /* SplitSideViews.swift */,
+				7184B5A2274371730028ABB6 /* OptionalAlertAndSheet.swift */,
+				7184B5A42743726D0028ABB6 /* BindingAlertAndSheet.swift */,
+				7184B5A6274375BD0028ABB6 /* GroupsLayoutContainers.swift */,
 				71BDFDF627436AE200DDE6B7 /* Assets.xcassets */,
 				71BDFDF827436AE200DDE6B7 /* Preview Content */,
 			);
@@ -140,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7184B5A3274371730028ABB6 /* OptionalAlertAndSheet.swift in Sources */,
 				71BDFDF527436AE000DDE6B7 /* ContentView.swift in Sources */,
 				71BDFDF327436AE000DDE6B7 /* SplitViewFlexibleLayoutApp.swift in Sources */,
+				7184B5A7274375BD0028ABB6 /* GroupsLayoutContainers.swift in Sources */,
+				7184B5A52743726D0028ABB6 /* BindingAlertAndSheet.swift in Sources */,
 				7184B5A127436E2C0028ABB6 /* SplitSideViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

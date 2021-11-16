@@ -17,6 +17,18 @@ struct ContentView: View {
                 .tabItem {
                     Label("SplitSideViews", systemImage: "1.circle")
                 } .tag(0)
+            OptionalAlertAndSheet()
+                .tabItem {
+                    Label("Optional Alert and Sheet", systemImage: "2.circle")
+                } .tag(1)
+            BindingAlertAndSheet()
+                .tabItem {
+                    Label("Binding Alert and Sheet", systemImage: "3.circle")
+                } .tag(2)
+            GroupsLayoutContainers()
+                .tabItem {
+                    Label("Groups LayoutContainers", systemImage: "4.circle")
+                } .tag(3)
         }
     }
 }
