@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ResortView: View {
     // MARK: - Properties
+    @Environment(\.horizontalSizeClass) var sizeClass
+    
     let resort: Resort
     
     // MARK: - Body
@@ -21,10 +23,21 @@ struct ResortView: View {
                 
                 Group {
                     HStack {
-                        Spacer()
-                        ResortDetailsView(resort: resort)
-                        SkiDetailsView(resort: resort)
-                        Spacer()
+                        if sizeClass == .compact {
+                            Spacer()
+                            VStack {
+                                ResortDetailsView(resort: resort)
+                            } //: compact Vstack
+                            VStack {
+                                SkiDetailsView(resort: resort)
+                            } //: compact Vstack
+                            Spacer()
+                        } else {
+                            // if landscape or bigger screen
+                            ResortDetailsView(resort: resort)
+                            Spacer().frame(height: 0)
+                            SkiDetailsView(resort: resort)
+                        }
                     } //: HStack for details
                     .font(.headline)
                     .foregroundColor(.secondary)
@@ -35,7 +48,7 @@ struct ResortView: View {
                     
                     Text("Facilities")
                         .font(.headline)
-//                    Text(resort.facilities.joined(separator: ", "))
+                    //                    Text(resort.facilities.joined(separator: ", "))
                     Text(ListFormatter.localizedString(byJoining: resort.facilities))
                         .padding(.vertical)
                 } //: Group
@@ -50,5 +63,6 @@ struct ResortView: View {
 struct ResortView_Previews: PreviewProvider {
     static var previews: some View {
         ResortView(resort: Resort.example)
+.previewInterfaceOrientation(.portrait)
     }
 }
