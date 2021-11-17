@@ -17,7 +17,7 @@ struct ContentView: View {
             List(resorts) { resort in
                 NavigationLink {
                     // destination
-                    Text(resort.name)
+                    ResortView(resort: resort)
                 } label: {
                     Image(resort.country)
                         .resizable()
@@ -35,12 +35,26 @@ struct ContentView: View {
                 } //: NavLink
             } //: List
             .navigationBarTitle("Resorts")
+            // secondary view
+            WelcomeView()
         } //: NavView
+        .phoneOnlyStackNavigationView()
     } //: body
 } //: contentview
+
+extension View {
+    func phoneOnlyStackNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return AnyView(self.navigationViewStyle(.stack))
+        } else {
+            return AnyView(self)
+        }
+    }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 11 Pro")
     }
 }
