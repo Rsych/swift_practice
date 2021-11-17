@@ -13,9 +13,12 @@ struct SkiDetailsView: View {
     
     // MARK: - Body
     var body: some View {
-        VStack {
+        Group {
             Text("Elevation: \(resort.elevation)m")
+                .layoutPriority(1) //: to make sure text is displayed in a single line
+            Spacer().frame(height: 0)
             Text("snow: \(resort.snowDepth)cm")
+                .layoutPriority(1)
         } //: Vstack
     }
 }
@@ -23,5 +26,6 @@ struct SkiDetailsView: View {
 struct SkiDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         SkiDetailsView(resort: Resort.example)
+            .previewLayout(.sizeThatFits)
     }
 }
