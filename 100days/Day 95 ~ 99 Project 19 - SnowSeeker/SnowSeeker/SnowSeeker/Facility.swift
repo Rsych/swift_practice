@@ -14,7 +14,7 @@ struct Facility: Identifiable {
     var icon: some View {
     
         let icons = [
-            "Accomodation": "house",
+            "Accommodation": "house",
             "Beginners": "1.circle",
             "Cross-country": "map",
             "Eco-friendly": "leaf.arrow.circlepath",
@@ -33,7 +33,7 @@ struct Facility: Identifiable {
     
         var alert: Alert {
         let messages = [
-            "Accomodation": "This resort has popular on-site accomodation",
+            "Accommodation": "This resort has popular on-site accomodation",
             "Beginners": "This resort has lots of ski schools",
             "Cross-country": "This resort has many cross-country ski routes",
             "Eco-friendly": "This resort has won an award for environmental friendliness",
