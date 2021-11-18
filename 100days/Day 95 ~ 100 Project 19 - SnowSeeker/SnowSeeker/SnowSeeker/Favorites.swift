@@ -16,6 +16,12 @@ class Favorites: ObservableObject {
     
     init() {
         // load our saved data
+        if let data = UserDefaults.standard.data(forKey: saveKey) {
+            if let decoded = try? JSONDecoder().decode(Set<String>.self, from: data) {
+                self.resorts = decoded
+                return
+            }
+        }
         
         self.resorts = []
     }
@@ -41,5 +47,8 @@ class Favorites: ObservableObject {
     
     func save() {
         // save data
+        if let encoded = try? JSONEncoder().encode(resorts) {
+            UserDefaults.standard.set(encoded, forKey: saveKey)
+        }
     }
 }
