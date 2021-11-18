@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ResortListView: View {
+    // MARK: - Properties
     let filteredResorts: [Resort]
     @ObservedObject var favirotes = Favorites()
+    
+    // MARK: - Body
     var body: some View {
         List(filteredResorts) { resort in
             NavigationLink {
@@ -40,8 +43,8 @@ struct ResortListView: View {
                 }
             } //: NavLink
         } //: List
-    }
-}
+    } //: body
+} //: contentview
 
 struct ResortListView_Previews: PreviewProvider {
     static var previews: some View {
