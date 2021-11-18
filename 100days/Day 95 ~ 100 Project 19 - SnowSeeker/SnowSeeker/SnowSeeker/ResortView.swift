@@ -76,6 +76,20 @@ struct ResortView: View {
             } //: Vstack
         } //: Scrollview
         .navigationTitle(Text("\(resort.name), \(resort.country)"))
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    if favorites.contains(resort) {
+                        favorites.remove(resort)
+                    } else {
+                        favorites.add(resort)
+                    }
+                } label: {
+                    Image(systemName: favorites.contains(resort) ? "heart.fill" : "heart")
+                        .foregroundColor(favorites.contains(resort) ? .red : .black)
+                }
+            } //: trailing toolbar
+        } //: toolbar
         .navigationBarTitleDisplayMode(.inline)
         .alert(item: $selectedFacility) { facility in
             facility.alert
