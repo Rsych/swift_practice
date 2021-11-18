@@ -16,41 +16,63 @@ struct ContentView: View {
     enum FilterType {
         case abc, country, price, favorite
     }
-    @State var filter:FilterType = .abc
     
+    @State private var selectedFilter:FilterType = .abc
     var filteredResorts: [Resort] {
-        switch filter {
+        switch selectedFilter {
         case .abc:
+            print("abc selected")
             return resorts.sorted(by: { $0.name < $1.name })
         case .country:
+            print("country selected")
             return resorts.sorted(by: { $0.country > $1.country })
         case .price:
+            print("price selected")
             return resorts.sorted(by: { $0.price > $1.price })
         case .favorite:
+            print("favorite selected")
             return resorts.sorted()
         }
     }
+    
     // MARK: - Body
     var body: some View {
         NavigationView {
+            
             ResortListView(filteredResorts: filteredResorts)
+            
                 .navigationBarTitle("Resorts")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Menu("Sort") {
-                            
-                            Text("Country")
-                        }
-                    }
+                            Button {
+                                selectedFilter = .abc
+                            } label: {
+                                Text("Abc")
+                            } //: ABC sort
+                            Button {
+                                selectedFilter = .country
+                            } label: {
+                                Text("Country")
+                            } //: Country sort
+                            Button {
+                                selectedFilter = .price
+                            } label: {
+                                Text("Price")
+                            } //: Price sort
+                        } //: Sort Menu
+                    } //: ToolbarItem trailing
                 } //: toolbar
             // secondary view
             WelcomeView()
         } //: NavView
         .phoneOnlyStackNavigationView()
-        
         // every navView presents will get that Favorites instance
         .environmentObject(favirotes)
     } //: body
+    func abcSelected() {
+        
+    }
 } //: contentview
 
 extension View {
