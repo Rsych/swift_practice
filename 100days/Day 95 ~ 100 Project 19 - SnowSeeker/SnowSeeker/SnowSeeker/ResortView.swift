@@ -10,6 +10,7 @@ import SwiftUI
 struct ResortView: View {
     // MARK: - Properties
     @Environment(\.horizontalSizeClass) var sizeClass
+    @EnvironmentObject var favorites: Favorites
     @State private var selectedFacility: Facility?
     
     let resort: Resort
@@ -26,10 +27,10 @@ struct ResortView: View {
                     HStack {
                         if sizeClass == .compact {
                             Spacer()
-                            VStack {
+                            VStack(alignment: .leading) {
                                 ResortDetailsView(resort: resort)
                             } //: compact Vstack
-                            VStack {
+                            VStack(alignment: .trailing) {
                                 SkiDetailsView(resort: resort)
                             } //: compact Vstack
                             Spacer()
@@ -63,6 +64,15 @@ struct ResortView: View {
                         .padding(.vertical)
                 } //: Group
                 .padding(.horizontal)
+                
+                Button(favorites.contains(resort) ? "Remove from Favorites" : "Add to Favorites") {
+                    if favorites.contains(resort) {
+                        favorites.remove(resort)
+                    } else {
+                        favorites.add(resort)
+                    }
+                } //: Add or remove fav button
+                .padding()
             } //: Vstack
         } //: Scrollview
         .navigationTitle(Text("\(resort.name), \(resort.country)"))
