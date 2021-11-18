@@ -11,6 +11,7 @@ struct ContentView: View {
     // MARK: - Properties
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
+    @ObservedObject var favirotes = Favorites()
     // MARK: - Body
     var body: some View {
         NavigationView {
@@ -32,6 +33,15 @@ struct ContentView: View {
                         Text("\(resort.runs) runs")
                             .foregroundColor(.secondary)
                     } //: Vstack for name and runs
+                    .layoutPriority(1)
+                    
+                    // favorite heart icon
+                    if self.favirotes.contains(resort) {
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                            .accessibility(label: Text("This is a favorite resort"))
+                            .foregroundColor(.red)
+                    }
                 } //: NavLink
             } //: List
             .navigationBarTitle("Resorts")
@@ -39,6 +49,9 @@ struct ContentView: View {
             WelcomeView()
         } //: NavView
         .phoneOnlyStackNavigationView()
+        
+        // every navView presents will get that Favorites instance
+        .environmentObject(favirotes)
     } //: body
 } //: contentview
 
