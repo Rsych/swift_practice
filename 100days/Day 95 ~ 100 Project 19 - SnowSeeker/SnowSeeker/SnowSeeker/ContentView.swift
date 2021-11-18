@@ -25,10 +25,10 @@ struct ContentView: View {
             return resorts.sorted(by: { $0.name < $1.name })
         case .country:
             print("country selected")
-            return resorts.sorted(by: { $0.country > $1.country })
+            return resorts.sorted(by: { $0.country < $1.country })
         case .price:
             print("price selected")
-            return resorts.sorted(by: { $0.price > $1.price })
+            return resorts.sorted(by: { $0.price < $1.price })
         case .favorite:
             print("favorite selected")
             return resorts.sorted()
@@ -70,9 +70,6 @@ struct ContentView: View {
         // every navView presents will get that Favorites instance
         .environmentObject(favirotes)
     } //: body
-    func abcSelected() {
-        
-    }
 } //: contentview
 
 extension View {
