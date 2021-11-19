@@ -19,19 +19,32 @@ struct ContentView: View {
     
     @State private var selectedFilter:FilterType = .abc
     var filteredResorts: [Resort] {
+        // search result
+        let searchList = searchResults
+        
         switch selectedFilter {
         case .abc:
             print("abc selected")
-            return resorts.sorted(by: { $0.name < $1.name })
+            return searchList.sorted(by: { $0.name < $1.name })
         case .country:
             print("country selected")
-            return resorts.sorted(by: { $0.country < $1.country })
+            return searchList.sorted(by: { $0.country < $1.country })
         case .price:
             print("price selected")
-            return resorts.sorted(by: { $0.price < $1.price })
+            return searchList.sorted(by: { $0.price < $1.price })
         case .favorite:
             print("favorite selected")
-            return resorts.sorted()
+            return searchList.sorted()
+        }
+    }
+    
+    // search within resorts
+    @State private var searchText = ""
+    var searchResults: [Resort] {
+        if searchText.isEmpty {
+            return resorts
+        } else {
+            return resorts.filter { $0.name.contains(searchText) }
         }
     }
     
@@ -40,7 +53,7 @@ struct ContentView: View {
         NavigationView {
             
             ResortListView(filteredResorts: filteredResorts)
-            
+                .searchable(text: $searchText)
                 .navigationBarTitle("Resorts")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -70,6 +83,8 @@ struct ContentView: View {
         // every navView presents will get that Favorites instance
         .environmentObject(favirotes)
     } //: body
+    
+    
 } //: contentview
 
 extension View {
