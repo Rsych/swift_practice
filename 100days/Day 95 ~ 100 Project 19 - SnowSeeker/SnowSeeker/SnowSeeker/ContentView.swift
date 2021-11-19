@@ -19,19 +19,33 @@ struct ContentView: View {
     
     @State private var selectedFilter:FilterType = .abc
     var filteredResorts: [Resort] {
+        // search result
+        let searchList = searchResults
+        
         switch selectedFilter {
         case .abc:
             print("abc selected")
-            return resorts.sorted(by: { $0.name < $1.name })
+            return searchList.sorted(by: { $0.name < $1.name })
         case .country:
             print("country selected")
-            return resorts.sorted(by: { $0.country < $1.country })
+            return searchList.sorted(by: { $0.country < $1.country })
         case .price:
             print("price selected")
-            return resorts.sorted(by: { $0.price < $1.price })
+            return searchList.sorted(by: { $0.price < $1.price })
         case .favorite:
             print("favorite selected")
-            return resorts.sorted()
+            return searchList.sorted()
+        }
+    }
+    
+    // search within resorts
+    @State private var searchText = ""
+    var searchResults: [Resort] {
+        if searchText.isEmpty {
+            return resorts
+        } else {
+            //            return resorts.filter { $0.name.contains(searchText) }
+            return resorts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
     }
     
@@ -40,29 +54,36 @@ struct ContentView: View {
         NavigationView {
             
             ResortListView(filteredResorts: filteredResorts)
-            
-                .navigationBarTitle("Resorts")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Menu("Sort") {
-                            Button {
-                                selectedFilter = .abc
-                            } label: {
-                                Text("Abc")
-                            } //: ABC sort
-                            Button {
-                                selectedFilter = .country
-                            } label: {
-                                Text("Country")
-                            } //: Country sort
-                            Button {
-                                selectedFilter = .price
-                            } label: {
-                                Text("Price")
-                            } //: Price sort
-                        } //: Sort Menu
-                    } //: ToolbarItem trailing
-                } //: toolbar
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Looking for a resort?")
+            // below code will implement search autocompletion
+            // I prefer not implementing this
+//            {
+//                ForEach(searchResults) {
+//                    Text("Are you looking for \($0.name)?").searchCompletion($0.name)
+//                }
+//            }
+            .navigationBarTitle("Resorts")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu("Sort") {
+                        Button {
+                            selectedFilter = .abc
+                        } label: {
+                            Text("Abc")
+                        } //: ABC sort
+                        Button {
+                            selectedFilter = .country
+                        } label: {
+                            Text("Country")
+                        } //: Country sort
+                        Button {
+                            selectedFilter = .price
+                        } label: {
+                            Text("Price")
+                        } //: Price sort
+                    } //: Sort Menu
+                } //: ToolbarItem trailing
+            } //: toolbar
             // secondary view
             WelcomeView()
         } //: NavView
@@ -70,6 +91,8 @@ struct ContentView: View {
         // every navView presents will get that Favorites instance
         .environmentObject(favirotes)
     } //: body
+    
+    
 } //: contentview
 
 extension View {
