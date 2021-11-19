@@ -53,7 +53,11 @@ struct ContentView: View {
         NavigationView {
             
             ResortListView(filteredResorts: filteredResorts)
-                .searchable(text: $searchText)
+                .searchable(text: $searchText, prompt: "Looking for a resort?") {
+                    ForEach(searchResults) {
+                        Text("Are you looking for \($0.name)?").searchCompletion($0.name)
+                    }
+                }
                 .navigationBarTitle("Resorts")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
