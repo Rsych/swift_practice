@@ -44,7 +44,8 @@ struct ContentView: View {
         if searchText.isEmpty {
             return resorts
         } else {
-            return resorts.filter { $0.name.contains(searchText) }
+            //            return resorts.filter { $0.name.contains(searchText) }
+            return resorts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
     }
     
@@ -53,33 +54,36 @@ struct ContentView: View {
         NavigationView {
             
             ResortListView(filteredResorts: filteredResorts)
-                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Looking for a resort?") {
-                    ForEach(searchResults) {
-                        Text("Are you looking for \($0.name)?").searchCompletion($0.name)
-                    }
-                }
-                .navigationBarTitle("Resorts")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Menu("Sort") {
-                            Button {
-                                selectedFilter = .abc
-                            } label: {
-                                Text("Abc")
-                            } //: ABC sort
-                            Button {
-                                selectedFilter = .country
-                            } label: {
-                                Text("Country")
-                            } //: Country sort
-                            Button {
-                                selectedFilter = .price
-                            } label: {
-                                Text("Price")
-                            } //: Price sort
-                        } //: Sort Menu
-                    } //: ToolbarItem trailing
-                } //: toolbar
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Looking for a resort?")
+            // below code will implement search autocompletion
+            // I prefer not implementing this
+//            {
+//                ForEach(searchResults) {
+//                    Text("Are you looking for \($0.name)?").searchCompletion($0.name)
+//                }
+//            }
+            .navigationBarTitle("Resorts")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu("Sort") {
+                        Button {
+                            selectedFilter = .abc
+                        } label: {
+                            Text("Abc")
+                        } //: ABC sort
+                        Button {
+                            selectedFilter = .country
+                        } label: {
+                            Text("Country")
+                        } //: Country sort
+                        Button {
+                            selectedFilter = .price
+                        } label: {
+                            Text("Price")
+                        } //: Price sort
+                    } //: Sort Menu
+                } //: ToolbarItem trailing
+            } //: toolbar
             // secondary view
             WelcomeView()
         } //: NavView
