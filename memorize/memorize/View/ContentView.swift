@@ -9,58 +9,57 @@ import SwiftUI
 
 struct ContentView: View {
     // MARK: - Properties
-    var emojis = ["✈️", "🚓", "🚁", "🚲", "🚌", "🚎", "🏎", "🛻", "🛵", "🏍",
-                  "🛺", "🚨", "🚔", "🚍", "🚘", "🚖", "🚡", "🚠", "🚟", "🚃",
-                  "🚋", "🚞", "🚄", "🚇", "🚊", "🚉", "🛫", "🛬", "🛩", "💺"]
-    @State var emojiCount = 20
+    @ObservedObject var GameVM: EmojiMemoryGame
+    
     // MARK: - Body
     var body: some View {
-        VStack {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 70))]) {
-                    ForEach(emojis[0..<emojiCount], id: \.self) { emoji in
-                        CardView(content: emoji)
+                    ForEach(GameVM.cards) { card in
+                        CardView(card: card)
                             .aspectRatio(2/3, contentMode: .fit)
+                            .onTapGesture {
+                                GameVM.choose(card)
+                            }
                     } //: emoji loop
                 } //: LazyVGrid
             } //: ScrollView
             .foregroundColor(.red)
-        } //: VStack
         .padding(.horizontal)
     } //: Body
 } //: Contentview
 
 struct CardView: View {
     // MARK: - Properties
-    var content: String
-    @State var isFaceup = true
+    let card: MemoryGame<String>.Card
     
     // MARK: - Body
     var body: some View {
         ZStack(alignment: .center) {
             let shape = RoundedRectangle(cornerRadius: 20)
-            
-            if isFaceup {
+            if card.isFaceUp {
                 shape.fill().foregroundColor(.white)
                 shape.stroke(lineWidth: 3)
-                Text(content)
+                Text(card.content)
                     .font(.largeTitle)
+            } else if card.isMatched {
+                shape.opacity(0)
             } else {
-                shape.padding()
+                shape.fill()
             }
         }//: ZStack
-        .onTapGesture {
-            isFaceup.toggle()
-        }
-    }//: CardView Body
-}// MARK: - CardView
+        
+    }
+} //: CardView Body
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        let game = EmojiMemoryGame()
+        ContentView(GameVM: game)
             .preferredColorScheme(.dark)
-
-        //        ContentView()
-        //            .preferredColorScheme(.light)
+        
+        ContentView(GameVM: game)
+            .preferredColorScheme(.light)
     }
 }
