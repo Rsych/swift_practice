@@ -86,7 +86,7 @@ struct ResortView: View {
                     }
                 } label: {
                     Image(systemName: favorites.contains(resort) ? "heart.fill" : "heart")
-                        .foregroundColor(favorites.contains(resort) ? .red : .black)
+                        .foregroundColor(favorites.contains(resort) ? .red : .white)
                 }
             } //: trailing toolbar
         } //: toolbar
