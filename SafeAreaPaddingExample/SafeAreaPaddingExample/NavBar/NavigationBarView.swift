@@ -14,13 +14,14 @@ struct NavigationBarView: View {
     var body: some View {
         HStack(alignment: .center, spacing: nil, content: {
             Button(action: {}, label: {
-                Image(systemName: "magnifyingglass.circle")
+                Image(systemName: "add")
                     .font(.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(.blue)
             }) //: Button
+            
             Spacer()
             
-            Text("Title")
+            Text("Home")
                 .opacity(isAnimated ? 1 : 0)
                 .offset(x: 0, y: isAnimated ? 0 : -25)
                 .onAppear(perform: {
