@@ -19,7 +19,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text("Footer")
+//                Text("Footer")
                 
             })
             VStack {
