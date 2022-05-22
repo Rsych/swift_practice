@@ -26,32 +26,19 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import SwiftUI
+import Combine
+import MapKit
 
-struct TripListView: View {
-    @ObservedObject var presenter: TripListPresenter
+class TripDetailInteractor {
+    private let trip: Trip
+    private let model: DataModel
+    let mapInfoProvider: MapDataProvider
     
-    var body: some View {
-        List {
-            ForEach(presenter.trips, id: \.id) {
-                TripListCell(trip: $0)
-                    .frame(height: 200)
-            }
-            .onDelete(perform: presenter.deleteTrip)
-        }
-        .navigationBarTitle("Roadtrips", displayMode: .inline)
-        .navigationBarItems(trailing: presenter.makeAddNewButton())
-    }
-}
-
-struct TripListView_Previews: PreviewProvider {
-    static var previews: some View {
-        let model = DataModel.sample
-        let interactor = TripListInteractor(model: model)
-        let presenter = TripListPresenter(interactor: interactor)
-        return NavigationView {
-            TripListView(presenter: presenter)
-        }
-        //        TripListView()
+    private var cancellables = Set<AnyCancellable>()
+    
+    init(trip: Trip, model: DataModel, mapInfoProvider: MapDataProvider) {
+        self.trip = trip
+        self.model = model
+        self.mapInfoProvider = mapInfoProvider
     }
 }
