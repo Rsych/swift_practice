@@ -26,6 +26,9 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		71175B9F283ACB5500817B5D /* TripListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71175B9E283ACB5500817B5D /* TripListInteractor.swift */; };
+		71175BA1283ACBA500817B5D /* TripListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71175BA0283ACBA500817B5D /* TripListPresenter.swift */; };
+		71175BA3283ACC8E00817B5D /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71175BA2283ACC8E00817B5D /* TripListView.swift */; };
 		71BCF4A2283AC73A002D81E3 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BCF4A1283AC73A002D81E3 /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71175B9E283ACB5500817B5D /* TripListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListInteractor.swift; sourceTree = "<group>"; };
+		71175BA0283ACBA500817B5D /* TripListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListPresenter.swift; sourceTree = "<group>"; };
+		71175BA2283ACC8E00817B5D /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		71BCF4A1283AC73A002D81E3 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,8 +135,11 @@
 				18D775C022AD944300AE281E /* AppDelegate.swift */,
 				18D775C222AD944300AE281E /* SceneDelegate.swift */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
-				0A8BE47C23ECC55F00C24F52 /* Functional Views */,
+				71175BA6283ACD4600817B5D /* Views */,
+				71175BA4283ACD3800817B5D /* Interactor */,
+				71175BA5283ACD3F00817B5D /* Presenter */,
 				0A8BE47D23ECC56F00C24F52 /* Entities */,
+				0A8BE47C23ECC55F00C24F52 /* Functional Views */,
 				0AEABEDA23EF7E1B00FD3972 /* Data Sources */,
 				0A20EFA9240EA73A00A0CA27 /* WaypointModule */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
@@ -149,6 +158,30 @@
 				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71175BA4283ACD3800817B5D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				71175B9E283ACB5500817B5D /* TripListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		71175BA5283ACD3F00817B5D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				71175BA0283ACBA500817B5D /* TripListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		71175BA6283ACD4600817B5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71175BA2283ACC8E00817B5D /* TripListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,13 +257,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A78DB8E23E799E400934DD4 /* SplitImage.swift in Sources */,
+				71175B9F283ACB5500817B5D /* TripListInteractor.swift in Sources */,
 				71BCF4A2283AC73A002D81E3 /* Secrets.swift in Sources */,
+				71175BA1283ACBA500817B5D /* TripListPresenter.swift in Sources */,
 				0A624E0123E7A44D00212508 /* ImageDataProvider.swift in Sources */,
 				0A83577A23D6996200D83533 /* DataModel.swift in Sources */,
 				0A20EFAF240EA73A00A0CA27 /* WaypointViewInteractor.swift in Sources */,
 				0A20EFAD240EA73A00A0CA27 /* WaypointViewPresenter.swift in Sources */,
 				18D775C122AD944300AE281E /* AppDelegate.swift in Sources */,
 				0A20EFAE240EA73A00A0CA27 /* WaypointView.swift in Sources */,
+				71175BA3283ACC8E00817B5D /* TripListView.swift in Sources */,
 				0A83577623D697A300D83533 /* MapView.swift in Sources */,
 				0A20EFA2240EA70900A0CA27 /* TripListCell.swift in Sources */,
 				0A83577B23D6996200D83533 /* Persistence.swift in Sources */,
