@@ -26,51 +26,29 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import Combine
-import MapKit
+import SwiftUI
 
-class TripDetailInteractor {
-    @Published var totalDistance: Measurement<UnitLength> = Measurement(value: 0, unit: .meters)
-    @Published var waypoints: [Waypoint] = []
-    @Published var directions: [MKRoute] = []
+struct TripMapView: View {
+    @ObservedObject var presenter: TripMapViewPresenter
     
-    private let trip: Trip
-    private let model: DataModel
-    let mapInfoProvider: MapDataProvider
-    
-    private var cancellables = Set<AnyCancellable>()
-    
-    var tripName: String { trip.name }
-    var tripNamePublisher: Published<String>.Publisher { trip.$name }
-    
-    init(trip: Trip, model: DataModel, mapInfoProvider: MapDataProvider) {
-        self.trip = trip
-        self.model = model
-        self.mapInfoProvider = mapInfoProvider
-        
-        trip.$waypoints
-          .assign(to: \.waypoints, on: self)
-          .store(in: &cancellables)
-
-        trip.$waypoints
-          .flatMap { mapInfoProvider.totalDistance(for: $0) }
-          .map { Measurement(value: $0, unit: UnitLength.meters) }
-          .assign(to: \.totalDistance, on: self)
-          .store(in: &cancellables)
-
-        trip.$waypoints
-          .setFailureType(to: Error.self)
-          .flatMap { mapInfoProvider.directions(for: $0) }
-          .catch { _ in Empty<[MKRoute], Never>() }
-          .assign(to: \.directions, on: self)
-          .store(in: &cancellables)
-
-    }
-    
-    func setTripName(_ name: String) {
-        trip.name = name
-    }
-    func save() {
-        model.save()
+    var body: some View {
+        MapView(pins: presenter.pins, routes: presenter.routes)
     }
 }
+
+#if DEBUG
+struct TripMapView_Previews: PreviewProvider {
+  static var previews: some View {
+    let model = DataModel.sample
+    let trip = model.trips[0]
+    let interactor = TripDetailInteractor(
+      trip: trip,
+      model: model,
+      mapInfoProvider: RealMapDataProvider())
+    let presenter = TripMapViewPresenter(interactor: interactor)
+    return VStack {
+      TripMapView(presenter: presenter)
+    }
+  }
+}
+#endif

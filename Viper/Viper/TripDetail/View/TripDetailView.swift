@@ -32,7 +32,15 @@ struct TripDetailView: View {
     @ObservedObject var presenter: TripDetailPresenter
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Trip Name", text: presenter.setTripName)
+                .textFieldStyle(.roundedBorder)
+                .padding([.horizontal])
+            presenter.makeMapView()
+            Text(presenter.distanceLabel)
+        }
+        .navigationBarTitle(Text(presenter.tripName), displayMode: .inline)
+        .navigationBarItems(trailing: Button("Save", action: presenter.save))
     }
 }
 
